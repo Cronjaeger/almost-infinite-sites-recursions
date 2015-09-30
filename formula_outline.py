@@ -10,6 +10,9 @@ from configurations import configuration,coalesce,invisible,mutation
 import numpy as np
 import probabilities as proba
 from copy import deepcopy
+import time
+import sys
+
 
 phiTable = configTable()
 phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
@@ -68,153 +71,52 @@ def prob(phi,theta,b,T,P):
 #    print "womp"
     return p
 
-#if __name__ == "__main__":
-#
-#    S_1 = np.matrix((0,))
-#    n_1 = np.array((5,))
-#    phi_1 = configuration(S_1,n_1)
-#
-#    P = (np.ones((4,4)) - np.eye(4))/3
-#    theta = 4.0
-#    T = 10
-#
-#    S_2 = np.matrix("0;1")
-#    n_2 = np.array((2,1))
-#    phi_2 = configuration(S_2,n_2)
-##
-##
-##     p_1 = [prob(deepcopy(phi_1),theta,b,T,P) for b in range(5)]
-##     phiTable = configTable()
-##     p_2 = [prob(deepcopy(phi_2),theta,b,T,P) for b in range(5)]
-##     print p_1
-##     print phiTable.get_all_configurations()
-##     print p_2
-##
-#    n_3 = np.array((1,1))
-#    phi_3 = configuration(S_2,n_3)
-#    phiTable = configTable()
-#    p_3 = [prob(deepcopy(phi_3),theta,b,T,P) for b in range(5)]
-#    print p_3
-##
-#    n_4 = np.array((2,))
-#    phi_4 = configuration(S_1,n_4)
-#    phiTable = configTable()
-#    p_4 = [prob(deepcopy(phi_4),theta,b,T,P) for b in range(5)]
-#    print p_4
-#
+if __name__ == "__main__":
 
-#def runInconsistent():
-#    S_i = np.matrix(((1,0),(1,0),(1,1)))
-#    n_i = np.array((1,1,1))
-#    phi_i = configuration(S_i,n_i)
-#
-#    theta = 2.0
-#    T = 10
-#    P = (np.ones((4,4)) - np.eye(4))/3
-#
-#    phiTable = configTable()
-#    p_i = [prob(deepcopy(phi_i),theta,b,T,P) for b in range(5)]
-#    print p_i
-#
-#runInconsistent()
-#
-#def typicalExample():
-#    S_1 = np.matrix(((1,1,0,0),(1,1,1,0),(0,0,0,1),(0,0,0,0)))
-#    n_1 = np.array((1,1,2,1))
-#    phi_1 = configuration(S_1,n_1)
-#
-#    theta = 2.0
-#    T = 10
-#    P = (np.ones((4,4)) - np.eye(4))/3
-#
-#    phiTable = configTable()
-#    p_1 = [prob(deepcopy(phi_1),theta,b,T,P) for b in xrange(3,6)]
+    sys.setrecursionlimit(1000000)
+    
+    P = (np.ones((4,4)) - np.eye(4))/3
+    theta = np.array((0.14,14,1400),float)
+    T = 14000
+    
+    #Easy data set
+    S_1 = np.matrix((0,))
+    n_1 = np.array((5,))
+    phi_1 = configuration(S_1,n_1)
+
+    #Typical example
+    S_2 = np.matrix(((1,1,0,0),(1,1,1,0),(0,0,0,1),(0,0,0,0)))
+    n_2 = np.array((1,1,2,1))
+    phi_2 = configuration(S_2,n_2)
+
+    #Mitochondrial data set
+    n_mitochondrial = np.array((696,193,124,112,29,15,9,7,6,5,5,5,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1))
+    S_mitochondrial = np.genfromtxt('S.csv',delimiter=',')
+    S_mitochondrial = S_mitochondrial.astype(int)
+    phi_mitochondrial = configuration(S_mitochondrial,n_mitochondrial)
+    
+    p_mitochondrial = np.zeros((3,5))
+    p_1 = np.zeros((3,3))    
+    p_2 = np.zeros((3,3))
+
+    b_1 = np.array((0,1,2))
+    b_2 = np.array((3,4,5))
+    b_mitochondrial = np.array((40,41,42,43,44))
+    
+    
+    for i in range(3):
+        for j in range(3):
+            start_time = time.time()
+            phiTable = configTable()
+#            p_1[i][j] = prob(deepcopy(phi_1),theta[i],b_1[j],T,P)
+#            p_2[i][j] = prob(deepcopy(phi_2),theta[i],b_2[j],T,P)
+            p_mitochondrial[i][j] = prob(deepcopy(phi_mitochondrial),theta[i],b_mitochondrial[j],T,P)
+            print (time.time()-start_time)
 #    print p_1
-#
-#typicalExample()
-#
-#def ChangingTheta():
-#    list_theta = [i for i in range (101)]
-#    S_2 = np.matrix("0;1")
-#    n_2 = np.array((2,1))
-#    phi_2 = configuration(S_2,n_2)
-#
-#    T=10
-#    P = (np.ones((4,4)) - np.eye(4))/3
-#    p_t1=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t1[j] = prob(phi_2,float (list_theta[j])/(10),1,T,P)
-#    print p_t1
-#
-#    p_t2=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t2[j] = prob(phi_2,float (list_theta[j])/(10),2,T,P)
-#
-#    p_t3=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t3[j] = prob(phi_2,float (list_theta[j])/(10),3,T,P)
-#
-#    T=100
-#    p_t4=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t4[j] = prob(phi_2,float (list_theta[j])/(10),1,T,P)
-#
-#    p_t5=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t5[j] = prob(phi_2,float (list_theta[j])/(10),2,T,P)
-#
-#    p_t6=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t6[j] = prob(phi_2,float (list_theta[j])/(10),3,T,P)
-#
-#    T=2
-#    p_t7=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t7[j] = prob(phi_2,float (list_theta[j])/(10),1,T,P)
-#
-#    p_t8=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t8[j] = prob(phi_2,float (list_theta[j])/(10),2,T,P)
-#
-#    p_t9=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_t9[j] = prob(phi_2,float (list_theta[j])/(10),3,T,P)
-#
-#    p_i5 = prob(deepcopy(phi_i),theta,5,10,P)
-
-    #Undone
-S_i = np.matrix(((1,0),(1,0),(1,1)))
-n_i = np.array((1,1,1))
-phi_i = configuration(S_i,n_i)
-theta = 2.0
-T = 10
-P = (np.ones((4,4)) - np.eye(4))/3
-
-for b in range(1,8):
-    phiTable = configTable()
-    p_i = prob(deepcopy(phi_i),theta,b,100,P)
-    print b,phiTable.get_size(),p_i
-
-#    p_i3T100 = prob(deepcopy(phi_i),theta,3,100,P)
-#
-#    p_i3T1000 =prob(deepcopy(phi_i),theta,3,1000,P)
-#
-#    p_ib=[0 for j in range(101)]
-#    for j in range(101):
-#        phiTable = configTable()
-#        p_ib[j] = prob(phi_i,float (list_theta[j])/(10),3,T,P)
-#
-#    baux=np.array((5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10))
-#
-#    for j in range(10):
-#        phiTable = configTable()
-#        p_ib[50+j*5] = prob(phi_i,baux[j],3,T,P)
+#    print p_2
+    print p_mitochondrial
+    
+#    start_time = time.time()
+#    p_mitochondrial_base = prob(deepcopy(phi_mitochondrial),14,20,T,P)
+#    print (time.time()-start_time)
+#    print p_mitochondrial_base
