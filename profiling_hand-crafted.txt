@@ -1,0 +1,135 @@
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_L_4.csv
+[0 0 1 0] 2
+[1 1 0 0] 1
+[1 1 0 1] 1
+[0 0 0 0] 1
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 0: 
+    elapsed time: 0.008 sec.
+    config-table size: 2
+ b = 1: 
+    elapsed time: 0.961 sec.
+    config-table size: 81
+ b = 1: 
+    elapsed time: 0.955 sec.
+    config-table size: 81
+ b = 2: 
+    elapsed time: 64.538 sec.
+    config-table size: 2462
+ b = 3: 
+    elapsed time: 2247.034 sec.
+    config-table size: 43010
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_incompatibleColumn-pair_L_4.csv
+[0 1 1 0] 2
+[1 0 0 0] 1
+[1 1 0 1] 1
+[0 0 0 0] 1
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 1 (17%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:    x      
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 0: 
+    elapsed time: 0.008 sec.
+    config-table size: 2
+ b = 1: 
+    elapsed time: 1.028 sec.
+    config-table size: 102
+ b = 1: 
+    elapsed time: 1.027 sec.
+    config-table size: 102
+ b = 2: 
+    elapsed time: 86.124 sec.
+    config-table size: 3514
+ b = 3: 
+    elapsed time: 5194.521 sec.
+    config-table size: 67196
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_with_a_2_L_4.csv
+[0 0 1 0] 2
+[1 2 0 0] 1
+[1 1 0 1] 1
+[0 0 0 0] 1
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 2, 3]
+  2 non-0-type columns: [1]
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 0: 
+    elapsed time: 0.008 sec.
+    config-table size: 2
+ b = 1: 
+    elapsed time: 0.877 sec.
+    config-table size: 101
+ b = 1: 
+    elapsed time: 0.882 sec.
+    config-table size: 101
+ b = 2: 
+    elapsed time: 72.770 sec.
+    config-table size: 3559
+ b = 3: 
+    elapsed time: 3171.723 sec.
+    config-table size: 69796

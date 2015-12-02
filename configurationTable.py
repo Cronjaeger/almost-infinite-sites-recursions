@@ -284,7 +284,7 @@ def reconstruction_possible(A,
 #        row_blocks_A, row_blocks_B, column_blocks_A, column_blocks_B = calculateBlocks(A,B)
 #    elif row_blocks_A == [] and row_blocks_B == [] and column_blocks_A == [] and column_blocks_B == []:
 
-    Verbose = False
+    Verbose = False #Produce debugging output if set to true.
 
     if Verbose:
 #        print A[sigma_rows_A,:][:,sigma_columns_A]

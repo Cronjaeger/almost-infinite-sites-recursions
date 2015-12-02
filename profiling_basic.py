@@ -1,5 +1,6 @@
 import sys,time,re
 import timeit
+import cProfile, pstats, StringIO
 import numpy as np
 from scipy.special import binom
 
@@ -27,31 +28,42 @@ simDataPath = '/home/mathias/programming/coalescent-simulations/simData'
 
 
 csvFileNames = [
-'psi__N_2_theta_1pt0000_L_2.csv',\
-'psi__N_2_theta_1pt0000_L_8.csv',\
-'psi__N_2_theta_1pt0000_L_32.csv',\
-'psi__N_8_theta_1pt0000_L_2.csv',\
-'psi__N_8_theta_1pt0000_L_8.csv',\
-'psi__N_8_theta_1pt0000_L_32.csv',\
-'psi__N_16_theta_1pt0000_L_2.csv',\
-'psi__N_16_theta_1pt0000_L_8.csv',\
-'psi__N_16_theta_1pt0000_L_32.csv',\
-'psi__N_32_theta_1pt0000_L_2.csv',\
-'psi__N_32_theta_1pt0000_L_8.csv',\
-'psi__N_32_theta_1pt0000_L_32.csv',\
+# 'psi__N_2_theta_1pt0000_L_2.csv',\
+# 'psi__N_2_theta_1pt0000_L_8.csv',\
+# 'psi__N_2_theta_1pt0000_L_32.csv',\
+# 'psi__N_8_theta_1pt0000_L_2.csv',\
+# 'psi__N_8_theta_1pt0000_L_8.csv',\
+# 'psi__N_8_theta_1pt0000_L_32.csv',\
+# 'psi__N_16_theta_1pt0000_L_2.csv',\
+# 'psi__N_16_theta_1pt0000_L_8.csv',\
+# 'psi__N_16_theta_1pt0000_L_32.csv',\
+# 'psi__N_32_theta_1pt0000_L_2.csv',\
+# 'psi__N_32_theta_1pt0000_L_8.csv',\
+# 'psi__N_32_theta_1pt0000_L_32.csv',\
 # 'psi__N_2_theta_10pt0000_L_2.csv',\
 # 'psi__N_2_theta_10pt0000_L_8.csv',\
 # 'psi__N_2_theta_10pt0000_L_32.csv',\
 # 'psi__N_8_theta_10pt0000_L_2.csv',\
 # 'psi__N_8_theta_10pt0000_L_8.csv',\
- 'psi__N_8_theta_10pt0000_L_32.csv',\
+# 'psi__N_8_theta_10pt0000_L_32.csv',\
 # 'psi__N_16_theta_10pt0000_L_2.csv',\
 # 'psi__N_16_theta_10pt0000_L_8.csv',\
 # 'psi__N_16_theta_10pt0000_L_32.csv',\
 # 'psi__N_32_theta_10pt0000_L_2.csv',\
 # 'psi__N_32_theta_10pt0000_L_8.csv',\
 # 'psi__N_32_theta_10pt0000_L_32.csv'\
+# 'psi__N_32_theta_1pt0000_L_1024.csv',\
+ 'hand-crafted/fromHeinsBook_L_4.csv',\
+ 'hand-crafted/fromHeinsBook_incompatibleColumn-pair_L_4.csv',\
+ 'hand-crafted/fromHeinsBook_with_a_2_L_4.csv',\
+ 'hand-crafted/fromHeinsBook_L_10.csv',\
+ 'hand-crafted/fromHeinsBook_incompatibleColumn-pair_L_10.csv',\
+ 'hand-crafted/fromHeinsBook_with_a_2_L_10.csv',\
+ 'hand-crafted/hammer1995_0123_L_3.csv',\
+ 'hand-crafted/hammer1995_0123_L_10.csv'\
+ # 'hand-crafted/WardEtAl1991_0123_L_27.csv'\
 ]
+
 
 #csvFilePaths = ['%s/%s'%(simDataPath,filename) for filename in csvFileNames]
 
@@ -195,7 +207,19 @@ str(threeTypeColumns))
 
     for b in b_list:
         print " b = %i: "%b
-        t1 = time.time()
-        fo.prob_External(S,n,L,b)
-        t2 = time.time()
-        print "    elapsed time: %.3f sec."%(t2-t1)
+        pr = cProfile.Profile()
+        pr.enable()
+        # t1 = time.time()
+        prob,size = fo.prob_External(S,n,L,b)
+        # t2 = time.time()
+        # print "    elapsed time: %.3f sec."%(t2-t1)
+        print "    config-table size: %i"%size
+        s = StringIO.StringIO()
+        sortby = 'cumulative'
+        ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+        ps.print_stats()
+        # print " . "*10
+        print "\n Begining of profiler output: "
+        print s.getvalue()
+        print " End of profiler output"
+        print " . "*26

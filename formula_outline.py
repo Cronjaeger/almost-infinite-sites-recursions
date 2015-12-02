@@ -14,18 +14,22 @@ import time
 import sys
 
 
-phiTable = configTable()
+phiTable_std = configTable()
 phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
+
 #for b in xrange(10):
 #    phiTable.add(phi_null,p=1.0,b=0)
 
 def prob_External(S,n, L, b, theta = 1.0,P = (np.ones((4,4)) - np.eye(4))/3):
-    phiTable = configTable()
-    phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
+    myPhiTable = configTable()
+    # phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
+    # renewPhiTable()
     phi = configuration(S,n)
-    p = prob(phi,theta,b,L,P)
+    p = prob(phi,theta,b,L,P, myPhiTable)
+    size = myPhiTable.get_size()
+    return p,size
 
-def prob(phi,theta,b,T,P):
+def prob(phi,theta,b,T,P,phiTable = phiTable_std):
 
     if phiTable.contains(phi,b):
 #        print "Wee!"
@@ -47,7 +51,7 @@ def prob(phi,theta,b,T,P):
     for i in coalescentIndicees:
         phi_coal = deepcopy(phi)
         fac_c = proba.p_coalesce(phi_coal,i,theta)
-        pro_c = prob( coalesce(phi_coal,i), theta , b , T, P)
+        pro_c = prob( coalesce(phi_coal,i), theta , b , T, P, phiTable)
         line_1 += fac_c * pro_c
 
     line_2 = 0
@@ -55,7 +59,7 @@ def prob(phi,theta,b,T,P):
         for i,k in invisibleIndicees:
             phi_inv = deepcopy(phi)
             fac_i = proba.p_invisible(phi_inv,i,k,theta,T,P)
-            pro_i = prob( invisible(phi_inv,i,k) , theta , b - 1, T , P )
+            pro_i = prob( invisible(phi_inv,i,k) , theta , b - 1, T, P, phiTable)
             line_2 += fac_i * pro_i
 
     line_3 = 0
@@ -64,7 +68,7 @@ def prob(phi,theta,b,T,P):
             if ((np.all(phi.S==0))==False):
                 phi_mut = deepcopy(phi)
                 fac_m = proba.p_mutation(phi_mut,i,j,k,theta,T,P)
-                pro_m = prob( mutation(phi_mut,i,j,k), theta , b - 1, T, P )
+                pro_m = prob( mutation(phi_mut,i,j,k), theta , b - 1, T, P, phiTable )
                 line_3 += fac_m * pro_m
 
 #    print ""
