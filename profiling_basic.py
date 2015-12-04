@@ -9,7 +9,8 @@ import formula_outline as fo
 #import simulation-code from coalescent-simulations
 # CHANGE THE VALUE OF THE BELOW VARIABLE TO WHERE COALESCENT-SIMULATIONS
 # HAS BEEN INSTALLED
-coalescentSimulationsPath = '/home/mathias/programming/coalescent-simulations/'
+#coalescentSimulationsPath = '/home/mathias/programming/coalescent-simulations/'
+coalescentSimulationsPath = '/homes/cronjage/Programming/python/coalescent-simulations'
 sys.path.insert(0,coalescentSimulationsPath)
 import finiteSitesModell_investigations as fsmi
 from psiFromCSV import psiFromCSV
@@ -22,7 +23,8 @@ from psiFromCSV import psiFromCSV
 # Import datasets to be analyzed below:
 #
 
-simDataPath = '/home/mathias/programming/coalescent-simulations/simData'
+#simDataPath = '/home/mathias/programming/coalescent-simulations/simData'
+simDataPath = '/homes/cronjage/Programming/python/coalescent-simulations/simData'
 #Path for where simulated data is stored. Format should be as outlined in
 # comments of psiFromCSV.py (in coalescent-simulations-module)
 
@@ -200,9 +202,12 @@ str(threeTypeColumns))
     print '- '+' - '*26
     print 'Benchmarks'
 
-    b_list = [3,4]
-    times = ()
+    segSites = S.shape[1]
+    bPlus_list = [-1,0,1,2]
+    b_list = [segSites + i for i in bPlus_list]
+    
 
+#    times = ()
 
     for b in b_list:
 
@@ -215,6 +220,7 @@ str(threeTypeColumns))
         prob,size = fo.prob_External(S,n,L,b)
         t2 = time.time()
 
+        print "    probability: %.15f"%prob
         print "    elapsed time: %.3f sec."%(t2-t1)
         print "    config-table size: %i"%size
 
