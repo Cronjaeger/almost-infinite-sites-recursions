@@ -59,15 +59,14 @@ csvFileNames = [
  'hand-crafted/fromHeinsBook_L_10.csv',\
  'hand-crafted/fromHeinsBook_incompatibleColumn-pair_L_10.csv',\
  'hand-crafted/fromHeinsBook_with_a_2_L_10.csv',\
- 'hand-crafted/hammer1995_0123_L_3.csv',\
- 'hand-crafted/hammer1995_0123_L_10.csv'\
+ # 'hand-crafted/hammer1995_0123_L_3.csv',\
+ # 'hand-crafted/hammer1995_0123_L_10.csv',\
+ 'hand-crafted/aquardoAndGreenberg_fig1_0123_L_49.csv'\
  # 'hand-crafted/WardEtAl1991_0123_L_27.csv'\
 ]
 
 
 #csvFilePaths = ['%s/%s'%(simDataPath,filename) for filename in csvFileNames]
-
-
 
 
 p1 = re.compile('_L_\d+')
@@ -94,7 +93,7 @@ for fileName in csvFileNames:
     print "Calculations for simulated dataset: %s"%fileName
 
     #read the dataset
-    S,n = psiFromCSV(filePath,tidyUp = False)
+    S,n = psiFromCSV(filePath,tidyUp = True)
 
     #print the dataset to standard output
     for i in xrange(S.shape[0]):
@@ -201,19 +200,24 @@ str(threeTypeColumns))
     print '- '+' - '*26
     print 'Benchmarks'
 
-    b_list = [0,1,2]
+    b_list = [3,4]
     times = ()
 
 
     for b in b_list:
+
         print " b = %i: "%b
+
         pr = cProfile.Profile()
         pr.enable()
-        # t1 = time.time()
+
+        t1 = time.time()
         prob,size = fo.prob_External(S,n,L,b)
-        # t2 = time.time()
-        # print "    elapsed time: %.3f sec."%(t2-t1)
+        t2 = time.time()
+
+        print "    elapsed time: %.3f sec."%(t2-t1)
         print "    config-table size: %i"%size
+
         s = StringIO.StringIO()
         sortby = 'cumulative'
         ps = pstats.Stats(pr, stream=s).sort_stats(sortby)

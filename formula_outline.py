@@ -32,20 +32,24 @@ def prob_External(S,n, L, b, theta = 1.0,P = (np.ones((4,4)) - np.eye(4))/3):
 def prob(phi,theta,b,T,P,phiTable = phiTable_std):
 
     if phiTable.contains(phi,b):
-#        print "Wee!"
         return phiTable.get_p(phi,b)
 
     if phi == phi_null:
-#        print "Woo"
         phiTable.add( phi = phi , p = 1.0 , b = b)
         return 1.0
 
+    # minMutations = phi.S.shape[1]
+    deviants = set((1,2,3))
+    minMutations = sum([len(deviants.intersection(set([phi.S[i,j] for i in xrange(phi.S.shape[0])]))) for j in xrange(phi.S.shape[1]) ])
+
+    if minMutations > b:
+        phiTable.add( phi = phi , p = 0.0 , b = b)
+        return 0.0
+
     coalescentIndicees = (i for i in range(len(phi.n)) if phi.n[i]>1)
-    invisibleIndicees = ((i,k) for k in xrange(1,4) for i in xrange(phi.S.shape[0]))
     mutationIndicees = ((i,j,k) for i in xrange(phi.S.shape[0]) for j in xrange(phi.L) for k in xrange(4) if k != phi.S[i,j] )
 
     fac_c,pro_c,fac_i,pro_i,fac_m,pro_m = 0,0,0,0,0,0
-
 
     line_1 = 0
     for i in coalescentIndicees:
@@ -55,7 +59,8 @@ def prob(phi,theta,b,T,P,phiTable = phiTable_std):
         line_1 += fac_c * pro_c
 
     line_2 = 0
-    if b > 1:
+    if b > minMutations + 1:
+        invisibleIndicees = ((i,k) for k in xrange(1,4) for i in xrange(phi.S.shape[0]))
         for i,k in invisibleIndicees:
             phi_inv = deepcopy(phi)
             fac_i = proba.p_invisible(phi_inv,i,k,theta,T,P)

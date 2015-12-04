@@ -1192,4 +1192,363 @@ Benchmarks
        22    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:963(find_common_type)
       133    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy_reg.py:92(__newobj__)
       399    0.000    0.000    0.000    0.000 {issubclass}
-    
+      133    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+       22    0.000    0.000    0.000    0.000 {numpy.core.multiarray.concatenate}
+       44    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:948(_can_coerce_all)
+      665    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:198(_deepcopy_atomic)
+      481    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+      133    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x919120}
+       28    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:392(asarray)
+       84    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:1452(shape)
+      299    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+       81    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:44(<genexpr>)
+      133    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+        7    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+       14    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+       22    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:220(_retval)
+       66    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:106(load_stats)
+       14    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+        7    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:630(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 2: 
+    config-table size: 2462
+
+ Begining of profiler output: 
+         18581396 function calls (18466479 primitive calls) in 67.982 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   79.248   79.248 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+   6142/1    0.255    0.000   79.248   79.248 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    20746    2.517    0.000   49.733    0.002 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+  1905384   37.934    0.000   49.200    0.000 {sum}
+     6142    0.097    0.000   39.959    0.007 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+   299870    0.915    0.000   33.175    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+  1499350    1.333    0.000   32.260    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    20886    0.144    0.000   22.704    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+    41772    0.254    0.000   22.458    0.001 {map}
+   173191    0.606    0.000   19.630    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:79(count0123)
+   865955    0.813    0.000   19.024    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+     3680    0.040    0.000   17.283    0.005 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+     2462    0.038    0.000   13.878    0.006 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:180(add)
+   105591    0.593    0.000   11.209    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+  2621728    8.779    0.000   11.013    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+   109372    0.510    0.000   10.995    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+70019/16512    2.456    0.000    9.922    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+     5259    0.085    0.000    3.810    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:127(mutation)
+   131818    0.671    0.000    3.793    0.000 /usr/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:1842(all)
+   131818    0.439    0.000    2.760    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:615(all)
+    10518    0.662    0.000    2.314    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+     4719    0.024    0.000    2.288    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+     4719    0.246    0.000    2.111    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+   131818    0.149    0.000    1.824    0.000 /usr/lib/python2.7/dist-packages/numpy/core/_methods.py:35(_all)
+   131818    1.448    0.000    1.675    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     5259    0.165    0.000    1.599    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+    20133    0.631    0.000    1.566    0.000 {max}
+  3906464    1.448    0.000    1.448    0.000 {isinstance}
+  1192655    1.247    0.000    1.446    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+   440036    0.334    0.000    1.057    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+   390606    0.311    0.000    0.961    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+   352290    0.258    0.000    0.843    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+   352290    0.254    0.000    0.834    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+61410/6141    0.201    0.000    0.636    0.000 /usr/lib/python2.7/copy.py:145(deepcopy)
+   131818    0.139    0.000    0.497    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+     6141    0.051    0.000    0.487    0.000 /usr/lib/python2.7/copy.py:306(_reconstruct)
+   131818    0.148    0.000    0.361    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:462(asanyarray)
+     6141    0.031    0.000    0.245    0.000 /usr/lib/python2.7/copy.py:253(_deepcopy_dict)
+   147701    0.237    0.000    0.237    0.000 {numpy.core.multiarray.array}
+    23841    0.047    0.000    0.176    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+    13323    0.048    0.000    0.167    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:14(__init__)
+  1025258    0.160    0.000    0.160    0.000 {len}
+   250500    0.138    0.000    0.138    0.000 {range}
+   107670    0.132    0.000    0.132    0.000 {method 'sort' of 'list' objects}
+    24377    0.096    0.000    0.126    0.000 {method 'astype' of 'numpy.ndarray' objects}
+      906    0.035    0.000    0.121    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   273450    0.108    0.000    0.108    0.000 {method 'index' of 'list' objects}
+    41772    0.072    0.000    0.102    0.000 {reduce}
+     6141    0.034    0.000    0.095    0.000 /usr/lib/python2.7/copy.py:234(_deepcopy_tuple)
+    61410    0.068    0.000    0.087    0.000 /usr/lib/python2.7/copy.py:267(_keep_alive)
+   417309    0.078    0.000    0.078    0.000 {method 'append' of 'list' objects}
+     6141    0.075    0.000    0.075    0.000 {method '__reduce_ex__' of 'object' objects}
+   225090    0.059    0.000    0.059    0.000 {method 'remove' of 'list' objects}
+    12282    0.039    0.000    0.049    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+     7721    0.027    0.000    0.048    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:45(<genexpr>)
+    30654    0.036    0.000    0.047    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:1810(isscalar)
+     1098    0.015    0.000    0.042    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:240(__getitem__)
+    17672    0.030    0.000    0.039    0.000 {filter}
+      858    0.021    0.000    0.030    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+   128961    0.026    0.000    0.026    0.000 {method 'get' of 'dict' objects}
+      544    0.014    0.000    0.020    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/function_base.py:3112(delete)
+    24564    0.017    0.000    0.017    0.000 {getattr}
+      858    0.005    0.000    0.017    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+       24    0.000    0.000    0.016    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:172(invisible)
+    63819    0.016    0.000    0.016    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+   147384    0.014    0.000    0.014    0.000 {id}
+    67600    0.014    0.000    0.014    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     3320    0.013    0.000    0.013    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:43(<genexpr>)
+     1098    0.004    0.000    0.011    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:963(find_common_type)
+     6142    0.010    0.000    0.010    0.000 {hasattr}
+     6141    0.006    0.000    0.009    0.000 /usr/lib/python2.7/copy_reg.py:92(__newobj__)
+    18423    0.008    0.000    0.008    0.000 {issubclass}
+    32946    0.008    0.000    0.008    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+     1098    0.006    0.000    0.008    0.000 {numpy.core.multiarray.concatenate}
+     6141    0.006    0.000    0.006    0.000 {method 'update' of 'dict' objects}
+     2196    0.006    0.000    0.006    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:948(_can_coerce_all)
+    30705    0.005    0.000    0.005    0.000 /usr/lib/python2.7/copy.py:198(_deepcopy_atomic)
+     6141    0.004    0.000    0.004    0.000 {built-in method __new__ of type object at 0x919120}
+     4719    0.003    0.000    0.003    0.000 /usr/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:1452(shape)
+    13323    0.003    0.000    0.003    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+     1088    0.001    0.000    0.003    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:392(asarray)
+     6141    0.002    0.000    0.002    0.000 {method 'iteritems' of 'dict' objects}
+       24    0.001    0.000    0.002    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:49(p_invisible)
+     2486    0.001    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:44(<genexpr>)
+     5709    0.001    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+     1098    0.001    0.000    0.001    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:220(_retval)
+      272    0.001    0.000    0.001    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+      544    0.001    0.000    0.001    0.000 {numpy.core.multiarray.empty}
+      544    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+      272    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:630(__getitem__)
+       24    0.000    0.000    0.000    0.000 {numpy.core.multiarray.zeros}
+       24    0.000    0.000    0.000    0.000 {method 'transpose' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_incompatibleColumn-pair_L_10.csv
+[0 1 1 0] 2
+[1 0 0 0] 1
+[1 1 0 1] 1
+[0 0 0 0] 1
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 1 (17%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:    x      
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 0: 
+    config-table size: 2
+
+ Begining of profiler output: 
+         1734 function calls (1724 primitive calls) in 0.008 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.010    0.010 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+      2/1    0.000    0.000    0.010    0.010 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+        8    0.000    0.000    0.008    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+       16    0.000    0.000    0.008    0.001 {map}
+      299    0.006    0.000    0.007    0.000 {sum}
+       64    0.000    0.000    0.007    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:79(count0123)
+      320    0.000    0.000    0.007    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+        2    0.000    0.000    0.006    0.003 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:180(add)
+       40    0.000    0.000    0.004    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+       40    0.000    0.000    0.004    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+        2    0.000    0.000    0.002    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+        2    0.000    0.000    0.001    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+       10    0.000    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+       50    0.000    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+      290    0.000    0.000    0.001    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     10/1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:145(deepcopy)
+      310    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:306(_reconstruct)
+        4    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:14(__init__)
+       40    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:253(_deepcopy_dict)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+       16    0.000    0.000    0.000    0.000 {reduce}
+        1    0.000    0.000    0.000    0.000 {method '__reduce_ex__' of 'object' objects}
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:234(_deepcopy_tuple)
+        3    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+       10    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:267(_keep_alive)
+        6    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        3    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:43(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        4    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+        2    0.000    0.000    0.000    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy_reg.py:92(__newobj__)
+        4    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+       17    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:106(load_stats)
+        4    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+       24    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+       21    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/StringIO.py:54(__init__)
+       24    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+       24    0.000    0.000    0.000    0.000 {id}
+        4    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/cProfile.py:90(create_stats)
+        6    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {hasattr}
+        2    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:44(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        4    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+        5    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:198(_deepcopy_atomic)
+        1    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+       10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x919120}
+        2    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:45(<genexpr>)
+        3    0.000    0.000    0.000    0.000 {issubclass}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 1: 
+    config-table size: 102
+
+ Begining of profiler output: 
+         299802 function calls (297908 primitive calls) in 1.146 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    1.346    1.346 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+    140/1    0.006    0.000    1.345    1.345 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    34757    0.672    0.000    0.872    0.000 {sum}
+      362    0.038    0.000    0.683    0.002 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+      522    0.004    0.000    0.535    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+     1044    0.006    0.000    0.529    0.001 {map}
+      140    0.001    0.000    0.505    0.004 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+      102    0.001    0.000    0.480    0.005 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:180(add)
+     4444    0.014    0.000    0.478    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+    22220    0.020    0.000    0.464    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+     4165    0.015    0.000    0.461    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:79(count0123)
+    20825    0.020    0.000    0.446    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+     2614    0.014    0.000    0.264    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+     2595    0.012    0.000    0.258    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+       38    0.000    0.000    0.179    0.005 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+    42616    0.127    0.000    0.160    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+  739/235    0.026    0.000    0.107    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+       96    0.002    0.000    0.065    0.001 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:127(mutation)
+     1750    0.009    0.000    0.052    0.000 /usr/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:1842(all)
+      192    0.010    0.000    0.041    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+       84    0.000    0.000    0.038    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+     1750    0.006    0.000    0.038    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:615(all)
+       84    0.004    0.000    0.035    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+       96    0.003    0.000    0.029    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+      336    0.010    0.000    0.026    0.000 {max}
+     1750    0.002    0.000    0.025    0.000 /usr/lib/python2.7/dist-packages/numpy/core/_methods.py:35(_all)
+    60552    0.023    0.000    0.023    0.000 {isinstance}
+     1750    0.020    0.000    0.023    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    16122    0.017    0.000    0.020    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+     7176    0.006    0.000    0.018    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+ 1390/139    0.005    0.000    0.015    0.000 /usr/lib/python2.7/copy.py:145(deepcopy)
+     5332    0.004    0.000    0.013    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+     4637    0.004    0.000    0.011    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+      139    0.001    0.000    0.011    0.000 /usr/lib/python2.7/copy.py:306(_reconstruct)
+     4637    0.003    0.000    0.011    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+     1750    0.002    0.000    0.007    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+      139    0.001    0.000    0.006    0.000 /usr/lib/python2.7/copy.py:253(_deepcopy_dict)
+     1750    0.002    0.000    0.005    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:462(asanyarray)
+      326    0.001    0.000    0.004    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      518    0.001    0.000    0.004    0.000 /usr/lib/python2.7/dist-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+     2120    0.003    0.000    0.003    0.000 {numpy.core.multiarray.array}
+      529    0.002    0.000    0.003    0.000 {method 'astype' of 'numpy.ndarray' objects}
+     1044    0.002    0.000    0.002    0.000 {reduce}
+     4125    0.002    0.000    0.002    0.000 {range}
+    12552    0.002    0.000    0.002    0.000 {len}
+      139    0.001    0.000    0.002    0.000 /usr/lib/python2.7/copy.py:234(_deepcopy_tuple)
+     1390    0.002    0.000    0.002    0.000 /usr/lib/python2.7/copy.py:267(_keep_alive)
+     1664    0.002    0.000    0.002    0.000 {method 'sort' of 'list' objects}
+       12    0.001    0.000    0.002    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+      139    0.002    0.000    0.002    0.000 {method '__reduce_ex__' of 'object' objects}
+       43    0.001    0.000    0.002    0.000 /home/mathias/programming/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+     3754    0.001    0.000    0.001    0.000 {method 'index' of 'list' objects}
+      278    0.001    0.000    0.001    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+     5946    0.001    0.000    0.001    0.000 {method 'append' of 'list' objects}
+       43    0.000    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+      198    0.001    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:45(<genexpr>)
+       24    0.000    0.000    0.001    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:240(__getitem__)
+      528    0.001    0.000    0.001    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:1810(isscalar)
+     2470    0.001    0.000    0.001    0.000 {method 'remove' of 'list' objects}
+      145    0.001    0.000    0.001    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:43(<genexpr>)
+     2919    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+      174    0.000    0.000    0.000    0.000 {filter}
+     1570    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+      556    0.000    0.000    0.000    0.000 {getattr}
+     1551    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     3336    0.000    0.000    0.000    0.000 {id}
+        8    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/function_base.py:3112(delete)
+      140    0.000    0.000    0.000    0.000 {hasattr}
+      139    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy_reg.py:92(__newobj__)
+       24    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:963(find_common_type)
+      417    0.000    0.000    0.000    0.000 {issubclass}
+      139    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+       24    0.000    0.000    0.000    0.000 {numpy.core.multiarray.concatenate}
+       48    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numerictypes.py:948(_can_coerce_all)
+      695    0.000    0.000    0.000    0.000 /usr/lib/python2.7/copy.py:198(_deepcopy_atomic)
+      321    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+      139    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x919120}
+      326    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      102    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/formula_outline.py:44(<genexpr>)
+       84    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:1452(shape)
+      139    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+       16    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/core/numeric.py:392(asarray)
+       24    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:220(_retval)
+        4    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:62(__init__)
+       54    0.000    0.000    0.000    0.000 /home/mathias/programming/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+        8    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/StringIO.py:54(__init__)
+        8    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python2.7/cProfile.py:90(create_stats)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python2.7/dist-packages/numpy/lib/index_tricks.py:630(__getitem__)
+        1    0.000    0.000    0.000    0.000 /home/mathias/programming/a
