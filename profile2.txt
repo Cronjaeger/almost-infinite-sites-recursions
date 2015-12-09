@@ -1,0 +1,1258 @@
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_with_a_2_L_4.csv
+[1 1 0 1] 1
+[0 0 0 0] 1
+[1 2 0 0] 1
+[0 0 1 0] 2
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 2, 3]
+  2 non-0-type columns: [1]
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 3: 
+    probability: 0.000000000000000
+    elapsed time: 0.001 sec.
+    config-table size: 1
+
+ Begining of profiler output: 
+         858 function calls in 0.001 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+        4    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+        8    0.000    0.000    0.001    0.000 {map}
+      149    0.001    0.000    0.001    0.000 {sum}
+       32    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+      160    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+      161    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+        5    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+       25    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+      171    0.000    0.000    0.000    0.000 {isinstance}
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+       20    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+        2    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+        8    0.000    0.000    0.000    0.000 {reduce}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        3    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+        4    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+        7    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+        2    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+        6    0.000    0.000    0.000    0.000 {len}
+        2    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+        1    0.000    0.000    0.000    0.000 {hasattr}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 4: 
+    probability: 0.000000000000000
+    elapsed time: 0.002 sec.
+    config-table size: 1
+
+ Begining of profiler output: 
+         858 function calls in 0.002 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+        4    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+        8    0.000    0.000    0.001    0.000 {map}
+       32    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+      149    0.001    0.000    0.001    0.000 {sum}
+      160    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+      161    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+        5    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+       25    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+      171    0.000    0.000    0.000    0.000 {isinstance}
+       20    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+        8    0.000    0.000    0.000    0.000 {reduce}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+        3    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        4    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+        6    0.000    0.000    0.000    0.000 {len}
+        2    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+        7    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 5: 
+    probability: 0.000000137904785
+    elapsed time: 3.351 sec.
+    config-table size: 1170
+
+ Begining of profiler output: 
+         2579248 function calls (2558410 primitive calls) in 3.131 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    3.351    3.351 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+   1556/1    0.038    0.000    3.351    3.351 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+   288214    1.264    0.000    1.483    0.000 {sum}
+     3443    0.133    0.000    1.443    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+     5836    0.017    0.000    1.229    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+    11672    0.025    0.000    1.199    0.000 {map}
+     1556    0.006    0.000    1.123    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+     1170    0.007    0.000    1.094    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+    38004    0.062    0.000    0.946    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+   190020    0.067    0.000    0.884    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+    32969    0.048    0.000    0.764    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+   164845    0.057    0.000    0.716    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    26138    0.055    0.000    0.610    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+   336152    0.469    0.000    0.610    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+    23538    0.043    0.000    0.564    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+7369/2081    0.099    0.000    0.359    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+     1512    0.011    0.000    0.327    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+      386    0.002    0.000    0.320    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+    19442    0.048    0.000    0.223    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+     3024    0.059    0.000    0.222    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+     1512    0.017    0.000    0.167    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+     1182    0.003    0.000    0.159    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+    19442    0.030    0.000    0.150    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+     1182    0.015    0.000    0.138    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+     3762    0.034    0.000    0.101    0.000 {max}
+   511196    0.095    0.000    0.095    0.000 {isinstance}
+   151902    0.075    0.000    0.087    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+    19442    0.006    0.000    0.085    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+15550/1555    0.027    0.000    0.082    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+    19442    0.065    0.000    0.079    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     1555    0.007    0.000    0.064    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+    48847    0.019    0.000    0.057    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+    33761    0.014    0.000    0.040    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+    19442    0.010    0.000    0.035    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+    27689    0.011    0.000    0.033    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+     1555    0.004    0.000    0.032    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+    27689    0.010    0.000    0.032    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+    19442    0.011    0.000    0.026    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+     6932    0.007    0.000    0.024    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+     3908    0.008    0.000    0.023    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      432    0.005    0.000    0.020    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+    24544    0.018    0.000    0.018    0.000 {numpy.core.multiarray.array}
+     7216    0.011    0.000    0.016    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   122553    0.013    0.000    0.013    0.000 {len}
+     1555    0.005    0.000    0.012    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+    11672    0.009    0.000    0.012    0.000 {reduce}
+    15550    0.009    0.000    0.012    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+      570    0.004    0.000    0.011    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+    35488    0.010    0.000    0.010    0.000 {range}
+     1555    0.009    0.000    0.009    0.000 {method '__reduce_ex__' of 'object' objects}
+    15210    0.007    0.000    0.007    0.000 {method 'sort' of 'list' objects}
+    26880    0.007    0.000    0.007    0.000 {method 'index' of 'list' objects}
+     6786    0.005    0.000    0.006    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+    51076    0.006    0.000    0.006    0.000 {method 'append' of 'list' objects}
+     3110    0.004    0.000    0.005    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+     1573    0.002    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+      240    0.002    0.000    0.003    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+    32655    0.003    0.000    0.003    0.000 {method 'get' of 'dict' objects}
+      570    0.001    0.000    0.003    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+    21920    0.003    0.000    0.003    0.000 {method 'remove' of 'list' objects}
+     6220    0.002    0.000    0.002    0.000 {getattr}
+    37320    0.002    0.000    0.002    0.000 {id}
+    14466    0.002    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+     1140    0.002    0.000    0.002    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+      570    0.001    0.000    0.002    0.000 {numpy.core.multiarray.concatenate}
+    11866    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     3642    0.001    0.000    0.001    0.000 {method 'intersection' of 'set' objects}
+     1067    0.001    0.000    0.001    0.000 {filter}
+     4665    0.001    0.000    0.001    0.000 {issubclass}
+     1555    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+     1557    0.001    0.000    0.001    0.000 {hasattr}
+     1555    0.001    0.000    0.001    0.000 {method 'update' of 'dict' objects}
+     7775    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+       43    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+      480    0.000    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+     3908    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+     1555    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+     1203    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+       43    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+     1555    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+     1812    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+      570    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+      120    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+      240    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+      104    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+      409    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+      240    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+      120    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/copy_reg.py:95(_slotnames)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'get' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 6: 
+    probability: 0.000000440812635
+    elapsed time: 60.162 sec.
+    config-table size: 9908
+
+ Begining of profiler output: 
+         44817792 function calls (44508264 primitive calls) in 56.108 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   60.150   60.150 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+  18242/1    0.418    0.000   60.150   60.150 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    61471    3.118    0.000   35.901    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+  4842520   23.372    0.000   27.414    0.000 {sum}
+    18242    0.115    0.000   26.067    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+   744823    1.121    0.000   19.265    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+  3724115    1.292    0.000   18.144    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    64630    0.209    0.000   15.691    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+   129260    0.313    0.000   15.326    0.000 {map}
+     9908    0.078    0.000   15.078    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+   454122    0.775    0.000   12.086    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+  2270610    0.829    0.000   11.311    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+  6029784    8.627    0.000   11.077    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     8334    0.038    0.000    9.227    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+173517/46399    2.481    0.000    8.845    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+   303867    0.692    0.000    7.816    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+   279515    0.553    0.000    7.196    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+    17889    0.134    0.000    4.293    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+   334424    0.843    0.000    3.903    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+    35778    0.749    0.000    2.829    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+   334424    0.518    0.000    2.608    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+    14820    0.038    0.000    2.226    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+    17889    0.211    0.000    2.078    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+    14820    0.205    0.000    1.970    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+  8844099    1.686    0.000    1.686    0.000 {isinstance}
+   334424    0.111    0.000    1.482    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+  2515709    1.267    0.000    1.472    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+    50718    0.501    0.000    1.465    0.000 {max}
+   334424    1.131    0.000    1.371    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+  1026682    0.414    0.000    1.221    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+   876044    0.370    0.000    1.073    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+182410/18241    0.332    0.000    1.002    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+   751699    0.300    0.000    0.909    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+   751699    0.291    0.000    0.891    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+    18241    0.086    0.000    0.772    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+   334424    0.172    0.000    0.607    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+   334424    0.189    0.000    0.452    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+    18241    0.049    0.000    0.383    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+   389426    0.302    0.000    0.302    0.000 {numpy.core.multiarray.array}
+    78748    0.087    0.000    0.274    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+    42970    0.086    0.000    0.261    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+  2534653    0.222    0.000    0.222    0.000 {len}
+     4332    0.056    0.000    0.211    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   690568    0.187    0.000    0.187    0.000 {range}
+    81539    0.129    0.000    0.183    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   662064    0.164    0.000    0.164    0.000 {method 'index' of 'list' objects}
+   308804    0.161    0.000    0.161    0.000 {method 'sort' of 'list' objects}
+   129260    0.110    0.000    0.156    0.000 {reduce}
+    18241    0.055    0.000    0.150    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+   182410    0.110    0.000    0.140    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+     5584    0.043    0.000    0.111    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+    18241    0.109    0.000    0.109    0.000 {method '__reduce_ex__' of 'object' objects}
+  1029951    0.104    0.000    0.104    0.000 {method 'append' of 'list' objects}
+    86496    0.063    0.000    0.082    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+   538152    0.070    0.000    0.070    0.000 {method 'remove' of 'list' objects}
+    18471    0.030    0.000    0.063    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+    36482    0.047    0.000    0.063    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+   383061    0.040    0.000    0.040    0.000 {method 'get' of 'dict' objects}
+    29694    0.027    0.000    0.037    0.000 {filter}
+     2502    0.025    0.000    0.037    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+     5584    0.012    0.000    0.032    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+    72964    0.027    0.000    0.027    0.000 {getattr}
+   174607    0.027    0.000    0.027    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+   437784    0.025    0.000    0.025    0.000 {id}
+    11168    0.017    0.000    0.019    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+   150255    0.019    0.000    0.019    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     5584    0.014    0.000    0.016    0.000 {numpy.core.multiarray.concatenate}
+    18241    0.008    0.000    0.013    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+    18242    0.013    0.000    0.013    0.000 {hasattr}
+    33747    0.013    0.000    0.013    0.000 {method 'intersection' of 'set' objects}
+    54723    0.013    0.000    0.013    0.000 {issubclass}
+    18241    0.010    0.000    0.010    0.000 {method 'update' of 'dict' objects}
+    91205    0.008    0.000    0.008    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+    47771    0.007    0.000    0.007    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+     5004    0.002    0.000    0.006    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+    42970    0.006    0.000    0.006    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+    18241    0.005    0.000    0.005    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+      352    0.003    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+    14904    0.005    0.000    0.005    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+      352    0.001    0.000    0.003    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+    18241    0.003    0.000    0.003    0.000 {method 'iteritems' of 'dict' objects}
+     5584    0.003    0.000    0.003    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+    15690    0.003    0.000    0.003    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+     1251    0.001    0.000    0.002    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+     2502    0.002    0.000    0.002    0.000 {numpy.core.multiarray.empty}
+      928    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+     2502    0.001    0.000    0.001    0.000 {method 'item' of 'numpy.ndarray' objects}
+     1251    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_L_10.csv
+[1 1 0 1] 1
+[1 1 0 0] 1
+[0 0 0 0] 1
+[0 0 1 0] 2
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 3: 
+    probability: 0.000000000000000
+    elapsed time: 0.002 sec.
+    config-table size: 1
+
+ Begining of profiler output: 
+         858 function calls in 0.002 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+        4    0.000    0.000    0.002    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+        8    0.000    0.000    0.002    0.000 {map}
+      149    0.001    0.000    0.002    0.000 {sum}
+       32    0.000    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+      160    0.000    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+      161    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+        5    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+       25    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+      171    0.000    0.000    0.000    0.000 {isinstance}
+       20    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+        8    0.000    0.000    0.000    0.000 {reduce}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+        1    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        3    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        7    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        6    0.000    0.000    0.000    0.000 {len}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+        2    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        4    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 4: 
+    probability: 0.000000027314815
+    elapsed time: 1.206 sec.
+    config-table size: 254
+
+ Begining of profiler output: 
+         569546 function calls (564434 primitive calls) in 1.125 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    1.205    1.205 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+    384/1    0.012    0.000    1.205    1.205 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    62972    0.480    0.000    0.560    0.000 {sum}
+      754    0.043    0.000    0.516    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+     1406    0.006    0.000    0.461    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+     2812    0.009    0.000    0.450    0.000 {map}
+      384    0.002    0.000    0.449    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+     8484    0.021    0.000    0.359    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+    42420    0.026    0.000    0.338    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+      254    0.002    0.000    0.316    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+     7000    0.016    0.000    0.282    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+    35000    0.021    0.000    0.266    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+     5913    0.019    0.000    0.227    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+    71405    0.166    0.000    0.216    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     5383    0.015    0.000    0.215    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+      130    0.001    0.000    0.167    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+ 1767/485    0.034    0.000    0.125    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+      366    0.004    0.000    0.111    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+     4462    0.016    0.000    0.074    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+      732    0.019    0.000    0.074    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+      366    0.006    0.000    0.055    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+      255    0.001    0.000    0.052    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+     4462    0.010    0.000    0.050    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+      255    0.005    0.000    0.046    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+   110941    0.034    0.000    0.034    0.000 {isinstance}
+      795    0.011    0.000    0.034    0.000 {max}
+    33752    0.029    0.000    0.033    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+ 3830/383    0.010    0.000    0.029    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+     4462    0.002    0.000    0.028    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+     4462    0.021    0.000    0.026    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+      383    0.002    0.000    0.023    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+     9730    0.006    0.000    0.019    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+     6897    0.005    0.000    0.014    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+     4462    0.003    0.000    0.012    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+     5935    0.004    0.000    0.012    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+     5935    0.004    0.000    0.012    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+      383    0.001    0.000    0.012    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+     4462    0.004    0.000    0.009    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+     1625    0.002    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+      893    0.002    0.000    0.007    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      108    0.002    0.000    0.007    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+     5685    0.006    0.000    0.006    0.000 {numpy.core.multiarray.array}
+     1715    0.004    0.000    0.005    0.000 {method 'astype' of 'numpy.ndarray' objects}
+      182    0.002    0.000    0.005    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+    27626    0.005    0.000    0.005    0.000 {len}
+      383    0.002    0.000    0.004    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+     3830    0.003    0.000    0.004    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+     2812    0.003    0.000    0.004    0.000 {reduce}
+     7697    0.003    0.000    0.003    0.000 {range}
+      383    0.003    0.000    0.003    0.000 {method '__reduce_ex__' of 'object' objects}
+     5990    0.002    0.000    0.002    0.000 {method 'index' of 'list' objects}
+     3448    0.002    0.000    0.002    0.000 {method 'sort' of 'list' objects}
+     1527    0.002    0.000    0.002    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+    12078    0.002    0.000    0.002    0.000 {method 'append' of 'list' objects}
+      386    0.001    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+      766    0.001    0.000    0.002    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+      182    0.001    0.000    0.002    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+     8043    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+       56    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+      364    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+     5132    0.001    0.000    0.001    0.000 {method 'remove' of 'list' objects}
+     9192    0.001    0.000    0.001    0.000 {id}
+     1532    0.001    0.000    0.001    0.000 {getattr}
+     3101    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+      182    0.001    0.000    0.001    0.000 {numpy.core.multiarray.concatenate}
+     2571    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+      276    0.000    0.000    0.000    0.000 {filter}
+     1149    0.000    0.000    0.000    0.000 {issubclass}
+      384    0.000    0.000    0.000    0.000 {hasattr}
+      727    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+      383    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+       17    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+     1915    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+      383    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+       17    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+      112    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+      893    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      182    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+      383    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+      267    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+      465    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+      383    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+       28    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+       56    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+       37    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+       56    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+      108    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+       28    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 5: 
+    probability: 0.000000041125247
+    elapsed time: 11.820 sec.
+    config-table size: 1956
+
+ Begining of profiler output: 
+         8038274 function calls (7977673 primitive calls) in 11.049 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   11.818   11.818 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+   3724/1    0.088    0.000   11.818   11.818 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    11106    0.574    0.000    6.733    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+   859581    4.472    0.000    5.242    0.000 {sum}
+     3724    0.023    0.000    5.150    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+   125747    0.208    0.000    3.490    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+    13125    0.046    0.000    3.287    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+   628735    0.247    0.000    3.283    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    26250    0.067    0.000    3.208    0.000 {map}
+     1956    0.014    0.000    2.700    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+    86772    0.163    0.000    2.532    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+   433860    0.181    0.000    2.369    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+  1054267    1.741    0.000    2.233    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     1768    0.008    0.000    1.918    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+31779/8408    0.503    0.000    1.828    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+    58232    0.143    0.000    1.628    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+    54790    0.116    0.000    1.513    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+     3618    0.029    0.000    0.885    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+    63735    0.173    0.000    0.804    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+     7236    0.154    0.000    0.585    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+    63735    0.104    0.000    0.537    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+     2787    0.008    0.000    0.439    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+     3618    0.046    0.000    0.437    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+     2787    0.041    0.000    0.386    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+  1586124    0.334    0.000    0.334    0.000 {isinstance}
+   471307    0.266    0.000    0.308    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+    63735    0.023    0.000    0.304    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+     9345    0.097    0.000    0.283    0.000 {max}
+    63735    0.231    0.000    0.281    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+37230/3723    0.075    0.000    0.225    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+   167709    0.074    0.000    0.220    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+   141287    0.066    0.000    0.190    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+     3723    0.019    0.000    0.175    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+   122646    0.054    0.000    0.163    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+   122646    0.052    0.000    0.160    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+    63735    0.036    0.000    0.129    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+    63735    0.039    0.000    0.094    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+     3723    0.011    0.000    0.088    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+    74998    0.063    0.000    0.063    0.000 {numpy.core.multiarray.array}
+    15703    0.018    0.000    0.059    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+     8467    0.018    0.000    0.056    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      918    0.012    0.000    0.047    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   442720    0.044    0.000    0.044    0.000 {len}
+    16433    0.028    0.000    0.040    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   120214    0.035    0.000    0.035    0.000 {range}
+     3723    0.013    0.000    0.034    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+    26250    0.023    0.000    0.033    0.000 {reduce}
+    37230    0.026    0.000    0.032    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+     1462    0.012    0.000    0.031    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+   112686    0.031    0.000    0.031    0.000 {method 'index' of 'list' objects}
+    55872    0.029    0.000    0.029    0.000 {method 'sort' of 'list' objects}
+     3723    0.023    0.000    0.023    0.000 {method '__reduce_ex__' of 'object' objects}
+   188358    0.022    0.000    0.022    0.000 {method 'append' of 'list' objects}
+    16581    0.014    0.000    0.018    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+     3770    0.007    0.000    0.014    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+     7446    0.010    0.000    0.014    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+    96216    0.014    0.000    0.014    0.000 {method 'remove' of 'list' objects}
+    78183    0.009    0.000    0.009    0.000 {method 'get' of 'dict' objects}
+     1462    0.003    0.000    0.009    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+     6952    0.007    0.000    0.009    0.000 {filter}
+      514    0.005    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+    14892    0.006    0.000    0.006    0.000 {getattr}
+    89352    0.006    0.000    0.006    0.000 {id}
+    31982    0.006    0.000    0.006    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+     2924    0.005    0.000    0.005    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+     1462    0.004    0.000    0.005    0.000 {numpy.core.multiarray.concatenate}
+    28540    0.004    0.000    0.004    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     3724    0.003    0.000    0.003    0.000 {hasattr}
+     3723    0.002    0.000    0.003    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+    11169    0.003    0.000    0.003    0.000 {issubclass}
+     6346    0.003    0.000    0.003    0.000 {method 'intersection' of 'set' objects}
+     3723    0.002    0.000    0.002    0.000 {method 'update' of 'dict' objects}
+    18615    0.002    0.000    0.002    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+    12383    0.002    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+      105    0.001    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+     1028    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+     3723    0.001    0.000    0.001    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+     8467    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      105    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+     2838    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+     3723    0.001    0.000    0.001    0.000 {method 'iteritems' of 'dict' objects}
+     1462    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+     2689    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+      257    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+      514    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+      251    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+      514    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+      257    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 6: 
+    probability: 0.000000050035349
+    elapsed time: 110.682 sec.
+    config-table size: 12164
+
+ Begining of profiler output: 
+         82760177 function calls (82220029 primitive calls) in 103.222 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  110.669  110.669 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+  29042/1    0.610    0.000  110.669  110.669 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+   114241    6.031    0.000   72.325    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+    29042    0.220    0.000   52.573    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+  8788749   43.238    0.000   50.685    0.000 {sum}
+  1467609    2.167    0.000   38.615    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+  7338045    2.516    0.000   36.448    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    99288    0.329    0.000   24.873    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+   198576    0.493    0.000   24.298    0.000 {map}
+    12164    0.107    0.000   22.594    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+ 11296350   16.308    0.000   20.796    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+    16878    0.082    0.000   20.621    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+   711877    1.214    0.000   19.133    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+339404/89666    5.058    0.000   18.314    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+  3559385    1.293    0.000   17.919    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+   463473    1.094    0.000   12.349    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+   446980    0.882    0.000   11.456    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+   622566    1.575    0.000    7.207    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+    28329    0.210    0.000    6.820    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+   622566    0.942    0.000    4.794    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+    56658    1.176    0.000    4.418    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+    23364    0.060    0.000    3.625    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+    28329    0.333    0.000    3.237    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+    23364    0.333    0.000    3.225    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+ 16398712    3.126    0.000    3.126    0.000 {isinstance}
+   622566    0.205    0.000    2.732    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+  4594909    2.279    0.000    2.656    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+   622566    2.088    0.000    2.527    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    84414    0.822    0.000    2.397    0.000 {max}
+  2027354    0.799    0.000    2.387    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+  1811853    0.755    0.000    2.216    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+  1546003    0.602    0.000    1.840    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+  1546003    0.587    0.000    1.807    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+290410/29041    0.531    0.000    1.594    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+    29041    0.135    0.000    1.231    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+   622566    0.318    0.000    1.120    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+   622566    0.348    0.000    0.837    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+    29041    0.079    0.000    0.615    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+   706248    0.549    0.000    0.549    0.000 {numpy.core.multiarray.array}
+   121228    0.132    0.000    0.416    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+  4761946    0.394    0.000    0.394    0.000 {len}
+    64570    0.129    0.000    0.388    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+  1306857    0.351    0.000    0.351    0.000 {range}
+  1318814    0.326    0.000    0.326    0.000 {method 'index' of 'list' objects}
+   587470    0.302    0.000    0.302    0.000 {method 'sort' of 'list' objects}
+     6042    0.079    0.000    0.296    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   125966    0.196    0.000    0.277    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   198576    0.175    0.000    0.247    0.000 {reduce}
+    29041    0.087    0.000    0.238    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+   290410    0.176    0.000    0.223    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+  1997434    0.199    0.000    0.199    0.000 {method 'append' of 'list' objects}
+     9628    0.074    0.000    0.191    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+    29041    0.170    0.000    0.170    0.000 {method '__reduce_ex__' of 'object' objects}
+  1064026    0.141    0.000    0.141    0.000 {method 'remove' of 'list' objects}
+   141123    0.100    0.000    0.131    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+    29241    0.048    0.000    0.102    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+    58082    0.075    0.000    0.100    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+    72645    0.066    0.000    0.090    0.000 {filter}
+   609861    0.065    0.000    0.065    0.000 {method 'get' of 'dict' objects}
+     9628    0.020    0.000    0.055    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+     3510    0.034    0.000    0.050    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+   116164    0.043    0.000    0.043    0.000 {getattr}
+   264897    0.041    0.000    0.041    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+   696984    0.041    0.000    0.041    0.000 {id}
+    19256    0.029    0.000    0.033    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+      150    0.001    0.000    0.031    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:172(invisible)
+   248404    0.031    0.000    0.031    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     9628    0.023    0.000    0.028    0.000 {numpy.core.multiarray.concatenate}
+    29041    0.013    0.000    0.022    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+    29042    0.022    0.000    0.022    0.000 {hasattr}
+    87123    0.021    0.000    0.021    0.000 {issubclass}
+   125466    0.018    0.000    0.018    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+    43896    0.016    0.000    0.016    0.000 {method 'intersection' of 'set' objects}
+    29041    0.016    0.000    0.016    0.000 {method 'update' of 'dict' objects}
+   145205    0.013    0.000    0.013    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+    29041    0.009    0.000    0.009    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+     7020    0.003    0.000    0.009    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+      562    0.005    0.000    0.008    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+    23532    0.008    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+    64570    0.008    0.000    0.008    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+    29041    0.006    0.000    0.006    0.000 {method 'iteritems' of 'dict' objects}
+      562    0.001    0.000    0.006    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+    33632    0.005    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+      150    0.002    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:49(p_invisible)
+     9628    0.005    0.000    0.005    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+     1755    0.001    0.000    0.003    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+     3510    0.002    0.000    0.002    0.000 {numpy.core.multiarray.empty}
+     1459    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+     3510    0.001    0.000    0.001    0.000 {method 'item' of 'numpy.ndarray' objects}
+     1755    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+      150    0.000    0.000    0.000    0.000 {numpy.core.multiarray.zeros}
+      170    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:63(<genexpr>)
+      150    0.000    0.000    0.000    0.000 {method 'transpose' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+================================================================================
+Calculations for simulated dataset: hand-crafted/fromHeinsBook_L_10.csv
+[1 1 0 1] 1
+[1 1 0 0] 1
+[0 0 0 0] 1
+[0 0 1 0] 2
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              4
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+ b = 3: 
+    probability: 0.000000000000000
+    elapsed time: 0.002 sec.
+    config-table size: 1
+
+ Begining of profiler output: 
+         858 function calls in 0.001 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+        1    0.000    0.000    0.002    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+        4    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+        8    0.000    0.000    0.001    0.000 {map}
+       32    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+      149    0.001    0.000    0.001    0.000 {sum}
+        1    0.000    0.000    0.001    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+      160    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+       20    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+      161    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+        5    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+       25    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+      171    0.000    0.000    0.000    0.000 {isinstance}
+       20    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+        8    0.000    0.000    0.000    0.000 {reduce}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        3    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+        7    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        2    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+        6    0.000    0.000    0.000    0.000 {len}
+        4    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+        2    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+       12    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 4: 
+    probability: 0.000000027314815
+    elapsed time: 0.723 sec.
+    config-table size: 254
+
+ Begining of profiler output: 
+         569546 function calls (564434 primitive calls) in 0.677 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.722    0.722 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+    384/1    0.009    0.000    0.722    0.722 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+      754    0.029    0.000    0.307    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+    62972    0.261    0.000    0.307    0.000 {sum}
+      384    0.001    0.000    0.263    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+     1406    0.004    0.000    0.262    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+     2812    0.006    0.000    0.255    0.000 {map}
+     8484    0.014    0.000    0.199    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+    42420    0.015    0.000    0.186    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+      254    0.001    0.000    0.181    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+     7000    0.010    0.000    0.156    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+    35000    0.012    0.000    0.146    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    71405    0.101    0.000    0.132    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     5913    0.012    0.000    0.130    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+     5383    0.009    0.000    0.119    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+      130    0.000    0.000    0.099    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+ 1767/485    0.023    0.000    0.083    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+      366    0.003    0.000    0.072    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+     4462    0.011    0.000    0.051    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+      732    0.013    0.000    0.049    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+      366    0.004    0.000    0.038    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+     4462    0.007    0.000    0.035    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+      255    0.001    0.000    0.032    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+      255    0.003    0.000    0.028    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+ 3830/383    0.007    0.000    0.021    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+   110941    0.020    0.000    0.020    0.000 {isinstance}
+      795    0.007    0.000    0.020    0.000 {max}
+     4462    0.002    0.000    0.020    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+    33752    0.017    0.000    0.019    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+     4462    0.015    0.000    0.018    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+      383    0.002    0.000    0.016    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+     9730    0.004    0.000    0.011    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+     6897    0.003    0.000    0.008    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+     4462    0.002    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+      383    0.001    0.000    0.008    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+     5935    0.002    0.000    0.007    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+     5935    0.002    0.000    0.007    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+     4462    0.002    0.000    0.006    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+     1625    0.002    0.000    0.006    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+      893    0.002    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      108    0.001    0.000    0.004    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+     5685    0.004    0.000    0.004    0.000 {numpy.core.multiarray.array}
+     1715    0.003    0.000    0.004    0.000 {method 'astype' of 'numpy.ndarray' objects}
+      182    0.001    0.000    0.003    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+      383    0.001    0.000    0.003    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+    27626    0.003    0.000    0.003    0.000 {len}
+     2812    0.002    0.000    0.003    0.000 {reduce}
+     3830    0.002    0.000    0.003    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+      383    0.002    0.000    0.002    0.000 {method '__reduce_ex__' of 'object' objects}
+     7697    0.002    0.000    0.002    0.000 {range}
+     3448    0.002    0.000    0.002    0.000 {method 'sort' of 'list' objects}
+     5990    0.002    0.000    0.002    0.000 {method 'index' of 'list' objects}
+     1527    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+      766    0.001    0.000    0.001    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+    12078    0.001    0.000    0.001    0.000 {method 'append' of 'list' objects}
+      386    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+      182    0.000    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+     8043    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+       56    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+     5132    0.001    0.000    0.001    0.000 {method 'remove' of 'list' objects}
+      364    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+     1532    0.001    0.000    0.001    0.000 {getattr}
+     9192    0.001    0.000    0.001    0.000 {id}
+      182    0.000    0.000    0.001    0.000 {numpy.core.multiarray.concatenate}
+     3101    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+     2571    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+      276    0.000    0.000    0.000    0.000 {filter}
+      383    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+     1149    0.000    0.000    0.000    0.000 {issubclass}
+      384    0.000    0.000    0.000    0.000 {hasattr}
+      727    0.000    0.000    0.000    0.000 {method 'intersection' of 'set' objects}
+       17    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+      383    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+     1915    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+       17    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+      112    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+      383    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+      893    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      182    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+      267    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+      383    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+      465    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+       28    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+       56    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+       37    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+      108    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+       56    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+       28    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 5: 
+    probability: 0.000000041125247
+    elapsed time: 10.246 sec.
+    config-table size: 1956
+
+ Begining of profiler output: 
+         8038274 function calls (7977673 primitive calls) in 9.581 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   10.244   10.244 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+   3724/1    0.080    0.000   10.244   10.244 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+    11106    0.513    0.000    5.867    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+     3724    0.021    0.000    4.478    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+   859581    3.811    0.000    4.474    0.000 {sum}
+   125747    0.182    0.000    2.995    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+   628735    0.208    0.000    2.813    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    13125    0.041    0.000    2.802    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+    26250    0.060    0.000    2.732    0.000 {map}
+     1956    0.013    0.000    2.305    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+    86772    0.142    0.000    2.146    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+   433860    0.151    0.000    2.004    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+  1054267    1.516    0.000    1.942    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+     1768    0.007    0.000    1.678    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+31779/8408    0.449    0.000    1.625    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+    58232    0.126    0.000    1.391    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+    54790    0.101    0.000    1.282    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+     3618    0.027    0.000    0.770    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+    63735    0.155    0.000    0.718    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+     7236    0.134    0.000    0.510    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+    63735    0.095    0.000    0.479    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+     3618    0.041    0.000    0.384    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+     2787    0.007    0.000    0.381    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+     2787    0.036    0.000    0.334    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+  1586124    0.290    0.000    0.290    0.000 {isinstance}
+    63735    0.020    0.000    0.272    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+   471307    0.228    0.000    0.266    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+    63735    0.209    0.000    0.252    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     9345    0.083    0.000    0.244    0.000 {max}
+37230/3723    0.066    0.000    0.198    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+   167709    0.065    0.000    0.192    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+   141287    0.058    0.000    0.167    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+     3723    0.017    0.000    0.153    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+   122646    0.047    0.000    0.142    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+   122646    0.045    0.000    0.139    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+    63735    0.031    0.000    0.112    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+    63735    0.035    0.000    0.084    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+     3723    0.010    0.000    0.076    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+    74998    0.057    0.000    0.057    0.000 {numpy.core.multiarray.array}
+    15703    0.017    0.000    0.053    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+     8467    0.016    0.000    0.049    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+      918    0.011    0.000    0.040    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   442720    0.039    0.000    0.039    0.000 {len}
+    16433    0.025    0.000    0.035    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   120214    0.031    0.000    0.031    0.000 {range}
+     3723    0.011    0.000    0.030    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+    26250    0.021    0.000    0.029    0.000 {reduce}
+    37230    0.022    0.000    0.028    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+     1462    0.011    0.000    0.028    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+   112686    0.027    0.000    0.027    0.000 {method 'index' of 'list' objects}
+    55872    0.026    0.000    0.026    0.000 {method 'sort' of 'list' objects}
+     3723    0.021    0.000    0.021    0.000 {method '__reduce_ex__' of 'object' objects}
+   188358    0.019    0.000    0.019    0.000 {method 'append' of 'list' objects}
+    16581    0.012    0.000    0.016    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+     3770    0.006    0.000    0.012    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+     7446    0.009    0.000    0.012    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+    96216    0.012    0.000    0.012    0.000 {method 'remove' of 'list' objects}
+     6952    0.006    0.000    0.008    0.000 {filter}
+    78183    0.008    0.000    0.008    0.000 {method 'get' of 'dict' objects}
+     1462    0.003    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+      514    0.005    0.000    0.007    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+    14892    0.005    0.000    0.005    0.000 {getattr}
+    89352    0.005    0.000    0.005    0.000 {id}
+    31982    0.005    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+     2924    0.004    0.000    0.005    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+     1462    0.003    0.000    0.004    0.000 {numpy.core.multiarray.concatenate}
+    28540    0.004    0.000    0.004    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+     3723    0.002    0.000    0.003    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+     3724    0.003    0.000    0.003    0.000 {hasattr}
+    11169    0.003    0.000    0.003    0.000 {issubclass}
+     6346    0.002    0.000    0.002    0.000 {method 'intersection' of 'set' objects}
+     3723    0.002    0.000    0.002    0.000 {method 'update' of 'dict' objects}
+    12383    0.002    0.000    0.002    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+    18615    0.002    0.000    0.002    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+      105    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+     1028    0.000    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+     3723    0.001    0.000    0.001    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+     8467    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      105    0.000    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+     2838    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+     3723    0.001    0.000    0.001    0.000 {method 'iteritems' of 'dict' objects}
+     1462    0.001    0.000    0.001    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+     2689    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+      257    0.000    0.000    0.000    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+      514    0.000    0.000    0.000    0.000 {numpy.core.multiarray.empty}
+      251    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+      514    0.000    0.000    0.000    0.000 {method 'item' of 'numpy.ndarray' objects}
+      257    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ b = 6: 
+    probability: 0.000000050035349
+    elapsed time: 108.605 sec.
+    config-table size: 12164
+
+ Begining of profiler output: 
+         82760177 function calls (82220029 primitive calls) in 101.265 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  108.594  108.594 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:23(prob_External)
+  29042/1    0.598    0.000  108.594  108.594 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:32(prob)
+   114241    5.947    0.000   70.995    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:29(__eq__)
+    29042    0.218    0.000   51.563    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:161(contains)
+  8788749   42.354    0.000   49.683    0.000 {sum}
+  1467609    2.133    0.000   37.867    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:215(count0123)
+  7338045    2.476    0.000   35.734    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:226(<genexpr>)
+    99288    0.325    0.000   24.393    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:21(__hash__)
+   198576    0.485    0.000   23.825    0.000 {map}
+    12164    0.106    0.000   22.215    0.002 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:180(add)
+ 11296350   16.059    0.000   20.457    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:312(__getitem__)
+    16878    0.083    0.000   20.231    0.001 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:174(get_p)
+   711877    1.185    0.000   18.746    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:79(count0123)
+339404/89666    4.958    0.000   18.014    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:237(reconstruction_possible)
+  3559385    1.260    0.000   17.561    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:82(<genexpr>)
+   463473    1.077    0.000   12.105    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<genexpr>)
+   446980    0.871    0.000   11.235    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<genexpr>)
+   622566    1.543    0.000    7.069    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1852(all)
+    28329    0.205    0.000    6.690    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:127(mutation)
+   622566    0.922    0.000    4.706    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:615(all)
+    56658    1.152    0.000    4.330    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:52(hasRow)
+    23364    0.060    0.000    3.558    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:100(rmZeros)
+    28329    0.327    0.000    3.171    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:34(p_mutation)
+    23364    0.328    0.000    3.163    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:49(segregatingColumns)
+ 16398712    3.062    0.000    3.062    0.000 {isinstance}
+   622566    0.198    0.000    2.682    0.000 /usr/lib64/python2.7/site-packages/numpy/core/_methods.py:40(_all)
+  4594909    2.234    0.000    2.602    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:290(__array_finalize__)
+   622566    2.054    0.000    2.483    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    84414    0.802    0.000    2.349    0.000 {max}
+  2027354    0.782    0.000    2.341    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:44(<genexpr>)
+  1811853    0.740    0.000    2.168    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:43(<genexpr>)
+  1546003    0.594    0.000    1.806    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:62(<genexpr>)
+  1546003    0.574    0.000    1.768    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:63(<genexpr>)
+290410/29041    0.516    0.000    1.553    0.000 /usr/lib64/python2.7/copy.py:145(deepcopy)
+    29041    0.132    0.000    1.201    0.000 /usr/lib64/python2.7/copy.py:306(_reconstruct)
+   622566    0.309    0.000    1.102    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:389(_collapse)
+   622566    0.338    0.000    0.819    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:464(asanyarray)
+    29041    0.077    0.000    0.597    0.000 /usr/lib64/python2.7/copy.py:253(_deepcopy_dict)
+   706248    0.539    0.000    0.539    0.000 {numpy.core.multiarray.array}
+   121228    0.128    0.000    0.408    0.000 /usr/lib64/python2.7/site-packages/numpy/matrixlib/defmatrix.py:244(__new__)
+  4761946    0.387    0.000    0.387    0.000 {len}
+    64570    0.126    0.000    0.380    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:14(__init__)
+  1306857    0.341    0.000    0.341    0.000 {range}
+  1318814    0.317    0.000    0.317    0.000 {method 'index' of 'list' objects}
+   587470    0.296    0.000    0.296    0.000 {method 'sort' of 'list' objects}
+     6042    0.077    0.000    0.290    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:58(whichRow)
+   125966    0.193    0.000    0.273    0.000 {method 'astype' of 'numpy.ndarray' objects}
+   198576    0.171    0.000    0.244    0.000 {reduce}
+    29041    0.086    0.000    0.235    0.000 /usr/lib64/python2.7/copy.py:234(_deepcopy_tuple)
+   290410    0.172    0.000    0.218    0.000 /usr/lib64/python2.7/copy.py:267(_keep_alive)
+  1997434    0.194    0.000    0.194    0.000 {method 'append' of 'list' objects}
+     9628    0.071    0.000    0.185    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:251(__getitem__)
+    29041    0.165    0.000    0.165    0.000 {method '__reduce_ex__' of 'object' objects}
+  1064026    0.137    0.000    0.137    0.000 {method 'remove' of 'list' objects}
+   141123    0.099    0.000    0.129    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:1910(isscalar)
+    29241    0.048    0.000    0.101    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:50(<genexpr>)
+    58082    0.073    0.000    0.098    0.000 {method '__deepcopy__' of 'numpy.ndarray' objects}
+    72645    0.065    0.000    0.088    0.000 {filter}
+   609861    0.063    0.000    0.063    0.000 {method 'get' of 'dict' objects}
+     9628    0.019    0.000    0.053    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:970(find_common_type)
+     3510    0.033    0.000    0.048    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:3427(delete)
+   116164    0.042    0.000    0.042    0.000 {getattr}
+   264897    0.041    0.000    0.041    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:26(<lambda>)
+   696984    0.039    0.000    0.039    0.000 {id}
+    19256    0.028    0.000    0.031    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numerictypes.py:949(_can_coerce_all)
+   248404    0.031    0.000    0.031    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:27(<lambda>)
+      150    0.001    0.000    0.030    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:172(invisible)
+     9628    0.023    0.000    0.027    0.000 {numpy.core.multiarray.concatenate}
+    29041    0.013    0.000    0.021    0.000 /usr/lib64/python2.7/copy_reg.py:92(__newobj__)
+    29042    0.021    0.000    0.021    0.000 {hasattr}
+    87123    0.021    0.000    0.021    0.000 {issubclass}
+   125466    0.018    0.000    0.018    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:453(<lambda>)
+    43896    0.016    0.000    0.016    0.000 {method 'intersection' of 'set' objects}
+    29041    0.015    0.000    0.015    0.000 {method 'update' of 'dict' objects}
+   145205    0.013    0.000    0.013    0.000 /usr/lib64/python2.7/copy.py:198(_deepcopy_atomic)
+     7020    0.003    0.000    0.009    0.000 /usr/lib64/python2.7/site-packages/numpy/core/numeric.py:394(asarray)
+    29041    0.008    0.000    0.008    0.000 {built-in method __new__ of type object at 0x7f1566539f60}
+    64570    0.008    0.000    0.008    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:76(validateInput)
+      562    0.005    0.000    0.008    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:28(p_coalesce)
+    23532    0.008    0.000    0.008    0.000 /usr/lib64/python2.7/site-packages/numpy/core/fromnumeric.py:1462(shape)
+    29041    0.005    0.000    0.005    0.000 {method 'iteritems' of 'dict' objects}
+      562    0.001    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurations.py:105(coalesce)
+    33632    0.005    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:444(<lambda>)
+      150    0.002    0.000    0.005    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/probabilities.py:49(p_invisible)
+     9628    0.004    0.000    0.004    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:231(_retval)
+     1755    0.002    0.000    0.003    0.000 {method '__array_wrap__' of 'numpy.ndarray' objects}
+     3510    0.002    0.000    0.002    0.000 {numpy.core.multiarray.empty}
+     1459    0.001    0.000    0.001    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:49(<genexpr>)
+     3510    0.001    0.000    0.001    0.000 {method 'item' of 'numpy.ndarray' objects}
+     1755    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/site-packages/numpy/lib/index_tricks.py:650(__getitem__)
+      150    0.000    0.000    0.000    0.000 {numpy.core.multiarray.zeros}
+      170    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/formula_outline.py:63(<genexpr>)
+      150    0.000    0.000    0.000    0.000 {method 'transpose' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:62(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:84(init)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/StringIO.py:54(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/pstats.py:106(load_stats)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python2.7/cProfile.py:90(create_stats)
+        1    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:154(__init__)
+        1    0.000    0.000    0.000    0.000 /homes/cronjage/Programming/python/almost-infinite-sites-recursions/configurationTable.py:204(get_size)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+ End of profiler output
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 

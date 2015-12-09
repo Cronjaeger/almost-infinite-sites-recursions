@@ -1,0 +1,172 @@
+================================================================================
+Calculations for simulated dataset: hand-crafted/noMutations_N_5_L_4.csv
+[0] 5
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              1
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 4
+      theta = 0.004000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.99171256223203452240
+    log10(probability) : -0.003614
+    elapsed time:        0.001 sec.
+    config-table size:   5
+ b = 2: 
+    probability:          0.99171361308549088598
+    log10(probability) : -0.003614
+    elapsed time:        0.069 sec.
+    config-table size:   58
+ b = 3: 
+    probability:          0.99171368162764195198
+    log10(probability) : -0.003614
+    elapsed time:        0.210 sec.
+    config-table size:   132
+================================================================================
+Calculations for simulated dataset: hand-crafted/noMutations_N_5_L_10.csv
+[0] 5
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              1
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 10
+      theta = 0.010000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.97945151491380177955
+    log10(probability) : -0.009017
+    elapsed time:        0.001 sec.
+    config-table size:   5
+ b = 2: 
+    probability:          0.97945408408678147349
+    log10(probability) : -0.009016
+    elapsed time:        0.067 sec.
+    config-table size:   58
+ b = 3: 
+    probability:          0.97945415152188453067
+    log10(probability) : -0.009016
+    elapsed time:        0.214 sec.
+    config-table size:   132
+================================================================================
+Calculations for simulated dataset: hand-crafted/noMutations_N_5_L_1000.csv
+[0] 5
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              1
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 1000
+      theta = 1.000000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.20000000000000001110
+    log10(probability) : -0.698970
+    elapsed time:        0.001 sec.
+    config-table size:   5
+ b = 2: 
+    probability:          0.20001712746913580254
+    log10(probability) : -0.698933
+    elapsed time:        0.071 sec.
+    config-table size:   58
+ b = 3: 
+    probability:          0.20001713409170024383
+    log10(probability) : -0.698933
+    elapsed time:        0.223 sec.
+    config-table size:   132
+================================================================================
+Calculations for simulated dataset: hand-crafted/noMutations_N_5_L_1000000000.csv
+[0] 5
+Basic statistics:
+ Individuals:             5
+ Haplotypes:              1
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 1000000000
+      theta = 1000000.000000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.00000000000000000000
+    log10(probability) : -22.619793
+    elapsed time:        0.001 sec.
+    config-table size:   5
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -22.619793
+    elapsed time:        0.072 sec.
+    config-table size:   58
+ b = 3: 
+    probability:          0.00000000000000000000
+    log10(probability) : -22.619793
+    elapsed time:        0.231 sec.
+    config-table size:   132
