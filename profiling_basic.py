@@ -58,8 +58,9 @@ csvFileNames = [
 # 'psi__N_16_theta_10pt0000_L_32.csv',\
 # 'psi__N_32_theta_10pt0000_L_2.csv',\
 # 'psi__N_32_theta_10pt0000_L_8.csv',\
-# 'psi__N_32_theta_10pt0000_L_32.csv'\
+# 'psi__N_32_theta_10pt0000_L_32.csv',\
 # 'psi__N_32_theta_1pt0000_L_1024.csv',\
+#
 # 'hand-crafted/fromHeinsBook_L_4.csv',\
 # 'hand-crafted/fromHeinsBook_L_10.csv',\
 # 'hand-crafted/fromHeinsBook_L_1000.csv',\
@@ -72,11 +73,12 @@ csvFileNames = [
 # 'hand-crafted/hammer1995_0123_L_3.csv',\
 # 'hand-crafted/hammer1995_0123_L_10.csv',\
 # 'hand-crafted/hammer1995_0123_L_1000.csv',\
- 'hand-crafted/noMutations_N_5_L_4.csv',\
- 'hand-crafted/noMutations_N_5_L_10.csv',\
- 'hand-crafted/noMutations_N_5_L_1000.csv',\
- 'hand-crafted/noMutations_N_5_L_1000000000.csv',\
+# 'hand-crafted/noMutations_N_5_L_4.csv',\
+# 'hand-crafted/noMutations_N_5_L_10.csv',\
+# 'hand-crafted/noMutations_N_5_L_1000.csv',\
+# 'hand-crafted/noMutations_N_5_L_1000000000.csv',\
  #'hand-crafted/aquardoAndGreenberg_fig1_0123_L_49.csv',\
+ 'hand-crafted/aquardoAndGreenberg_fig1_0123_L_139500000.csv',\
  # 'hand-crafted/WardEtAl1991_0123_L_27.csv',\
 ]
 
@@ -103,7 +105,7 @@ for fileName in csvFileNames:
     filePath = '%s/%s'%(simDataPath,fileName)
 
     L = getL(fileName)
-    
+
     theta = 10**-3 * L
 
     print "="*80
@@ -226,7 +228,7 @@ str(threeTypeColumns))
 #    bPlus_list = [-1,0,1,2]
     bPlus_list = [0,1,2]
     b_list = [segSites + i for i in bPlus_list]
-    
+
 
 #    times = ()
 

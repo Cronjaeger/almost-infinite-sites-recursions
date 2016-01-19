@@ -1,0 +1,1122 @@
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_1pt0000_L_2.csv
+[0] 1
+[3] 1
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              2
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.00033200398935993608
+    log10(probability) : -3.478857
+    elapsed time:        0.003 sec.
+    config-table size:   8
+ b = 2: 
+    probability:          0.00038744843468884089
+    log10(probability) : -3.411786
+    elapsed time:        0.019 sec.
+    config-table size:   21
+ b = 3: 
+    probability:          0.00040594874685100492
+    log10(probability) : -3.391529
+    elapsed time:        0.144 sec.
+    config-table size:   74
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_1pt0000_L_8.csv
+[2] 1
+[0] 1
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              2
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.00032806332409507014
+    log10(probability) : -3.484042
+    elapsed time:        0.003 sec.
+    config-table size:   8
+ b = 2: 
+    probability:          0.00034184111581467134
+    log10(probability) : -3.466176
+    elapsed time:        0.018 sec.
+    config-table size:   21
+ b = 3: 
+    probability:          0.00034299581234526892
+    log10(probability) : -3.464711
+    elapsed time:        0.144 sec.
+    config-table size:   74
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_1pt0000_L_32.csv
+[0] 2
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              1
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.96899224806201544880
+    log10(probability) : -0.013680
+    elapsed time:        0.001 sec.
+    config-table size:   2
+ b = 2: 
+    probability:          0.96899710049600407125
+    log10(probability) : -0.013678
+    elapsed time:        0.016 sec.
+    config-table size:   16
+ b = 3: 
+    probability:          0.96899715260951513329
+    log10(probability) : -0.013677
+    elapsed time:        0.049 sec.
+    config-table size:   33
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_1pt0000_L_2.csv
+[2] 2
+[0] 6
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              2
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.00016562930150716785
+    log10(probability) : -3.780863
+    elapsed time:        0.061 sec.
+    config-table size:   75
+ b = 2: 
+    probability:          0.00017492315238703735
+    log10(probability) : -3.757153
+    elapsed time:        0.275 sec.
+    config-table size:   178
+ b = 3: 
+    probability:          0.00017800316443141806
+    log10(probability) : -3.749572
+    elapsed time:        2.871 sec.
+    config-table size:   975
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_1pt0000_L_8.csv
+[0 2 0] 1
+[3 0 0] 2
+[0 0 0] 4
+[0 0 3] 1
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              4
+ Segregating sites:       3
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2 
+ 0:        
+ 1:        
+ 2:        
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 3: 
+    probability:          0.00000000005094009204
+    log10(probability) : -10.292940
+    elapsed time:        1.348 sec.
+    config-table size:   566
+ b = 4: 
+    probability:          0.00000000005168074945
+    log10(probability) : -10.286671
+    elapsed time:        13.677 sec.
+    config-table size:   3331
+ b = 5: 
+    probability:          0.00000000005173782688
+    log10(probability) : -10.286192
+    elapsed time:        117.740 sec.
+    config-table size:   18571
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_1pt0000_L_32.csv
+[0 0 0 2 0] 6
+[1 2 2 0 2] 2
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              2
+ Segregating sites:       5
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 5
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3, 4]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3  4 
+ 0:              
+ 1:              
+ 2:              
+ 3:              
+ 4:              
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 5: 
+    probability:          0.00000000000000064703
+    log10(probability) : -15.189078
+    elapsed time:        1.837 sec.
+    config-table size:   769
+ b = 6: 
+    probability:          0.00000000000000075088
+    log10(probability) : -15.124427
+    elapsed time:        21.401 sec.
+    config-table size:   5006
+ b = 7: 
+    probability:          0.00000000000000077047
+    log10(probability) : -15.113245
+    elapsed time:        209.981 sec.
+    config-table size:   30610
+================================================================================
+Calculations for simulated dataset: psi__N_16_theta_1pt0000_L_2.csv
+[2] 2
+[0] 14
+Basic statistics:
+ Individuals:             16
+ Haplotypes:              2
+ Segregating sites:       1
+ Incompatible site-pairs: 0
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0 
+ 0:  
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 1: 
+    probability:          0.00016545524161473311
+    log10(probability) : -3.781319
+    elapsed time:        0.144 sec.
+    config-table size:   171
+ b = 2: 
+    probability:          0.00016947727601276895
+    log10(probability) : -3.770889
+    elapsed time:        0.647 sec.
+    config-table size:   402
+ b = 3: 
+    probability:          0.00017079627776760888
+    log10(probability) : -3.767522
+    elapsed time:        6.453 sec.
+================================================================================
+Calculations for simulated dataset: psi__N_16_theta_1pt0000_L_8.csv
+[1 0 0] 2
+[1 0 3] 1
+[1 2 0] 9
+[0 0 0] 4
+Basic statistics:
+ Individuals:             16
+ Haplotypes:              4
+ Segregating sites:       3
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2 
+ 0:        
+ 1:        
+ 2:        
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 3: 
+    probability:          0.00000000000016559872
+    log10(probability) : -12.780943
+    elapsed time:        7.359 sec.
+    config-table size:   4124
+ b = 4: 
+    probability:          0.00000000000025570026
+    log10(probability) : -12.592269
+    elapsed time:        93.489 sec.
+    config-table size:   28112
+b = 5: 
+    probability:          0.00000000000027153165
+    log10(probability) : -12.566180
+    elapsed time:        951.599 sec.
+    config-table size:   180989
+================================================================================
+Calculations for simulated dataset: psi__N_16_theta_1pt0000_L_32.csv
+[0 3] 8
+[0 0] 4
+[2 3] 4
+Basic statistics:
+ Individuals:             16
+ Haplotypes:              3
+ Segregating sites:       2
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 2
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1 
+ 0:     
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000173739469629
+    log10(probability) : -8.760102
+    elapsed time:        3.390 sec.
+    config-table size:   1955
+ b = 3: 
+    probability:          0.00000000187836268518
+    log10(probability) : -8.726221
+    elapsed time:        21.370 sec.
+    config-table size:   7169
+ b = 4: 
+    probability:          0.00000000188318209650
+    log10(probability) : -8.725108
+    elapsed time:        213.060 sec.
+    config-table size:   46755
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_1pt0000_L_2.csv
+[2 0] 4
+[0 0] 25
+[0 2] 3
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              3
+ Segregating sites:       2
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 2
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1 
+ 0:     
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000001547615061990
+    log10(probability) : -7.810337
+    elapsed time:        8.306 sec.
+    config-table size:   3117
+ b = 3: 
+    probability:          0.00000001599008171642
+    log10(probability) : -7.796149
+    elapsed time:        45.809 sec.
+    config-table size:   11212
+ b = 4: 
+    probability:          0.00000001615151710797
+    log10(probability) : -7.791787
+    elapsed time:        442.823 sec.
+    config-table size:   69816
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_1pt0000_L_8.csv
+[3 0] 12
+[2 0] 3
+[0 0] 11
+[0 2] 6
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              4
+ Segregating sites:       2
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [1]
+  2 non-0-type columns: [0]
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1 
+ 0:     
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 3: 
+    probability:          0.00000000000029805243
+    log10(probability) : -12.525707
+    elapsed time:        176.285 sec.
+    config-table size:   50910
+ b = 4: 
+    probability:          0.00000000000030644237
+    log10(probability) : -12.513651
+    elapsed time:        1234.597 sec.
+    config-table size:   213692
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_1pt0000_L_32.csv
+[3 1 0 2 1] 1
+[3 1 0 0 1] 17
+[0 0 0 0 1] 12
+[0 0 1 0 0] 2
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              4
+ Segregating sites:       5
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 5
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3, 4]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3  4 
+ 0:              
+ 1:              
+ 2:              
+ 3:              
+ 4:              
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 5: 
+    probability:          0.00000000000000000006
+    log10(probability) : -19.208205
+    elapsed time:        119.693 sec.
+    config-table size:   54535
+ b = 6: 
+    probability:          0.00000000000000000008
+    log10(probability) : -19.084878
+    elapsed time:        3294.298 sec.
+    config-table size:   776284
+ b = 7: 
+    probability:          0.00000000000000000008
+    log10(probability) : -19.075787
+    elapsed time:        55249.444 sec.
+    config-table size:   7862960
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_10pt0000_L_2.csv
+[2 0] 1
+[1 1] 1
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              2
+ Segregating sites:       2
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [1]
+  2 non-0-type columns: [0]
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1 
+ 0:     
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 3: 
+    probability:          0.00000011063081333040
+    log10(probability) : -6.956124
+    elapsed time:        0.080 sec.
+    config-table size:   62
+ b = 4: 
+    probability:          0.00000024593467273450
+    log10(probability) : -6.609180
+    elapsed time:        0.454 sec.
+    config-table size:   154
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_10pt0000_L_8.csv
+[0 0 1 0] 1
+[2 3 1 1] 1
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              2
+ Segregating sites:       4
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 4
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3 
+ 0:           
+ 1:           
+ 2:           
+ 3:           
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 4: 
+    probability:          0.00000000005381277231
+    log10(probability) : -10.269115
+    elapsed time:        0.108 sec.
+    config-table size:   105
+ b = 5: 
+    probability:          0.00000000009901477229
+    log10(probability) : -10.004300
+    elapsed time:        1.223 sec.
+    config-table size:   441
+ b = 6: 
+    probability:          0.00000000014528108563
+    log10(probability) : -9.837791
+    elapsed time:        7.884 sec.
+    config-table size:   1422
+================================================================================
+Calculations for simulated dataset: psi__N_2_theta_10pt0000_L_32.csv
+[0 1 0 0 0 0] 1
+[2 0 3 1 1 1] 1
+Basic statistics:
+ Individuals:             2
+ Haplotypes:              2
+ Segregating sites:       6
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 6
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3, 4, 5]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3  4  5 
+ 0:                 
+ 1:                 
+ 2:                 
+ 3:                 
+ 4:                 
+ 5:                 
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 6: 
+    probability:          0.00000000000000001783
+    log10(probability) : -16.748970
+    elapsed time:        0.862 sec.
+    config-table size:   294
+ b = 7: 
+    probability:          0.00000000000000002225
+    log10(probability) : -16.652706
+    elapsed time:        7.721 sec.
+    config-table size:   1237
+ b = 8: 
+    probability:          0.00000000000000002346
+    log10(probability) : -16.629720
+    elapsed time:        40.564 sec.
+    config-table size:   3929
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_10pt0000_L_2.csv
+[0 1] 1
+[1 2] 1
+[0 0] 1
+[3 1] 2
+[2 1] 1
+[2 2] 2
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              6
+ Segregating sites:       2
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 1
+
+  1 non-0-type columns: []
+  2 non-0-type columns: [1]
+  3 non-0-type columns: [0]
+
+Incompatibility-table:
+    0  1 
+ 0:     
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 3: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 4: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_10pt0000_L_8.csv
+[3 2 0 3 0 3 0] 1
+[1 0 3 0 0 0 0] 1
+[0 0 1 0 0 1 0] 1
+[0 1 3 2 0 0 2] 2
+[0 1 3 2 1 0 2] 1
+[1 2 1 3 0 0 1] 1
+[2 0 2 0 1 0 0] 1
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              7
+ Segregating sites:       7
+ Incompatible site-pairs: 14 (67%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 1
+  2 non-0-type-columns count: 4
+  3 non-0-type-columns count: 2
+
+  1 non-0-type columns: [4]
+  2 non-0-type columns: [1, 3, 5, 6]
+  3 non-0-type columns: [0, 2]
+
+Incompatibility-table:
+    0  1  2  3  4  5  6 
+ 0:    x  x  x  x  x  x
+ 1:       x     x  x   
+ 2:          x     x   
+ 3:             x  x   
+ 4:                   x
+ 5:                    
+ 6:                    
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 7: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.003 sec.
+    config-table size:   1
+ b = 8: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.003 sec.
+    config-table size:   1
+ b = 9: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.003 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_8_theta_10pt0000_L_32.csv
+[0 0 0 3 0 2 1 1 0 0 3 0 0 0 0] 1
+[2 0 2 0 1 0 0 0 3 2 0 2 3 1 1] 2
+[2 2 2 0 1 0 0 0 2 2 0 2 3 0 1] 5
+Basic statistics:
+ Individuals:             8
+ Haplotypes:              3
+ Segregating sites:       15
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 14
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14]
+  2 non-0-type columns: [8]
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2  3  4  5  6  7  8  9  10 11 12 13 14
+ 0:                                            
+ 1:                                            
+ 2:                                            
+ 3:                                            
+ 4:                                            
+ 5:                                            
+ 6:                                            
+ 7:                                            
+ 8:                                            
+ 9:                                            
+10:                                            
+11:                                            
+12:                                            
+13:                                            
+14:                                            
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 32
+      theta = 0.032000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 15: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.003 sec.
+    config-table size:   1
+ b = 16: 
+    probability:          0.00000000000000000000
+    log10(probability) : -38.529667
+    elapsed time:        755.658 sec.
+    config-table size:   60726
+ b = 17: 
+    probability:          0.00000000000000000000
+    log10(probability) : -38.150119
+    elapsed time:        19944.629 sec.
+    config-table size:   1085327
+================================================================================
+Calculations for simulated dataset: psi__N_16_theta_10pt0000_L_2.csv
+[0 1] 1
+[1 3] 5
+[3 3] 1
+[2 1] 1
+[2 3] 1
+[2 2] 2
+[1 0] 5
+Basic statistics:
+ Individuals:             16
+ Haplotypes:              7
+ Segregating sites:       2
+ Incompatible site-pairs: 1 (100%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 2
+
+  1 non-0-type columns: []
+  2 non-0-type columns: []
+  3 non-0-type columns: [0, 1]
+
+Incompatibility-table:
+    0  1 
+ 0:    x
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 3: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 4: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_16_theta_10pt0000_L_8.csv
+[2 2 3 3 0 0 3 2] 1
+[0 0 0 1 2 1 0 3] 4
+[0 0 3 0 2 1 0 0] 2
+[0 0 0 0 2 0 1 0] 1
+[0 0 0 2 0 0 0 0] 1
+[3 0 0 0 2 1 0 0] 1
+[0 2 2 1 0 0 3 2] 2
+[2 2 2 3 0 0 3 2] 3
+[0 2 2 0 2 0 0 2] 1
+Basic statistics:
+ Individuals:             16
+ Haplotypes:              9
+ Segregating sites:       8
+ Incompatible site-pairs: 23 (82%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 4
+  3 non-0-type-columns count: 1
+
+  1 non-0-type columns: [1, 4, 5]
+  2 non-0-type columns: [0, 2, 6, 7]
+  3 non-0-type columns: [3]
+
+Incompatibility-table:
+    0  1  2  3  4  5  6  7 
+ 0:    x  x  x  x  x  x  x
+ 1:          x  x     x   
+ 2:          x  x  x  x  x
+ 3:             x  x  x  x
+ 4:                   x  x
+ 5:                      x
+ 6:                      x
+ 7:                       
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 8: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.005 sec.
+    config-table size:   1
+ b = 9: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.004 sec.
+    config-table size:   1
+ b = 10: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.004 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_10pt0000_L_2.csv
+[0 0] 3
+[3 3] 2
+[3 1] 8
+[2 1] 1
+[1 1] 1
+[1 3] 1
+[2 3] 7
+[1 0] 5
+[0 3] 4
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              9
+ Segregating sites:       2
+ Incompatible site-pairs: 1 (100%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 0
+  2 non-0-type-columns count: 1
+  3 non-0-type-columns count: 1
+
+  1 non-0-type columns: []
+  2 non-0-type columns: [1]
+  3 non-0-type columns: [0]
+
+Incompatibility-table:
+    0  1 
+ 0:    x
+ 1:     
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 2
+      theta = 0.002000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 2: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 3: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+ b = 4: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.001 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_10pt0000_L_8.csv
+[0 2 0 0 2 0 1 3] 2
+[0 0 2 3 3 3 1 3] 1
+[0 3 2 3 3 3 1 0] 2
+[0 3 2 0 3 3 0 3] 1
+[1 3 3 1 1 3 2 3] 2
+[1 3 3 3 1 3 2 2] 1
+[0 3 2 3 3 3 1 1] 1
+[0 3 2 0 3 3 1 3] 11
+[1 3 3 3 1 3 2 1] 4
+[0 3 2 3 3 3 1 3] 6
+[1 1 1 0 1 3 0 1] 1
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              11
+ Segregating sites:       8
+ Incompatible site-pairs: 13 (46%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 2
+  2 non-0-type-columns count: 2
+  3 non-0-type-columns count: 4
+
+  1 non-0-type columns: [0, 5]
+  2 non-0-type columns: [3, 6]
+  3 non-0-type columns: [1, 2, 4, 7]
+
+Incompatibility-table:
+    0  1  2  3  4  5  6  7 
+ 0:          x        x   
+ 1:       x  x     x  x  x
+ 2:                   x  x
+ 3:                      x
+ 4:                       
+ 5:                   x  x
+ 6:                      x
+ 7:                       
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 8
+      theta = 0.008000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 8: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.005 sec.
+    config-table size:   1
+ b = 9: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.005 sec.
+    config-table size:   1
+ b = 10: 
+    probability:          0.00000000000000000000
+    log10(probability) : -inf
+    elapsed time:        0.005 sec.
+    config-table size:   1
+================================================================================
+Calculations for simulated dataset: psi__N_32_theta_1pt0000_L_1024.csv
+[0 0 0] 28
+[2 0 0] 1
+[0 3 1] 3
+Basic statistics:
+ Individuals:             32
+ Haplotypes:              3
+ Segregating sites:       3
+ Incompatible site-pairs: 0 (0%)
+
+ Excess mutation-statistics:
+  1 non-0-type-columns count: 3
+  2 non-0-type-columns count: 0
+  3 non-0-type-columns count: 0
+
+  1 non-0-type columns: [0, 1, 2]
+  2 non-0-type columns: []
+  3 non-0-type columns: []
+
+Incompatibility-table:
+    0  1  2 
+ 0:        
+ 1:        
+ 2:        
+
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+Benchmarks
+  Presumptions:
+      L     = 1024
+      theta = 1.024000
+      P(i,j) = 1/3 * int(i!=j) 
+ b = 3: 
+    probability:          0.00000000000029000819
+    log10(probability) : -12.537590
+    elapsed time:        5.168 sec.
+    config-table size:   4255
+ b = 4: 
+    probability:          0.00000000000029030093
+    log10(probability) : -12.537152
+    elapsed time:        72.642 sec.
+    config-table size:   27212
+ b = 5: 
+    probability:          0.00000000000029043566
+    log10(probability) : -12.536950
+    elapsed time:        688.595 sec.
+    config-table size:   155810
