@@ -9,8 +9,70 @@ Created on Mon Jun  1 14:24:30 2015
 
 import numpy as np
 
-class configuration(object):
+class configuration_new(object):
 
+    def __init__(self,S,nR,nC):
+        validateInput(S,nR,nC)
+        self.S = np.matrix(S)
+        self.nR = np.array(nR)
+        self.nC = np.array(nC)
+        self.rows = len(nR)
+        self.columns = len(nC)
+
+
+    def __hash__(self):
+        ## x ^ y returns bitwise xor of integers x and y
+        #nHash = hash(tuple(i for i in np.sort(self.n)))
+#        if len(self.S.shape) < 2:
+#        try:
+        rowHash    = reduce(lambda x,y: x ^ y, map(hash,(count0123([self.S[i,j] for j in xrange(self.S.shape[1])]) + (self.nR[i],) for i in xrange(self.S.shape[0]))))
+        columnHash = reduce(lambda x,y: x ^ y, map(hash,(count0123([self.S[i,j] for i in xrange(self.S.shape[0])]) + (self.nC[j],) for j in xrange(self.S.shape[1]))))
+        return rowHash ^ columnHash
+#        except:
+#            print "WTF!"
+#            print self
+#            return hash(sum(self.S)) ^ hash(sum(self.n))
+
+    def __str__(self):
+#        return "S =\n %s\nn = \n %s"%(str(self.S),str(self.n))
+        lines = []
+        rowCounts = rowToString(self.nC,sepChar = " ", f = lambda x: str(x))
+        rowCountsSep = "="*len(rowCounts)
+        lines += [rowCounts, rowCountsSep]
+        for i in xrange(self.S.shape[0]):
+#            for j in xrange(self.n[i]):
+#                lines.append(rowToString([self.S[i,j] for j in xrange(self.S.shape[1])]))
+            lines.append(rowToString([self.S[i,j] for j in xrange(self.S.shape[1])]) + " ||  %i"%self.nR[i])
+        return "\n".join(lines)
+
+    def __repr__(self):
+        return "%s\n(%r)" % (self.__class__, self.__dict__)
+
+    def nullColumns(self):
+        #give all indices of columns that are 0
+        return [j for j in range(self.L) if max(self.S[:,j]) == 0]
+
+    def segregatingColumns(self):
+        return [j for j in range(self.L) if max(self.S[:,j]) != 0]
+
+    def hasRow(self,new_row):
+        for row in self.S:
+            if np.all(new_row == row):
+                return True
+        return False
+
+    def whichRow(self,new_row):
+        for i,row in enumerate(self.S):
+            if np.all(new_row == row):
+                return i
+        return 0
+
+class configuration(object):
+    """
+    OLD and depricated version of configuration. Kept in its current state so that
+    old code won't be broken. New code relies on new version (which counts rows with
+    multiplicity)
+    """
     def __init__(self,S,n):
         validateInput(S,n)
         self.S = np.matrix(S)
@@ -31,14 +93,16 @@ class configuration(object):
 #            print self
 #            return hash(sum(self.S)) ^ hash(sum(self.n))
 
+
     def __str__(self):
 #        return "S =\n %s\nn = \n %s"%(str(self.S),str(self.n))
         rowStrings = []
         for i in xrange(self.S.shape[0]):
 #            for j in xrange(self.n[i]):
 #                rowStrings.append(rowToString([self.S[i,j] for j in xrange(self.S.shape[1])]))
-            rowStrings.append(rowToString([self.S[i,j] for j in xrange(self.S.shape[1])]) + " x %i"%self.n[i])
+            rowStrings.append(rowToString([self.S[i,j] for j in xrange(self.S.shape[1])]) + " x %i"%self.nR[i])
         return "\n".join(rowStrings)
+
     def __repr__(self):
         return "%s\n(%r)" % (self.__class__, self.__dict__)
 
@@ -76,6 +140,10 @@ class configuration(object):
 def validateInput(S,n):
     pass
 
+def validateInput(S,nR,nC):
+    if S.shape != nR.shape + nC.shape:
+        raise Exception("S.shape != nR.shape + nC.shape")
+
 def count0123(vec):
     # input a collection "vec" of numbers in {0,1,2,3,4}
     #returns a tuple (x0,x1,x2,x3,x4), s.t. xi == count(eintries in x == i)
@@ -102,13 +170,21 @@ def rmZeros(phi):
         new_S = phi.S[:,phi.segregatingColumns()]
         return configuration(S=new_S,n=phi.n)
 
+# def coalesce(phi,i):
+#     if phi.n[i] < 2:
+#         raise ValueError("cannot coalesce, since n[%i] < 2."%i)
+#     else:
+#         n_new=phi.n
+#         n_new[i]=phi.n[i]-1
+#         return configuration(S = phi.S, n=n_new)
 def coalesce(phi,i):
-    if phi.n[i] < 2:
-        raise ValueError("cannot coalesce, since n[%i] < 2."%i)
+    if phi.nR[i] < 2:
+        raise ValueError("cannot coalesce, since nR[%i] < 2."%i)
     else:
-        n_new=phi.n
-        n_new[i]=phi.n[i]-1
-        return configuration(S = phi.S, n=n_new)
+        n_new=phi.nR
+        n_new[i]=phi.nR[i]-1
+        return configuration_new(S = phi.S, nR=n_new, nC = phi.nC)
+
 
 def nucleotideToChar(x):
     if x == 0:
@@ -120,9 +196,107 @@ def nucleotideToChar(x):
     if x == 3:
         return "x"
 
-def rowToString(row,width=1):
-    sep = "-"*width
-    return sep+sep.join(map(nucleotideToChar,row))+sep
+def rowToString(row,width=1,sepChar = " ",f = nucleotideToChar):
+    sep = sepChar*width
+    return sep+sep.join(map(f,row))+sep
+
+def mutation_new(phi,i,j,X):
+    """
+    Input:
+    phi = (S,nR,nC) -- a configutation
+    i,j = row/column index of mutation
+    X   = Nucleotide after mutation -- encoded as integer in {0,1,2,3}
+
+    Output:
+    phiNew = configuration after applying mutation
+    Nr = Combinatorial row-coefficient
+    Nc = ocmbinatorial column-coeffiecient
+    """
+
+    VERBOSE = False
+    # If set to True, the state after each step will be prited.
+
+    if phi.S[i,j] == X:
+        return phi,phi.nR[i],phi.nC[j]
+
+    Nr, Nc = 1,1
+    nR_new = np.array(tuple(phi.nR)+(1,))
+    nR_new[i] = nR_new[i] - 1
+    nC_new = np.array(tuple(phi.nC)+(1,))
+    nC_new[j] = nC_new[j] - 1
+
+    newRow = np.c_[phi.S[i,:], X]
+    S_withExtraCol = np.c_[phi.S,phi.S[:,j]]
+    S_new = np.vstack([S_withExtraCol,newRow])
+
+    if VERBOSE:
+        print "After step 1"
+        print S_new
+        print nR_new
+        print nC_new
+        print ""
+
+    #Check if old rows and columns have multiplicity 0, and if so, delete them
+    if nR_new[i] == 0:
+        otherRows = [k for k in range(S_new.shape[0]) if k != i]
+        S_new = S_new[ otherRows , :]
+        nR_new = nR_new[otherRows]
+
+    if VERBOSE:
+        print "After step 2.1 (remove rows w multiplicity 0)"
+        print S_new
+        print nR_new
+        print nC_new
+        print ""
+
+    if nC_new[j] == 0:
+        otherColumns = [l for l in range(S_new.shape[1]) if l != j]
+        S_new = S_new[ : , otherColumns]
+        nC_new = nC_new[otherColumns]
+
+    if VERBOSE:
+        print "After step 2.2 (remove cols w. multiplicity 0)"
+        print S_new
+        print nR_new
+        print nC_new
+        print ""
+
+    #Check if new rows/columns already exist, and if so remove them and update mutiplicities
+    k = firstRowMatch(S_new,S_new[-1])
+    if k < S_new.shape[0] - 1:
+        if VERBOSE:
+            print "Step 3.1 carried out"
+        S_new = S_new[:-1,:]
+        nR_new = nR_new[:-1]
+        nR_new[k] += 1
+        Nr = nR_new[k]
+
+    if VERBOSE:
+        print "After step 3.1 (merge identical rows)"
+        print S_new
+        print nR_new
+        print nC_new
+        print ""
+
+    l = firstColumnMatch(S_new,S_new[:,-1])
+    if l < S_new.shape[1] -1:
+        if VERBOSE:
+            print "step 3.2 carried out"
+            print "l = %i"%l
+        S_new = S_new[:,:-1]
+        nC_new = nC_new[:-1]
+        nC_new[l] += 1
+        Nc = nC_new[l]
+
+    if VERBOSE:
+        print "After step 3.2 (merge identical columns)"
+        print S_new
+        print nR_new
+        print nC_new
+        print ""
+
+    phiNew = configuration_new(S_new,nR_new,nC_new)
+    return phiNew, Nr, Nc
 
 def mutation(phi,i,j,k):
     #TODO: Validate input
@@ -168,6 +342,21 @@ def mutation(phi,i,j,k):
             n_new = phi.n - np.array([ int(l==i) for l in range(len(phi.n))])
             n_new = np.r_[n_new,1]
             return configuration(S = new_S, n = n_new)
+
+def hasRow(S,new_row):
+    for row in S:
+        if np.all(new_row == row):
+            return True
+    return False
+
+def firstRowMatch(S,new_row):
+    for i,row in enumerate(S):
+        if np.all(new_row == row):
+            return i
+    return False
+
+def firstColumnMatch(S,new_column):
+    return firstRowMatch(np.transpose(S),np.transpose(new_column))
 
 def invisible(phi,i,k):
     #TODO: Validate input

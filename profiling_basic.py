@@ -10,8 +10,8 @@ import formula_outline as fo
 #import simulation-code from coalescent-simulations
 # CHANGE THE VALUE OF THE BELOW VARIABLE TO WHERE COALESCENT-SIMULATIONS
 # HAS BEEN INSTALLED
-#coalescentSimulationsPath = '/home/mathias/programming/coalescent-simulations/'
-coalescentSimulationsPath = '/homes/cronjage/Programming/python/coalescent-simulations'
+coalescentSimulationsPath = '/home/mathias/programming/coalescent-simulations/'
+#coalescentSimulationsPath = '/homes/cronjage/Programming/python/coalescent-simulations'
 sys.path.insert(0,coalescentSimulationsPath)
 import finiteSitesModell_investigations as fsmi
 from psiFromCSV import psiFromCSV
@@ -28,8 +28,8 @@ def mylog10(x):
 # Import datasets to be analyzed below:
 #
 
-#simDataPath = '/home/mathias/programming/coalescent-simulations/simData'
-simDataPath = '/homes/cronjage/Programming/python/coalescent-simulations/simData'
+simDataPath = '/home/mathias/programming/coalescent-simulations/simData'
+#simDataPath = '/homes/cronjage/Programming/python/coalescent-simulations/simData'
 #Path for where simulated data is stored. Format should be as outlined in
 # comments of psiFromCSV.py (in coalescent-simulations-module)
 
@@ -75,10 +75,10 @@ csvFileNames = [
 # 'hand-crafted/hammer1995_0123_L_1000.csv',\
 # 'hand-crafted/noMutations_N_5_L_4.csv',\
 # 'hand-crafted/noMutations_N_5_L_10.csv',\
-# 'hand-crafted/noMutations_N_5_L_1000.csv',\
+ 'hand-crafted/noMutations_N_5_L_1000.csv',\
 # 'hand-crafted/noMutations_N_5_L_1000000000.csv',\
  #'hand-crafted/aquardoAndGreenberg_fig1_0123_L_49.csv',\
- 'hand-crafted/aquardoAndGreenberg_fig1_0123_L_139500000.csv',\
+# 'hand-crafted/aquardoAndGreenberg_fig1_0123_L_139500000.csv',\
  # 'hand-crafted/WardEtAl1991_0123_L_27.csv',\
 ]
 

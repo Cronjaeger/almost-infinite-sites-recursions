@@ -5,10 +5,10 @@ Created on Mon Jun  1 17:01:15 2015
 @author: mathias, alejandra
 """
 
-from configurations import configuration, sortRows, sortColumns
+from configurations import configuration, configuration_new, sortRows, sortColumns
 import numpy as np
 
-class node(configuration):
+class node(configuration_new):
 
 #    def __cmp__(self,other):
 #        #returnrn 1 if self > other, 0 if self==other, -1 if self < other
@@ -32,7 +32,7 @@ class node(configuration):
 #            if self.b != other.b:
 #                return False
 
-        if isinstance(other,node) or isinstance(other,configuration):
+        if isinstance(other,node) or isinstance(other,configuration_new):
 
             #for bug-checking. Set to false when deploying
             Verbose = False
@@ -40,8 +40,8 @@ class node(configuration):
             #Step 1: verify that row-counts match (up to reordering of rows).
 #            extended_rows_self  = [count0123(s) + (self.n[i],) for i,s in enumerate(self.S) ]
 #            extended_rows_other = [count0123(s)+(other.n[i],) for i,s in enumerate(other.S)]
-            extended_rows_self  = [count0123(tuple(self.S[i,j] for j in range(self.S.shape[1]))) + (self.n[i],) for i in range(self.S.shape[0]) ]
-            extended_rows_other = [count0123(tuple(other.S[i,j] for j in range(other.S.shape[1]))) + (other.n[i],) for i in range(other.S.shape[0]) ]
+            extended_rows_self  = [count0123(tuple(self.S[i,j] for j in range(self.S.shape[1]))) + (self.nR[i],) for i in range(self.S.shape[0]) ]
+            extended_rows_other = [count0123(tuple(other.S[i,j] for j in range(other.S.shape[1]))) + (other.nR[i],) for i in range(other.S.shape[0]) ]
             extended_rows_self_sorted  = list(extended_rows_self)
             extended_rows_other_sorted = list(extended_rows_other)
 #            if True:
@@ -59,8 +59,8 @@ class node(configuration):
             #Step 2: verify that column-counts match up to reordering of columns.
 #            extended_columns_self  = [count0123(c) for c in self.S.T ]
 #            extended_columns_other = [count0123(c) for c in other.S.T]
-            extended_columns_self  = [count0123(tuple(self.S[i,j] for i in xrange(self.S.shape[0]))) for j in range(self.S.shape[1]) ]
-            extended_columns_other = [count0123(tuple(other.S[i,j] for i in xrange(self.S.shape[0]))) for j in range(self.S.shape[1])]
+            extended_columns_self  = [count0123(tuple(self.S[i,j] for i in xrange(self.S.shape[0]))) + (self.nC[j],) for j in range(self.S.shape[1]) ]
+            extended_columns_other = [count0123(tuple(other.S[i,j] for i in xrange(self.S.shape[0]))) + (other.nC[j],) for j in range(self.S.shape[1])]
             extended_columns_self_sorted  = list(extended_columns_self)
             extended_columns_other_sorted = list(extended_columns_other)
             extended_columns_self_sorted.sort()
@@ -120,6 +120,98 @@ class node(configuration):
         else:
             return NotImplemented
 
+
+###
+# OLD VERSION BELOW
+###
+#         if isinstance(other,node) or isinstance(other,configuration):
+#
+#             #for bug-checking. Set to false when deploying
+#             Verbose = False
+#
+#             #Step 1: verify that row-counts match (up to reordering of rows).
+# #            extended_rows_self  = [count0123(s) + (self.n[i],) for i,s in enumerate(self.S) ]
+# #            extended_rows_other = [count0123(s)+(other.n[i],) for i,s in enumerate(other.S)]
+#             extended_rows_self  = [count0123(tuple(self.S[i,j] for j in range(self.S.shape[1]))) + (self.n[i],) for i in range(self.S.shape[0]) ]
+#             extended_rows_other = [count0123(tuple(other.S[i,j] for j in range(other.S.shape[1]))) + (other.n[i],) for i in range(other.S.shape[0]) ]
+#             extended_rows_self_sorted  = list(extended_rows_self)
+#             extended_rows_other_sorted = list(extended_rows_other)
+# #            if True:
+# #                print extended_rows_self_sorted
+# #                print [count0123(s.flat) + (self.n[i],) for i,s in enumerate(self.S) ]
+# #                print extended_rows_other
+#             extended_rows_self_sorted.sort()
+#             extended_rows_other_sorted.sort()
+#
+#
+#             if not extended_rows_self_sorted == extended_rows_other_sorted:
+#                 if Verbose : print "Rows do not match!"
+#                 return False
+#
+#             #Step 2: verify that column-counts match up to reordering of columns.
+# #            extended_columns_self  = [count0123(c) for c in self.S.T ]
+# #            extended_columns_other = [count0123(c) for c in other.S.T]
+#             extended_columns_self  = [count0123(tuple(self.S[i,j] for i in xrange(self.S.shape[0]))) for j in range(self.S.shape[1]) ]
+#             extended_columns_other = [count0123(tuple(other.S[i,j] for i in xrange(self.S.shape[0]))) for j in range(self.S.shape[1])]
+#             extended_columns_self_sorted  = list(extended_columns_self)
+#             extended_columns_other_sorted = list(extended_columns_other)
+#             extended_columns_self_sorted.sort()
+#             extended_columns_other_sorted.sort()
+#
+#             if not extended_columns_self_sorted == extended_columns_other_sorted:
+#                 if Verbose : print "Columns do not match!"
+#                 return False
+#
+#             #Step 3: if all row and and column counts match, attempt to
+#             #        reconstruct. Permutations of rows and columns. Based on
+#             #        backtracking.
+#
+#             #work out row and column blocks of self and other.
+#             # The basic idea is simple. If self and other are equivalent, then
+#             # any permutation of rows which can turn other into self must
+#             # satisfy: any element of row_blocks_other[i] is mapped to an
+#             # element of row_blocks_self[i]
+#             extended_rows_no_duplicates = list(set(extended_rows_self))
+#             extended_rows_no_duplicates.sort()
+#             n_row_blocks = len(extended_rows_no_duplicates)
+#             row_blocks_self  = [ [] for i in xrange(n_row_blocks)]
+#             row_blocks_other = [ [] for i in xrange(n_row_blocks)]
+#             for i in xrange(self.S.shape[0]):
+#                 row_blocks_self[ extended_rows_no_duplicates.index(extended_rows_self[i]) ].append(i)
+#                 row_blocks_other[extended_rows_no_duplicates.index(extended_rows_other[i])].append(i)
+#             row_blocks_self  = [ tuple(l) for l in row_blocks_self ]
+#             row_blocks_other = [ tuple(l) for l in row_blocks_other]
+#
+#             # We now do the same thing for the columns of self and other
+#             extended_columns_no_duplicates = list(set(extended_columns_self))
+#             extended_columns_no_duplicates.sort()
+#             n_column_blocks = len(extended_columns_no_duplicates)
+#             column_blocks_self  = [ [] for i in xrange(n_column_blocks)]
+#             column_blocks_other = [ [] for i in xrange(n_column_blocks)]
+#             for i in xrange(self.S.shape[1]):
+#                 column_blocks_self[ extended_columns_no_duplicates.index(extended_columns_self[i]) ].append(i)
+#                 column_blocks_other[extended_columns_no_duplicates.index(extended_columns_other[i])].append(i)
+#             column_blocks_self  = [ tuple(l) for l in column_blocks_self ]
+#             column_blocks_other = [ tuple(l) for l in column_blocks_other]
+#
+#             S_s = self.S
+#             S_o = other.S
+#
+#             if Verbose :
+#                 print row_blocks_self,"\n",row_blocks_other
+#                 print column_blocks_self,"\n",column_blocks_other
+#                 for i in range(len(row_blocks_other)):
+#                     print i,np.all(S_s[row_blocks_self[i][0]] == S_o[row_blocks_other[i][0]])
+#
+#             return reconstruction_possible(self.S,other.S,row_blocks_self,row_blocks_other,column_blocks_self,column_blocks_other)
+#
+# #            self.sort()
+# #            other.sort()
+# #            return np.all(self.S == other.S) and np.all(self.n == other.n)
+#
+#         else:
+#             return NotImplemented
+
     def __ne__(self,other):
         result = self.__eq__(other)
         if result is NotImplemented:
@@ -155,6 +247,7 @@ class configTable(object):
 
         self.__node_table__ = dict()
         self.__size__ = 0
+        self.__size_expanded__ = 0
 #        self.__edge_count__ = 0
 #        self.__b_set__ = set()
 
@@ -178,12 +271,14 @@ class configTable(object):
 #        return self.__node_table__[phi][1]
 
     def add(self,phi,p,b):
-        phiNode = node(phi.S, phi.n)
+#        phiNode = node(phi.S, phi.n)
+        phiNode = node(phi.S, phi.nR, phi.nC)
         if phi not in self.__node_table__:
 #            newNode = node(phi.S, phi.n)
             self.__node_table__[phiNode] = dict()
+            self.__size__ += 1
         self.__node_table__[phiNode][b] = p
-        self.__size__ += 1
+        self.__size_expanded__ += 1
 
 #    def set_m(self,phi,m):
 ##        phiAsNode = node(phi.S,phi.n)
@@ -205,7 +300,7 @@ class configTable(object):
         """
         returns self.size
         """
-        return self.__size__
+        return self.__size__,self.__size_expanded__
 
 #def count0123more(vec):
 #    # input a collection "vec" of numbers in {0,1,2,3,4}
@@ -421,6 +516,7 @@ def reconstruction_possible(A,
 #                    return True
 
     if len(B_row_column_pairs) == 0:
+        #The perumtation being expored could not be expanded. we must return false
 #        if Verbose:
 #            print "No suitable Columns/Rows!"
 #            print sigma_rows_A,"--->", new_sigma_rows_A,"\t",sigma_rows_B,"-/->",B_rows_working_block,"\nA[%i,:] = %s\nB[%i,:] = %s"%(i_A,str(A[i_A,:]),B_rows_working_block[0],str(B[B_rows_working_block[0],:]))
@@ -483,21 +579,23 @@ def reconstruction_possible(A,
     # worked, we must return false.
     return False
 
-def calculateBlocks(A,B):
-    return [],[],[],[] # TODO: implement this
+# def calculateBlocks(A,B):
+#     return [],[],[],[] # TODO: implement this
 
 def runTest():
     """
     Runs a variety of tests to verify that the program performs as intended
+    (OUTDATED)
     """
-#    phi1 = configuration(np.random.randint(0,4,(2,3)),np.array((1,2)))
-    phiList = []
-    phiList_mod = []
-    for  i in range(10):
-        phi = configuration(np.random.randint(0,4,(10,10)),np.repeat(range(1,3),5))
-        phi_ReverseRows = configuration(phi.S[::-1,:],phi.n[::-1])
-        phiList.append(phi)
-        phiList_mod.append(phi_ReverseRows)
+    pass
+# #    phi1 = configuration(np.random.randint(0,4,(2,3)),np.array((1,2)))
+#     phiList = []
+#     phiList_mod = []
+#     for  i in range(10):
+#         phi = configuration(np.random.randint(0,4,(10,10)),np.repeat(range(1,3),5))
+#         phi_ReverseRows = configuration(phi.S[::-1,:],phi.n[::-1])
+#         phiList.append(phi)
+#         phiList_mod.append(phi_ReverseRows)
 
 #    node1,node2 = node(phi.S,phi.n),node(phi.S[[0,1],:],phi.n[[0,1]])
 #    print phi
@@ -527,25 +625,25 @@ def runTest():
 #    print hash(phi)
 #    print phi
 
-    b = 0
-    myTable = configTable()
-    for phi in phiList:
-        myTable.add(phi,p=0.4,b=0)
-#        if myTable.contains(phi):
-#            print phi.S
-#            print "\n"
-#        print phi
-
-    print [myTable.contains(phi,b) for phi in myTable.get_all_configurations()]
-    print [myTable.contains(phi,b) for phi in phiList]
-    print [myTable.contains(phiR,b) for phiR in phiList_mod]
-
-    pathPi = node(S = np.matrix("1,1,0,0;1,0,0,0;0,0,1,1"), n = np.array((1,1,2)))
-    pathPi2 = node(S = np.matrix("1,1,0,0;0,0,1,0;0,0,1,1"), n = np.array((1,1,2)))
-    print pathPi
-    print pathPi2
-    print "hash(pathPi)-hash(pathPi2) =",hash(pathPi)-hash(pathPi2)
-    print "(pathPi == pathPi2) ==",pathPi == pathPi2
+#     b = 0
+#     myTable = configTable()
+#     for phi in phiList:
+#         myTable.add(phi,p=0.4,b=0)
+# #        if myTable.contains(phi):
+# #            print phi.S
+# #            print "\n"
+# #        print phi
+#
+#     print [myTable.contains(phi,b) for phi in myTable.get_all_configurations()]
+#     print [myTable.contains(phi,b) for phi in phiList]
+#     print [myTable.contains(phiR,b) for phiR in phiList_mod]
+#
+#     pathPi = node(S = np.matrix("1,1,0,0;1,0,0,0;0,0,1,1"), n = np.array((1,1,2)))
+#     pathPi2 = node(S = np.matrix("1,1,0,0;0,0,1,0;0,0,1,1"), n = np.array((1,1,2)))
+#     print pathPi
+#     print pathPi2
+#     print "hash(pathPi)-hash(pathPi2) =",hash(pathPi)-hash(pathPi2)
+#     print "(pathPi == pathPi2) ==",pathPi == pathPi2
 
 #    print map(hash,(count0123([pathPi.S[i,j] for j in xrange(3)])+(pathPi.n[i],) for i in xrange(pathPi.S.shape[0])))
 #    print map(hash,(count0123([pathPi2.S[i,j] for j in xrange(3)])+(pathPi2.n[i],) for i in xrange(pathPi2.S.shape[0])))

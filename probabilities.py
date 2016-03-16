@@ -31,6 +31,13 @@ def p_coalesce(phi,i,theta):
     else:
         return float (sum(phi.n)-1)/(sum(phi.n)-1+theta) * (phi.n[i]-1)/(sum(phi.n)-1)
 
+def p_coalesce_new(phi,i,theta):
+    if phi.nR[i]<2:
+        return 0.
+    else:
+        return float(sum(phi.nR)-1)/(sum(phi.nR)-1+theta) * float(phi.nR[i]-1)/(sum(phi.nR)-1)
+
+
 def p_mutation(phi,i,j,k,theta,T,P):
 
     #Compute new row
@@ -45,6 +52,15 @@ def p_mutation(phi,i,j,k,theta,T,P):
         return float (theta)/(sum(phi.n)-1+theta) * P[k,phi.S[i,j]] * (phi.L)/(T) * (phi.n[i] * (n_r + 1))/(sum(phi.n))
     else:
         return float (theta)/(sum(phi.n)-1+theta) * P[k,phi.S[i,j]] * (phi.L)/(T) * (1)/(sum(phi.n))
+
+def p_mutation_new(phi,theta,P,X,Y,Nr,Nc):
+    N = sum(phi.nR)
+    T = sum(phi.nC)
+    p_mut_vs_coal = float(theta) / (N-1+theta)
+    combinatorialFactor = float(Nr * Nc)/(N*T)
+    transitionProb = P[X,Y]
+    return p_mut_vs_coal * combinatorialFactor * transitionProb
+
 
 def p_invisible(phi,i,k,theta,T,P):
     if (np.all(phi.S==0)):
