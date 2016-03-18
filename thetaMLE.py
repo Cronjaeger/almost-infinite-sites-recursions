@@ -1,4 +1,6 @@
-from math import log10
+from math import log10,log
+import numpy as np
+from formula_outline import prob_External
 
 def harmonic(n):
     '''Returns the n-th harmonic number.'''
@@ -104,12 +106,31 @@ def thetaMLE(
 
     n = sum(nR)
     deviants = set((1,2,3))
-    min_mutations = sum( [ len(deviants.intersection(set([phi.S[i,j] for i in xrange(phi.S.shape[0])]))) * phi.nC[j] for j in xrange(phi.S.shape[1]) ] )
+    min_mutations = sum( [ len(deviants.intersection(set([S[i,j] for i in xrange(S.shape[0])]))) * nC[j] for j in xrange(S.shape[1]) ] )
     b = min_mutations + extra_mutations_allowed
 
-    objective = lambda theta: prob_External(S,nR,nC,b,theta,returnTable = False, P = P)
+    #objective = lambda theta: prob_External(S,nR,nC,b,theta,returnTable = False, P = P)
+    def objective(theta):
+        return prob_External(S,nR,nC,b,theta,returnTable = False, P = P)
 
     theta0 = waterson(min_mutations,n)
+
+    if verbose:
+        print " n = %i"%n
+        print " min_mutations = %i"%min_mutations
+        print " b = %i"%b
+        print " theta0 = %f"%theta0
+
+
+    if theta0 == 0.0:
+        if verbose:
+            print "theta0 == 0 artificially using value 0.001 * ln(n)"
+        theta0 = 0.1 * log(n)
+
+    gridpoints = 10
+    scaleFactor = 2.0/9.0
+    log10Diameter0 = 2.0
+    steps = 10
 
     if verbose:
         print "Running MLE with the following parameters:"
@@ -117,7 +138,7 @@ def thetaMLE(
         print " steps:\t %i"%steps
         print " gridpoints per step:\t %i"%gridpoints
         print " initial log10Diameter:\t %f"%log10Diameter0
-        print " log10Diameter scale-factor per step:\t %f"%scale-factor
+        print " log10Diameter scale-factor per step:\t %f"%scaleFactor
 
     theta_hat = logMaximizer(objective,theta0,gridpoints,steps,log10Diameter0,scaleFactor,verbose)
 
