@@ -12,6 +12,7 @@ import probabilities as proba
 from copy import deepcopy
 import time
 import sys
+from functools import partial
 
 
 phiTable_std = configTable()
@@ -38,13 +39,27 @@ def prob_External(S,nR,nC, b, theta = 1.0, returnTable = True ,P = (np.ones((4,4
     else:
         return p
 
-    # myPhiTable = configTable()
-    # # phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
-    # # renewPhiTable()
-    # phi = configuration(S,n)
-    # p = prob(phi,theta,b,L,P, myPhiTable)
-    # size = myPhiTable.get_size()
-    # return p,size
+def prob_External_passDictionary(d):
+    S = d['S']
+    nR = d['nR']
+    nC = d['nC']
+    b = d['b']
+    theta = d['theta']
+    returnTable = d['returnTable']
+    P = d['P']
+    return  prob_External(S, nR, nC, b, theta, returnTable ,P)
+
+# myPhiTable = configTable()
+# # phi_null = node( S = np.matrix((0,)) , n = np.array((1,)) )
+# # renewPhiTable()
+# phi = configuration(S,n)
+# p = prob(phi,theta,b,L,P, myPhiTable)
+# size = myPhiTable.get_size()
+# return p,size
+
+# def prob_External_partial(S,nR,nC,b,returnTable = True, P = (np.ones((4,4)) - np.eye(4))/3):
+#     # def f(theta):
+#     #     return prob_External(S,nR,nC, b, theta, returnTable, P)
 
 def prob(phi,theta,b,T,P,phiTable = phiTable_std,boundaryCondition = stdBoundaryCondition):
 
