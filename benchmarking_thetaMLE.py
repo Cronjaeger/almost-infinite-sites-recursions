@@ -9,17 +9,17 @@ if __name__ == '__main__':
         cores = 4
     else:
         cores = int(sys.argv[1])
-        print 'Benchmarking vs. %i cores'%cores
+    print 'Benchmarking 1 vs. %i cores'%cores
 
-    # '''
-    # Our test-dataset is from Hammer 1995
-    # '''
-    # S = np.matrix([[0, 0, 3, 0],[0, 0, 0, 3],[0, 0, 0, 0],[3, 0, 0, 3]])
-    # nr = np.array([1, 1, 11, 3])
-    # nc = np.array([1, 997, 1, 1])
-    S  = np.matrix([[0,0],[0,1]])
-    nr = np.array([1 , 1])
-    nc = np.array([1 , 1])
+    '''
+    Our test-dataset is from Hammer 1995
+    '''
+    S = np.matrix([[0, 0, 3, 0],[0, 0, 0, 3],[0, 0, 0, 0],[3, 0, 0, 3]])
+    nr = np.array([1, 1, 11, 3])
+    nc = np.array([1, 997, 1, 1])
+    # S  = np.matrix([[0,0],[0,1]])
+    # nr = np.array([1 , 1])
+    # nc = np.array([1 , 1])
 
     extra_mutations = 2
 
