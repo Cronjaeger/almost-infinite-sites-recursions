@@ -4,6 +4,8 @@ import time
 import sys
 import numpy as np
 from math import log10
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 
 if __name__ == '__main__':
@@ -67,6 +69,7 @@ if __name__ == '__main__':
             full_path = '%s_b_%s%s'%(out_path,string_b_list,suffix)
             try:
                 plt.savefig(full_path)
+                print 'saved figure "%s"'%full_path
             except Exception as e:
                 print "Error saving figure %s"%full_path,e
         plt.show()
