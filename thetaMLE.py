@@ -47,10 +47,10 @@ def maxWithIndex(l):
 
 def logMaximizer(x0,
                 dict_otherArgs,
-                gridpoints = 10,
-                steps = 10,
+                gridpoints = 20,
+                steps = 5,
                 log10Diameter0 = 2,
-                scaleFactor = 2.0/9.0,
+                scaleFactor = 2.0/19.0,
                 verbose = False,
                 cores = 1,
                 ):
@@ -66,6 +66,7 @@ def logMaximizer(x0,
     log10Diameter = log10Diameter0
     log_x_max = log_x0
     x_max = x0
+    x_fx_pairs = []
 
     objective_function = prob_External_passDictionary
     # S_list = [np.matrix(S) for i in xrange(gridpoints)]
@@ -114,8 +115,9 @@ def logMaximizer(x0,
             #f_values = p.map(objective_function, S_list, nR_list, nC_list, b_list, grid, returnTable_list, P_list)
             f_values = p.map(objective_function,arg_dicts)
 
+        x_fx_pairs.append(zip(grid,f_values))
         if verbose:
-            print " (x,f(x))-pairs :\n  %s"%str(zip(grid,f_values))
+            print " (x,f(x))-pairs :\n  %s"%str(x_fx_pairs[-1])
 
         fx_max,i_max = maxWithIndex(f_values)
         x_max,log_x_max = grid[i_max],logGrid[i_max]
@@ -132,26 +134,31 @@ def logMaximizer(x0,
     if verbose:
         print " final step comleted."
 
-    return x_max,fx_max
+    return x_max,fx_max,x_fx_pairs
 
 def thetaMLE(
             S,
             nR,
             nC,
-            extra_mutations_allowed = 2,
+            mutations = 2,
             P = (np.ones((4,4)) - np.eye(4))/3,
             # gridpoints = 6,
             # scaleFactor = 0.5,
             # log10Diameter0 = 2.0,
             # steps = 10,
             verbose = False,
-            cores = 1
+            cores = 1,
+            add_min_mutations = False
             ):
 
     n = sum(nR)
+    b = mutations
+
     deviants = set((1,2,3))
     min_mutations = sum( [ len(deviants.intersection(set([S[i,j] for i in xrange(S.shape[0])]))) * nC[j] for j in xrange(S.shape[1]) ] )
-    b = min_mutations + extra_mutations_allowed
+
+    if add_min_mutations:
+        b += min_mutations
 
     #objective = lambda theta: prob_External(S,nR,nC,b,theta,returnTable = False, P = P)
     # def objective(theta):
@@ -187,8 +194,8 @@ def thetaMLE(
 
     arg_dict = {'S':S,'nR':nR,'nC':nC,'b':b,'P':P,'returnTable':False}
 
-    theta_hat = logMaximizer(theta0,arg_dict,gridpoints,steps,log10Diameter0,scaleFactor,verbose,cores)
+    theta_hat,p_theta_hat,all_values = logMaximizer(theta0,arg_dict,gridpoints,steps,log10Diameter0,scaleFactor,verbose,cores)
 
-    return theta_hat[0]
+    return theta_hat,all_values
 
     #logTheta0 = log10(theta0)

@@ -101,7 +101,8 @@ def prob(phi,theta,b,T,P,phiTable = phiTable_std,boundaryCondition = stdBoundary
 
     coalescentIndicees = (i for i in range(len(phi.nR)) if phi.nR[i]>1)
     #mutationIndicees = ((i,j,k) for i in xrange(phi.S.shape[0]) for j in xrange(phi.S.shape[1]) for k in xrange(4) if k != phi.S[i,j] )
-    mutationIndicees = ( (i,j,Y) for i in xrange(phi.S.shape[0]) for j in xrange(phi.S.shape[1]) for Y in xrange(4) if Y != phi.S[i,j] )
+    mutationIndicees = ( (i,j,Y) for i in xrange(phi.S.shape[0]) for j in xrange(phi.S.shape[1]) for Y in xrange(4) if Y != phi.S[i,j] and P[phi.S[i,j],Y] > 0.0 )
+    #mutationIndicees = ( (i,j,Y) for i in xrange(phi.S.shape[0]) for j in xrange(phi.S.shape[1]) for Y in xrange(4) if P[phi.S[i,j],Y] > 0.0 )
 
     fac_c,pro_c,fac_i,pro_i,fac_m,pro_m = 0,0,0,0,0,0
 
