@@ -61,7 +61,10 @@ if __name__ == '__main__':
             X_values = np.array([theta for theta,likelihood in all_values_flat])
             Y_values = np.array([likelihood for theta,likelihood in all_values_flat])
 
-            plt.plot(X_values,Y_values,'|-',label = 'b = %i'%mutations)
+            plt.plot(X_values,Y_values,'|-',label = 'b = %i, $\\theta_{MLE} = %.8g$'%(mutations,mle))
+            plt.axvline(mle,color = 'grey', linestyle='dotted')
+        plt.xlabel(r'$\theta$')
+        plt.ylabel(r'$q_{\theta , B \leq b}$')
         plt.legend()
 
         string_b_list = '-'.join(map(str,mutations_list))
