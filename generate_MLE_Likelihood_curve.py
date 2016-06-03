@@ -38,6 +38,15 @@ if __name__ == '__main__':
             mutations_list = map(int,sys.argv[4:])
 
         plt.figure(num = 1,figsize = (10,5), dpi = 100)
+
+        color_list = ['black']
+        style_list = ['-','--','-.']
+        colors = {}
+        styles = {}
+        for i,mutations in enumerate(mutations_list):
+            colors[mutations] = color_list[i%len(color_list)]
+            styles[mutations] = style_list[i%len(style_list)]
+
         for mutations in mutations_list:
             print "Alalyzing dataset:\nS =\n%s\nnr =\n%s\nnc =\n%s\n Mutations = %i"%(str(S),str(nr),str(nc),mutations)
 
@@ -61,7 +70,7 @@ if __name__ == '__main__':
             X_values = np.array([theta for theta,likelihood in all_values_flat])
             Y_values = np.array([likelihood for theta,likelihood in all_values_flat])
 
-            plt.plot(X_values,Y_values,'|-',label = 'b = %i, $\\theta_{MLE} = %.8g$'%(mutations,mle))
+            plt.plot(X_values,Y_values,'|',color = colors[mutations], linestyle = styles[mutations],label = 'b = %i, $\\hat{\\theta}_{MLE} = %.8g$'%(mutations,mle))
             plt.axvline(mle,color = 'grey', linestyle='dotted')
         plt.xlabel(r'$\theta$')
         plt.ylabel(r'$q_{\theta , B \leq b}$')
@@ -69,7 +78,7 @@ if __name__ == '__main__':
 
         string_b_list = '-'.join(map(str,mutations_list))
         for suffix in ['.pdf','.eps','.jpg','.png']:
-            full_path = '%s_b_%s%s'%(out_path,string_b_list,suffix)
+            full_path = '%s_b_%s_no_color%s'%(out_path,string_b_list,suffix)
             try:
                 plt.savefig(full_path)
                 print 'saved figure "%s"'%full_path
