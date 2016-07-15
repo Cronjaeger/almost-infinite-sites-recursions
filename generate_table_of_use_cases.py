@@ -41,6 +41,8 @@ def printTable(cesesDirectory,b_extras = [0]):
 
     #b_extras = [b]
 
+    print 'n,\tcolumns,\tb_min,\tb_extra,\ttsize_small,\tsize_smaller,\tsize,\tnon_0_terms'
+
     for file_name in csv_file_list:
         file_path = '%s%s'%(casesDirectory,file_name)
         #print file_path
@@ -86,12 +88,14 @@ def printTable(cesesDirectory,b_extras = [0]):
 
             new_row = vectorToRow(entries)
 
-            print '\\\\\n%s'%new_row
+            print '\t'.join(map(str,[n,S.shape[1],b_min,b_extra,size_small,size_smaller,size,non_0_terms]))
+            #print '\\\\\n%s'%new_row
 
             table_string += '\\\\\n%s'%new_row
 
     table_string += '\n%s'%table_end
 
+    print '\n'+'='*80+'\n'
     print table_string
 
 def format_numbers(x):
