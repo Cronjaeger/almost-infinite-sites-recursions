@@ -1,0 +1,246 @@
+\\
+$\left( \begin{bmatrix} 0 & 0 & 1 & 0 & 0 & 2 \\ 3 & 0 & 0 & 2 & 0 & 0 \\ 3 & 2 & 0 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \\ 992 \\ 2 \end{bmatrix} \right)$ & $9$ & $8.26e-07$ & $65$ & 13718 & 421 & 16954 & 501
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 2 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.023$ & 5 & 2 & 5 & 2
+\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0539$ & $0.383$ & 120 & 20 & 173 & 28
+\\
+$\left( \begin{bmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 4 \\ 1 \\ 993 \\ 2 \end{bmatrix} \right)$ & $8$ & $3.36e-05$ & $6.71$ & 977 & 92 & 1551 & 119
+\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 3 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 1 & 0 & 0 \\ 3 & 0 & 2 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $1.56e-06$ & $113$ & 14702 & 370 & 17694 & 423
+\\
+$\left( \begin{bmatrix} 0 & 2 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $4.31e-05$ & $21.3$ & 4408 & 199 & 5815 & 245
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 3 \\ 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 2 & 3 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 993 \\ 1 \\ 3 \\ 1 \end{bmatrix} \right)$ & $8$ & $4.82e-07$ & $29.5$ & 4491 & 182 & 5944 & 211
+\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0587$ & $0.282$ & 89 & 15 & 128 & 21
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 3 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.00685$ & 9 & 3 & 9 & 3
+\\
+$\left( \begin{bmatrix} 1 & 0 & 3 & 0 & 0 & 2 \\ 0 & 2 & 0 & 0 & 1 & 0 \\ 0 & 2 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 3 \\ 2 \\ 1 \\ 992 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $3.71e-06$ & $94.8$ & 16801 & 517 & 21229 & 628
+\\
+$\left( \begin{bmatrix} 0 & 0 & 2 & 0 & 1 \\ 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 1 \end{bmatrix} , \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 4 \\ 992 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $9$ & $1.12e-08$ & $101$ & 22200 & 450 & 26476 & 517
+\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0151$ & $0.628$ & 175 & 24 & 277 & 36
+\\
+$\left( \begin{bmatrix} 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 4 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000516$ & $30.8$ & 3368 & 196 & 4354 & 243
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 2 & 0 \\ 3 & 0 & 0 & 0 & 2 \\ 3 & 0 & 0 & 0 & 0 \\ 3 & 1 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $1.67e-07$ & $44.9$ & 11757 & 178 & 13425 & 206
+\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 0 & 0 & 0 \\ 3 & 0 & 3 & 2 & 0 & 0 & 3 \\ 0 & 2 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 3 & 2 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $5.93e-07$ & $101$ & 21365 & 322 & 24760 & 369
+\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 3 & 0 \\ 0 & 0 & 2 & 0 & 3 & 0 & 0 \\ 0 & 0 & 2 & 0 & 3 & 0 & 2 \\ 0 & 0 & 2 & 3 & 3 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $6.77e-07$ & $265$ & 49734 & 812 & 57073 & 902
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 \\ 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 3 \end{bmatrix} , \begin{bmatrix} 6 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $5.47e-05$ & $116$ & 14845 & 786 & 19188 & 933
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 3 \\ 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $1.38e-05$ & $70.7$ & 11519 & 354 & 14126 & 436
+\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0105$ & $0.775$ & 218 & 28 & 354 & 43
+\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 1 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $4.05e-07$ & $474$ & 59542 & 1430 & 69076 & 1588
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 & 0 \\ 0 & 2 & 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 3 & 3 & 2 & 0 & 0 & 2 \\ 0 & 0 & 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 3 & 3 & 0 & 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $4.89e-10$ & $1.75e+03$ & 191054 & 1714 & 214503 & 1867
+\\
+$\left( \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 3 \\ 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.000427$ & $17.7$ & 3480 & 205 & 4713 & 276
+\\
+$\left( \begin{bmatrix} 3 & 2 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 4 \\ 992 \\ 1 \end{bmatrix} \right)$ & $9$ & $8.3e-06$ & $26.5$ & 4624 & 268 & 6548 & 336
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 4 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0216$ & 13 & 4 & 13 & 4
+\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0662$ & $0.153$ & 58 & 10 & 83 & 14
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 3 & 0 & 2 \\ 2 & 3 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 993 \\ 2 \end{bmatrix} \right)$ & $8$ & $1.23e-06$ & $134$ & 18684 & 510 & 23075 & 580
+\\
+$\left( \begin{bmatrix} 0 & 3 & 2 & 3 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 3 & 2 & 0 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $2.24e-05$ & $21.6$ & 3889 & 145 & 5013 & 172
+\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 1 & 0 \\ 1 & 0 & 0 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 994 \\ 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} \right)$ & $7$ & $0.000801$ & $13.6$ & 1566 & 129 & 2477 & 171
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 2 \\ 3 & 3 & 0 & 2 & 0 & 1 & 0 \\ 3 & 0 & 1 & 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \\ 993 \\ 1 \\ 1 \end{bmatrix} \right)$ & $8$ & $7.72e-08$ & $109$ & 22543 & 412 & 26319 & 456
+\\
+$\left( \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.08$ & $0.088$ & 27 & 5 & 38 & 7
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 5 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0119$ & 17 & 5 & 17 & 5
+\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 1 & 0 \\ 1 & 0 & 0 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 992 \\ 1 \\ 2 \\ 2 \\ 1 \end{bmatrix} \right)$ & $9$ & $0.000235$ & $40.2$ & 3932 & 288 & 6137 & 381
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 3 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $8.58e-06$ & $47.3$ & 9891 & 314 & 12036 & 378
+\\
+$\left( \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 9 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 996 \\ 1 \end{bmatrix} \right)$ & $5$ & $2.12e-05$ & $10.6$ & 3440 & 146 & 4379 & 182
+\\
+$\left( \begin{bmatrix} 0 & 2 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 2 \\ 6 \\ 1 \end{bmatrix} , \begin{bmatrix} 998 \\ 1 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00275$ & $9.13$ & 1724 & 138 & 2333 & 178
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 7 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0196$ & 25 & 7 & 25 & 7
+\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 3 & 0 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 1 & 0 & 2 & 0 \\ 0 & 0 & 0 & 1 & 3 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 993 \\ 1 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $8$ & $2.98e-08$ & $178$ & 32782 & 543 & 37771 & 611
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 2 \\ 1 & 0 & 0 & 0 & 2 \\ 0 & 0 & 1 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 995 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.48e-07$ & $91.4$ & 22549 & 476 & 26634 & 554
+\\
+$\left( \begin{bmatrix} 0 & 2 & 0 & 1 & 0 & 0 \\ 3 & 0 & 0 & 0 & 0 & 1 \\ 0 & 2 & 1 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 2 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 995 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.71e-06$ & $117$ & 27222 & 473 & 31372 & 551
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 & 1 & 0 \\ 2 & 0 & 1 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 993 \\ 2 \\ 2 \end{bmatrix} \right)$ & $8$ & $3.14e-07$ & $135$ & 25831 & 943 & 30860 & 1053
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 6 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0601$ & 21 & 6 & 21 & 6
+\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00161$ & $8.41$ & 1678 & 124 & 2255 & 161
+\\
+$\left( \begin{bmatrix} 0 & 2 & 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 2 & 2 & 0 & 0 \\ 0 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 2 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \\ 3 \\ 3 \end{bmatrix} , \begin{bmatrix} 993 \\ 1 \\ 1 \\ 1 \\ 1 \\ 3 \end{bmatrix} \right)$ & $8$ & $2.21e-09$ & $657$ & 98755 & 1565 & 111588 & 1741
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 10 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.25$ & 37 & 10 & 37 & 10
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 3 & 0 \\ 0 & 1 & 3 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 2 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $2.45e-09$ & $6.51e+03$ & 461668 & 6503 & 521754 & 7035
+\\
+$\left( \begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $5.96e-07$ & $42.1$ & 8149 & 162 & 9439 & 185
+\\
+$\left( \begin{bmatrix} 2 & 0 & 2 & 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 2 & 0 & 2 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 3 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $1.24e-09$ & $1.13e+03$ & 138765 & 1507 & 155809 & 1671
+\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 8 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0439$ & $1.13$ & 244 & 40 & 353 & 56
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 \end{bmatrix} , \begin{bmatrix} 5 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000773$ & $17.3$ & 2335 & 188 & 3169 & 227
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.00148$ & $21$ & 2326 & 157 & 3050 & 192
+\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 5 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.00789$ & $0.93$ & 261 & 32 & 431 & 50
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 & 0 & 2 \\ 2 & 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 1 & 0 & 0 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 994 \\ 2 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $5.92e-08$ & $75.7$ & 16803 & 316 & 19424 & 363
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 \\ 2 & 1 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000226$ & $71.2$ & 6194 & 362 & 7983 & 420
+\\
+$\left( \begin{bmatrix} 1 & 0 & 2 & 0 & 3 & 2 \\ 1 & 0 & 2 & 0 & 3 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 3 \\ 992 \\ 2 \\ 1 \end{bmatrix} \right)$ & $9$ & $1.88e-07$ & $83.3$ & 20282 & 499 & 24146 & 599
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 2 \\ 2 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000313$ & $23.3$ & 2516 & 170 & 3325 & 200
+\\
+$\left( \begin{bmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 995 \\ 2 \end{bmatrix} \right)$ & $6$ & $0.000151$ & $6.73$ & 1451 & 94 & 2065 & 119
+\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000512$ & $5.27$ & 1062 & 74 & 1392 & 90
+\\
+$\left( \begin{bmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \\ 0 & 1 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 998 \\ 1 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00211$ & $0.525$ & 165 & 15 & 225 & 19
+\\
+$\left( \begin{bmatrix} 3 & 2 & 0 \\ 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.0155$ & $0.234$ & 90 & 10 & 131 & 14
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 \\ 1 & 0 & 2 & 2 \\ 1 & 0 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000182$ & $5.21$ & 1619 & 75 & 1999 & 90
+\\
+$\left( \begin{bmatrix} 3 & 0 & 0 & 1 & 0 \\ 0 & 3 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $0.000953$ & $5.55$ & 787 & 70 & 1244 & 93
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000133$ & $21$ & 2163 & 143 & 2844 & 172
+\\
+$\left( \begin{bmatrix} 3 & 0 & 1 & 2 & 0 & 0 & 3 & 2 \\ 0 & 0 & 0 & 2 & 0 & 1 & 0 & 0 \\ 3 & 0 & 1 & 2 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 2 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 2 & 2 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 993 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $8$ & $5.53e-10$ & $759$ & 115820 & 1349 & 129987 & 1480
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 0 & 3 & 0 & 0 & 0 \\ 0 & 3 & 3 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 995 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $1.16e-06$ & $243$ & 16302 & 416 & 19614 & 474
+\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00308$ & $4.56$ & 908 & 75 & 1232 & 97
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 8 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0229$ & 29 & 8 & 29 & 8
+\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 9 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.023$ & 33 & 9 & 33 & 9
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 \\ 1 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.0014$ & $2.66$ & 957 & 75 & 1196 & 88
+\\
+$\left( \begin{bmatrix} 0 & 0 & 1 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 2 & 0 & 0 & 2 \\ 0 & 2 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 2 & 0 & 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 3 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 1 \\ 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $5.48e-10$ & $3.21e+03$ & 383790 & 3096 & 424426 & 3419
+\\
+$\left( \begin{bmatrix} 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 995 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $6$ & $3.7e-05$ & $93.1$ & 12009 & 742 & 15748 & 869
+\\
+$\left( \begin{bmatrix} 0 & 3 & 2 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \\ 0 & 3 & 2 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \\ 1 \\ 993 \\ 1 \end{bmatrix} \right)$ & $8$ & $4.38e-07$ & $144$ & 33062 & 695 & 38558 & 808
+\\
+$\left( \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 7 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0132$ & $1.52$ & 371 & 52 & 609 & 80
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 & 0 & 3 & 1 \\ 0 & 0 & 0 & 0 & 2 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 2 & 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 0 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \\ 1 \\ 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $9.45e-09$ & $1.42e+03$ & 198070 & 1887 & 222454 & 2103
+\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 2 \end{bmatrix} \right)$ & $5$ & $0.00141$ & $2.34$ & 359 & 36 & 562 & 47
+\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 & 1 \\ 2 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.13e-06$ & $24.7$ & 6147 & 179 & 7437 & 205
+\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 3 \\ 997 \end{bmatrix} \right)$ & $4$ & $0.000913$ & $0.267$ & 99 & 11 & 146 & 15
+\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00165$ & $2.04$ & 538 & 43 & 728 & 56
+\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.00312$ & $0.758$ & 258 & 21 & 348 & 26
+\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000661$ & $1.79$ & 386 & 30 & 538 & 37
+\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 0 & 1 & 0 \\ 1 & 0 & 0 & 2 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 995 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $0.000175$ & $18.7$ & 4071 & 169 & 5228 & 205
+\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 \\ 3 & 0 & 0 & 0 \\ 3 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 996 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.00015$ & $4.36$ & 898 & 53 & 1226 & 64
+\begin{table} \begin{tabular}{c|rrrrrrrrrrr}
+Conf. & $b$ & $q_{\theta_w ; B \leq b}$ & $t_{b}$ (sec.) & $c$ & $c_{>0}$ & $C$ & $C_{>0}$\\
+$\left( \begin{bmatrix} 0 & 0 & 1 & 0 & 0 & 2 \\ 3 & 0 & 0 & 2 & 0 & 0 \\ 3 & 2 & 0 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \\ 992 \\ 2 \end{bmatrix} \right)$ & $9$ & $8.26e-07$ & $65$ & 13718 & 421 & 16954 & 501\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 2 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.023$ & 5 & 2 & 5 & 2\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0539$ & $0.383$ & 120 & 20 & 173 & 28\\
+$\left( \begin{bmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 4 \\ 1 \\ 993 \\ 2 \end{bmatrix} \right)$ & $8$ & $3.36e-05$ & $6.71$ & 977 & 92 & 1551 & 119\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 3 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 1 & 0 & 0 \\ 3 & 0 & 2 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $1.56e-06$ & $113$ & 14702 & 370 & 17694 & 423\\
+$\left( \begin{bmatrix} 0 & 2 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $4.31e-05$ & $21.3$ & 4408 & 199 & 5815 & 245\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 3 \\ 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 2 & 3 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 993 \\ 1 \\ 3 \\ 1 \end{bmatrix} \right)$ & $8$ & $4.82e-07$ & $29.5$ & 4491 & 182 & 5944 & 211\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0587$ & $0.282$ & 89 & 15 & 128 & 21\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 3 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.00685$ & 9 & 3 & 9 & 3\\
+$\left( \begin{bmatrix} 1 & 0 & 3 & 0 & 0 & 2 \\ 0 & 2 & 0 & 0 & 1 & 0 \\ 0 & 2 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 3 \\ 2 \\ 1 \\ 992 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $3.71e-06$ & $94.8$ & 16801 & 517 & 21229 & 628\\
+$\left( \begin{bmatrix} 0 & 0 & 2 & 0 & 1 \\ 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 1 \end{bmatrix} , \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 4 \\ 992 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $9$ & $1.12e-08$ & $101$ & 22200 & 450 & 26476 & 517\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0151$ & $0.628$ & 175 & 24 & 277 & 36\\
+$\left( \begin{bmatrix} 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 4 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000516$ & $30.8$ & 3368 & 196 & 4354 & 243\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 2 & 0 \\ 3 & 0 & 0 & 0 & 2 \\ 3 & 0 & 0 & 0 & 0 \\ 3 & 1 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $1.67e-07$ & $44.9$ & 11757 & 178 & 13425 & 206\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 0 & 0 & 0 \\ 3 & 0 & 3 & 2 & 0 & 0 & 3 \\ 0 & 2 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 3 & 2 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \end{bmatrix} \right)$ & $7$ & $5.93e-07$ & $101$ & 21365 & 322 & 24760 & 369\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 3 & 0 \\ 0 & 0 & 2 & 0 & 3 & 0 & 0 \\ 0 & 0 & 2 & 0 & 3 & 0 & 2 \\ 0 & 0 & 2 & 3 & 3 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $6.77e-07$ & $265$ & 49734 & 812 & 57073 & 902\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 \\ 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 3 \end{bmatrix} , \begin{bmatrix} 6 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $5.47e-05$ & $116$ & 14845 & 786 & 19188 & 933\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 3 \\ 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $1.38e-05$ & $70.7$ & 11519 & 354 & 14126 & 436\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0105$ & $0.775$ & 218 & 28 & 354 & 43\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 1 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $4.05e-07$ & $474$ & 59542 & 1430 & 69076 & 1588\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 & 0 \\ 0 & 2 & 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 3 & 3 & 2 & 0 & 0 & 2 \\ 0 & 0 & 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 3 & 3 & 0 & 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $4.89e-10$ & $1.75e+03$ & 191054 & 1714 & 214503 & 1867\\
+$\left( \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 3 \\ 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.000427$ & $17.7$ & 3480 & 205 & 4713 & 276\\
+$\left( \begin{bmatrix} 3 & 2 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 4 \\ 992 \\ 1 \end{bmatrix} \right)$ & $9$ & $8.3e-06$ & $26.5$ & 4624 & 268 & 6548 & 336\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 4 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0216$ & 13 & 4 & 13 & 4\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0662$ & $0.153$ & 58 & 10 & 83 & 14\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 3 & 0 & 2 \\ 2 & 3 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 993 \\ 2 \end{bmatrix} \right)$ & $8$ & $1.23e-06$ & $134$ & 18684 & 510 & 23075 & 580\\
+$\left( \begin{bmatrix} 0 & 3 & 2 & 3 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 3 & 2 & 0 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 994 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $2.24e-05$ & $21.6$ & 3889 & 145 & 5013 & 172\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 1 & 0 \\ 1 & 0 & 0 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 994 \\ 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} \right)$ & $7$ & $0.000801$ & $13.6$ & 1566 & 129 & 2477 & 171\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 2 \\ 3 & 3 & 0 & 2 & 0 & 1 & 0 \\ 3 & 0 & 1 & 2 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \\ 993 \\ 1 \\ 1 \end{bmatrix} \right)$ & $8$ & $7.72e-08$ & $109$ & 22543 & 412 & 26319 & 456\\
+$\left( \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.08$ & $0.088$ & 27 & 5 & 38 & 7\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 5 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0119$ & 17 & 5 & 17 & 5\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 2 & 1 & 0 \\ 1 & 0 & 0 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 992 \\ 1 \\ 2 \\ 2 \\ 1 \end{bmatrix} \right)$ & $9$ & $0.000235$ & $40.2$ & 3932 & 288 & 6137 & 381\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 3 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 1 \\ 4 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $8.58e-06$ & $47.3$ & 9891 & 314 & 12036 & 378\\
+$\left( \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 9 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 996 \\ 1 \end{bmatrix} \right)$ & $5$ & $2.12e-05$ & $10.6$ & 3440 & 146 & 4379 & 182\\
+$\left( \begin{bmatrix} 0 & 2 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 2 \\ 6 \\ 1 \end{bmatrix} , \begin{bmatrix} 998 \\ 1 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00275$ & $9.13$ & 1724 & 138 & 2333 & 178\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 7 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0196$ & 25 & 7 & 25 & 7\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 & 0 & 0 & 2 \\ 3 & 0 & 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 1 & 0 & 2 & 0 \\ 0 & 0 & 0 & 1 & 3 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 993 \\ 1 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $8$ & $2.98e-08$ & $178$ & 32782 & 543 & 37771 & 611\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 2 \\ 1 & 0 & 0 & 0 & 2 \\ 0 & 0 & 1 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 995 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.48e-07$ & $91.4$ & 22549 & 476 & 26634 & 554\\
+$\left( \begin{bmatrix} 0 & 2 & 0 & 1 & 0 & 0 \\ 3 & 0 & 0 & 0 & 0 & 1 \\ 0 & 2 & 1 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 2 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 995 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.71e-06$ & $117$ & 27222 & 473 & 31372 & 551\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 & 1 & 0 \\ 2 & 0 & 1 & 0 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 993 \\ 2 \\ 2 \end{bmatrix} \right)$ & $8$ & $3.14e-07$ & $135$ & 25831 & 943 & 30860 & 1053\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 6 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0601$ & 21 & 6 & 21 & 6\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00161$ & $8.41$ & 1678 & 124 & 2255 & 161\\
+$\left( \begin{bmatrix} 0 & 2 & 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 2 & 2 & 0 & 0 \\ 0 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 2 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \\ 3 \\ 3 \end{bmatrix} , \begin{bmatrix} 993 \\ 1 \\ 1 \\ 1 \\ 1 \\ 3 \end{bmatrix} \right)$ & $8$ & $2.21e-09$ & $657$ & 98755 & 1565 & 111588 & 1741\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 10 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.25$ & 37 & 10 & 37 & 10\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 & 3 & 0 \\ 0 & 1 & 3 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \\ 1 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 2 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $2.45e-09$ & $6.51e+03$ & 461668 & 6503 & 521754 & 7035\\
+$\left( \begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $5.96e-07$ & $42.1$ & 8149 & 162 & 9439 & 185\\
+$\left( \begin{bmatrix} 2 & 0 & 2 & 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 2 & 0 & 2 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 3 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $1.24e-09$ & $1.13e+03$ & 138765 & 1507 & 155809 & 1671\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 8 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0439$ & $1.13$ & 244 & 40 & 353 & 56\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 \end{bmatrix} , \begin{bmatrix} 5 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000773$ & $17.3$ & 2335 & 188 & 3169 & 227\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.00148$ & $21$ & 2326 & 157 & 3050 & 192\\
+$\left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 5 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.00789$ & $0.93$ & 261 & 32 & 431 & 50\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 & 0 & 2 \\ 2 & 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 1 & 0 & 0 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 994 \\ 2 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $5.92e-08$ & $75.7$ & 16803 & 316 & 19424 & 363\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 3 & 0 \\ 2 & 1 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000226$ & $71.2$ & 6194 & 362 & 7983 & 420\\
+$\left( \begin{bmatrix} 1 & 0 & 2 & 0 & 3 & 2 \\ 1 & 0 & 2 & 0 & 3 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 3 \\ 992 \\ 2 \\ 1 \end{bmatrix} \right)$ & $9$ & $1.88e-07$ & $83.3$ & 20282 & 499 & 24146 & 599\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 2 \\ 2 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 996 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000313$ & $23.3$ & 2516 & 170 & 3325 & 200\\
+$\left( \begin{bmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 995 \\ 2 \end{bmatrix} \right)$ & $6$ & $0.000151$ & $6.73$ & 1451 & 94 & 2065 & 119\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 \\ 2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 997 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000512$ & $5.27$ & 1062 & 74 & 1392 & 90\\
+$\left( \begin{bmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \\ 0 & 1 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 998 \\ 1 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00211$ & $0.525$ & 165 & 15 & 225 & 19\\
+$\left( \begin{bmatrix} 3 & 2 & 0 \\ 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.0155$ & $0.234$ & 90 & 10 & 131 & 14\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 \\ 1 & 0 & 2 & 2 \\ 1 & 0 & 2 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000182$ & $5.21$ & 1619 & 75 & 1999 & 90\\
+$\left( \begin{bmatrix} 3 & 0 & 0 & 1 & 0 \\ 0 & 3 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $0.000953$ & $5.55$ & 787 & 70 & 1244 & 93\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 996 \\ 1 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.000133$ & $21$ & 2163 & 143 & 2844 & 172\\
+$\left( \begin{bmatrix} 3 & 0 & 1 & 2 & 0 & 0 & 3 & 2 \\ 0 & 0 & 0 & 2 & 0 & 1 & 0 & 0 \\ 3 & 0 & 1 & 2 & 0 & 0 & 0 & 2 \\ 0 & 0 & 0 & 2 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 2 & 2 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \\ 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 993 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $8$ & $5.53e-10$ & $759$ & 115820 & 1349 & 129987 & 1480\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 0 & 3 & 0 & 0 & 0 \\ 0 & 3 & 3 & 2 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 995 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $1.16e-06$ & $243$ & 16302 & 416 & 19614 & 474\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00308$ & $4.56$ & 908 & 75 & 1232 & 97\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 8 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.0229$ & 29 & 8 & 29 & 8\\
+$\left( \begin{bmatrix} 0 \end{bmatrix} , \begin{bmatrix} 9 \end{bmatrix} , \begin{bmatrix} 1000 \end{bmatrix} \right)$ & $1$ & $1$ & $0.023$ & 33 & 9 & 33 & 9\\
+$\left( \begin{bmatrix} 0 & 0 & 0 \\ 1 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 4 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.0014$ & $2.66$ & 957 & 75 & 1196 & 88\\
+$\left( \begin{bmatrix} 0 & 0 & 1 & 0 & 2 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 2 & 0 & 0 & 2 \\ 0 & 2 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 2 & 0 & 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 3 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 3 \\ 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 992 \\ 1 \\ 1 \\ 1 \\ 1 \\ 2 \\ 1 \\ 1 \end{bmatrix} \right)$ & $9$ & $5.48e-10$ & $3.21e+03$ & 383790 & 3096 & 424426 & 3419\\
+$\left( \begin{bmatrix} 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 2 & 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 995 \\ 1 \\ 1 \\ 2 \end{bmatrix} \right)$ & $6$ & $3.7e-05$ & $93.1$ & 12009 & 742 & 15748 & 869\\
+$\left( \begin{bmatrix} 0 & 3 & 2 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \\ 0 & 3 & 2 & 1 & 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 1 \\ 2 \\ 1 \\ 993 \\ 1 \end{bmatrix} \right)$ & $8$ & $4.38e-07$ & $144$ & 33062 & 695 & 38558 & 808\\
+$\left( \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 7 \end{bmatrix} , \begin{bmatrix} 1 \\ 999 \end{bmatrix} \right)$ & $2$ & $0.0132$ & $1.52$ & 371 & 52 & 609 & 80\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 & 0 & 3 & 1 \\ 0 & 0 & 0 & 0 & 2 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 2 & 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 0 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 2 \\ 1 \\ 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 994 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $7$ & $9.45e-09$ & $1.42e+03$ & 198070 & 1887 & 222454 & 2103\\
+$\left( \begin{bmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 996 \\ 2 \end{bmatrix} \right)$ & $5$ & $0.00141$ & $2.34$ & 359 & 36 & 562 & 47\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 & 1 \\ 2 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 995 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $2.13e-06$ & $24.7$ & 6147 & 179 & 7437 & 205\\
+$\left( \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 3 \\ 997 \end{bmatrix} \right)$ & $4$ & $0.000913$ & $0.267$ & 99 & 11 & 146 & 15\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2 \end{bmatrix} , \begin{bmatrix} 3 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 998 \\ 1 \end{bmatrix} \right)$ & $3$ & $0.00165$ & $2.04$ & 538 & 43 & 728 & 56\\
+$\left( \begin{bmatrix} 3 & 0 & 0 \\ 0 & 3 & 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 3 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 998 \end{bmatrix} \right)$ & $3$ & $0.00312$ & $0.758$ & 258 & 21 & 348 & 26\\
+$\left( \begin{bmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 997 \\ 1 \\ 1 \end{bmatrix} \right)$ & $4$ & $0.000661$ & $1.79$ & 386 & 30 & 538 & 37\\
+$\left( \begin{bmatrix} 0 & 0 & 3 & 0 & 1 & 0 \\ 1 & 0 & 0 & 2 & 0 & 3 \end{bmatrix} , \begin{bmatrix} 2 \\ 2 \end{bmatrix} , \begin{bmatrix} 1 \\ 995 \\ 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \right)$ & $6$ & $0.000175$ & $18.7$ & 4071 & 169 & 5228 & 205\\
+$\left( \begin{bmatrix} 0 & 3 & 0 & 0 \\ 3 & 0 & 0 & 0 \\ 3 & 0 & 0 & 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 2 \\ 996 \\ 1 \end{bmatrix} \right)$ & $5$ & $0.00015$ & $4.36$ & 898 & 53 & 1226 & 64
+\end{tabular} \end{table}
