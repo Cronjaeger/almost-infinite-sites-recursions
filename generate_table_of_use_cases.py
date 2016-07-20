@@ -12,6 +12,8 @@ practitioner eyeball the computational time required to compute likelihoods for
 simple tasks.
 '''
 
+HEATMAP_MODE = True # signifficantly alters outputs. Set to false for regular behaviour
+
 def printTable(cesesDirectory,b_extras = [0]):
     '''
     Prints a table for each case (encoded as a .csv-file) in cesesDirectory.
@@ -41,7 +43,7 @@ def printTable(cesesDirectory,b_extras = [0]):
 
     #b_extras = [b]
 
-    print 'n,\tcolumns,\tb_min,\tb_extra,\ttsize_small,\tsize_smaller,\tsize,\tnon_0_terms'
+    if HEATMAP_MODE: print 'n,\tcolumns,\tb_min,\tb_extra,\ttsize_small,\tsize_smaller,\tsize,\tnon_0_terms'
 
     for file_name in csv_file_list:
         file_path = '%s%s'%(casesDirectory,file_name)
@@ -88,15 +90,15 @@ def printTable(cesesDirectory,b_extras = [0]):
 
             new_row = vectorToRow(entries)
 
-            print '\t'.join(map(str,[n,S.shape[1],b_min,b_extra,size_small,size_smaller,size,non_0_terms]))
+            if HEATMAP_MODE: print '\t'.join(map(str,[n,S.shape[1],b_min,b_extra,size_small,size_smaller,size,non_0_terms]))
             #print '\\\\\n%s'%new_row
 
             table_string += '\\\\\n%s'%new_row
 
     table_string += '\n%s'%table_end
 
-    print '\n'+'='*80+'\n'
-    print table_string
+    # print '\n'+'='*80+'\n'
+    if not HEATMAP_MODE: print table_string
 
 def format_numbers(x):
     if type(x) == int:
