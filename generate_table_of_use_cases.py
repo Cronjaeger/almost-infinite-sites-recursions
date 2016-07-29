@@ -182,7 +182,7 @@ def evaluate_single_example(file_path):
     size_smaller = sum([int( 0 < sum([1 for y in x.values() if y>0.0]) ) for x in table.get_all_configurations().values()])
     non_0_terms = sum([sum([1 for y in x.values() if y>0.0]) for x in table.get_all_configurations().values()])
 
-    return '\t'.join(map(str,[n,S.shape[1],b_min,b_extra,size_small,size_smaller,size,non_0_terms,prob,runtime]))
+    return ',\t'.join(map(str,[n,S.shape[1],b_min,b_extra,size_small,size_smaller,size,non_0_terms,prob,runtime]))
 
 b_extra = 0
 
