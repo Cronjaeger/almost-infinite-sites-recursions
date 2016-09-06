@@ -30,13 +30,17 @@ def main():
     t2 = time.time()
 
     size = table.get_size()
+    size_smaller = sum([int( 0 < sum([1 for y in x.values() if y>0.0]) ) for x in table.get_all_configurations().values()])
+    non_0_terms = sum([sum([1 for y in x.values() if y>0.0]) for x in table.get_all_configurations().values()])
     t_diff = t2 - t1
 
     print 'done!'
     print 'q(S,nR,nC,B<%i) = %f '%(B_max+1,prob)
     print 'time = %.3f s'%t_diff
-    print 'table size = %i'%size[0]
-    print 'table size extended = %i'%size[1]
+    print 'Encountered configurations = %i'%size[0]
+    print 'Encountered configurations w pos. probability =%i'%size_smaller
+    print 'Total number of terms considered = %i'%size[1]
+    print 'Total number of positive terms = %i'%non_0_terms
     #print '(table_size,teble_size_extended) = %s'%str(size)
     #print str(table.get_all_configurations())
 
