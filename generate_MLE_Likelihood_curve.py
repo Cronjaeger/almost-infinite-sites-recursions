@@ -12,11 +12,11 @@ if __name__ == '__main__':
 
     if len(sys.argv) < 3:
 
-        print "Usage: python bemcmarking_thetaMLE.py  input_file_path output-file-path n_cores = 4 b = 1 ]"
-        print " Will read a dataset from a .csv file, run thetaMLE (using the number of cores"
-        print " given), and save a plot of the results to output-file-path."
-        print "  e.g. \"python bemcmarking_thetaMLE.py  $FILE_PATH $OUTPUT_FILE_PATH 10 1\""
-        print "  will run the code, with 1 mutation, on 10 cores."
+        print "Usage: python generate_MLE_Likelihood.py  input_file_path output\
+-file-path n_cores = 4 b = 1\nWill read a dataset from a .csv file, run \
+thetaMLE (using the number of cores given), and save a plot of the results to \
+output-file-path. e.g. \"python generate_MLE_Likelihood.py $FILE_PATH $OUTPUT_\
+FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
     else:
         csv_path = str(sys.argv[1])
         out_path = str(sys.argv[2])
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
         if len(sys.argv) < 4:
             print 'No cores argument provided. Using the default number of cores for comparison: 4'
-            cores_list = [4]
+            cores = 4
         else:
             cores = int(sys.argv[3])
 
@@ -37,7 +37,8 @@ if __name__ == '__main__':
         else:
             mutations_list = map(int,sys.argv[4:])
 
-        plt.figure(num = 1,figsize = (10,5), dpi = 100)
+        matplotlib.rcParams.update({'font.size': 14})
+        plt.figure(num = 1,figsize = (10,5), dpi = 300)
 
         color_list = ['black']
         style_list = ['-','--','-.']
@@ -47,6 +48,7 @@ if __name__ == '__main__':
             colors[mutations] = color_list[i%len(color_list)]
             styles[mutations] = style_list[i%len(style_list)]
 
+        Y_values_list = []
         for mutations in mutations_list:
             print "Alalyzing dataset:\nS =\n%s\nnr =\n%s\nnc =\n%s\n Mutations = %i"%(str(S),str(nr),str(nc),mutations)
 
@@ -69,11 +71,12 @@ if __name__ == '__main__':
 
             X_values = np.array([theta for theta,likelihood in all_values_flat])
             Y_values = np.array([likelihood for theta,likelihood in all_values_flat])
+            Y_values_list.append(Y_values)
 
             plt.plot(X_values,Y_values,'|',color = colors[mutations], linestyle = styles[mutations],label = 'b = %i, $\\hat{\\theta}_{MLE} = %.8g$'%(mutations,mle))
             plt.axvline(mle,color = 'grey', linestyle='dotted')
-        plt.xlabel(r'$\theta$')
-        plt.ylabel(r'$q_{\theta , B \leq b}$')
+        plt.xlabel(r'$\theta$',size='16')
+        plt.ylabel(r'$L(\theta | \psi , B \leq b)$',size='16')
         plt.legend()
 
         string_b_list = '-'.join(map(str,mutations_list))
@@ -84,5 +87,7 @@ if __name__ == '__main__':
                 print 'saved figure "%s"'%full_path
             except Exception as e:
                 print "Error saving figure %s"%full_path,e
+        csv_out_path ="%s_b_%s.csv"%(out_path,string_b_list)
         plt.show()
+        np.savetxt( csv_out_path, np.transpose( np.array([X_values] + Y_values_list) ) )
         print "Shows over, folks!"
