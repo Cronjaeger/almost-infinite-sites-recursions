@@ -47,10 +47,13 @@ def maxWithIndex(l):
 
 def logMaximizer(x0,
                 dict_otherArgs,
-                gridpoints = 20,
-                steps = 5,
+                #gridpoints = 20,
+                gridpoints = 100,
+                #steps = 5,
+                steps = 3,
                 log10Diameter0 = 2,
-                scaleFactor = 2.0/19.0,
+                scaleFactor = 2.0/99.0,
+                #scaleFactor = 2.0/19.0,
                 verbose = False,
                 cores = 1,
                 ):
@@ -179,10 +182,10 @@ def thetaMLE(
             print "theta0 == 0 artificially using value 0.001 * ln(n)"
         theta0 = 0.1 * log(n)
 
-    gridpoints = 10
-    scaleFactor = 2.0/9.0
+    gridpoints = 100
+    scaleFactor = 2.0/99.0
     log10Diameter0 = 2.0
-    steps = 10
+    steps = 3
 
     if verbose:
         print "Running MLE with the following parameters:"

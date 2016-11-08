@@ -38,7 +38,8 @@ FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
             mutations_list = map(int,sys.argv[4:])
 
         matplotlib.rcParams.update({'font.size': 14})
-        plt.figure(num = 1,figsize = (10,5), dpi = 300)
+        fig = plt.figure(num = 1,figsize = (10,5), dpi = 300)
+        ax = plt.subplot(111)
 
         color_list = ['black']
         style_list = ['-','--','-.']
@@ -77,6 +78,8 @@ FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
             plt.axvline(mle,color = 'grey', linestyle='dotted')
         plt.xlabel(r'$\theta$',size='16')
         plt.ylabel(r'$L(\theta | \psi , B \leq b)$',size='16')
+        ax.ticklabel_format(axis='y', style = 'sci', scilimits=(-1,1))
+
         plt.legend()
 
         string_b_list = '-'.join(map(str,mutations_list))
