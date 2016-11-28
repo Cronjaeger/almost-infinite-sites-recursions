@@ -49,6 +49,7 @@ FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
             colors[mutations] = color_list[i%len(color_list)]
             styles[mutations] = style_list[i%len(style_list)]
 
+        X_values_list = []
         Y_values_list = []
         for mutations in mutations_list:
             print "Alalyzing dataset:\nS =\n%s\nnr =\n%s\nnc =\n%s\n Mutations = %i"%(str(S),str(nr),str(nc),mutations)
@@ -73,6 +74,7 @@ FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
             X_values = np.array([theta for theta,likelihood in all_values_flat])
             Y_values = np.array([likelihood for theta,likelihood in all_values_flat])
             Y_values_list.append(Y_values)
+            X_values_list.append(X_values)
 
             plt.plot(X_values,Y_values,'|',color = colors[mutations], linestyle = styles[mutations],label = 'b = %i, $\\hat{\\theta}_{MLE} = %.8g$'%(mutations,mle))
             plt.axvline(mle,color = 'grey', linestyle='dotted')
@@ -92,5 +94,5 @@ FILE_PATH 10 1\" will run the code, with 1 mutation, on 10 cores."
                 print "Error saving figure %s"%full_path,e
         csv_out_path ="%s_b_%s.csv"%(out_path,string_b_list)
         plt.show()
-        np.savetxt( csv_out_path, np.transpose( np.array([X_values] + Y_values_list) ) )
+        np.savetxt( csv_out_path, np.transpose( np.array(X_values_list + Y_values_list) ) )
         print "Shows over, folks!"
