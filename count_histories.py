@@ -40,6 +40,49 @@ def powerset(iterable):
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
+
+
+
+def partitions(n,n1):
+    '''Outputs the set {x : x is a partition of n into n1 parts}.
+    The partitions are generated in lexicographical order'''
+    if n1 == 0:
+        return [tuple()] if n == 0 else []
+    if n1==1:
+#        return set([(n,)])
+        return [(n,)]
+    else:
+#        P = set()
+        P = []
+        for i in xrange(1,n//n1+1):
+            buildPartitions((i,),i,P,n,n1,1,i)
+        return P
+
+def buildPartitions(part,last,P,n,n1,Len,Sum):
+    ''''A recursive function used to generate all partitions of n into N parts (note
+this implementation does not handle the case n1 == 1 faithfully'''
+    if Len == n1-1:
+#        P.add(part+(n-Sum,))
+        P.append(part+(n-Sum,))
+    else:
+        for i in xrange(last,(n-Sum)//(n1-Len)+1):
+            buildPartitions(part+(i,),i,P,n,n1,Len+1,Sum+i)
+
+def partitionToMultiset(part):
+    '''
+        input: a partition encoded as a non-ascending sequence
+        output: the multiset-encoding of the input-partition
+
+        example:
+        part = (4,2,1,1,1) partition of 9
+        partitionToMultiset(part) = (0,3,1,0,1,0,0,0,0,0)
+    '''
+    #return tuple([part.count(i) for i in range(sum(part)+1)])
+    return tuple([part.count(i) for i in range(max( part+(0,) ) +1 ) ])
+
+
+
+
 def unordered_rooted_leaf_labelled_tree_from_nested_tuples(T):
     if type(T) is tuple:
         subtree_counter = Counter( (unordered_rooted_leaf_labelled_tree_from_nested_tuples(t) for t in T) )
@@ -255,7 +298,6 @@ def count_histories(tree,computed_histories):
         return computed_histories[tree], computed_histories
 
     if max(t.rootDegree for t in tree.getSubtrees_unique() ) == 0:
-        #print 'womp!'
         # A special case: T has no propper subtrees, but only leaves below. Here
         # a closed form formula for the number of histories exists, and is much
         # quicker to apply than iterating over all hierarchies.
@@ -340,6 +382,75 @@ def evaluate_hierarchy(Hierarchy,subtree_history_counts):
 
     return reduce_over_tree(Hierarchy, f_int, f_leaf, f_int_initial = (1,0))
 
+def AS_prime(tree,computed_ancestral_states = dict()):
+    if tree in computed_ancestral_states:
+        #Step 1: see if we already know the answer.
+        #If we do, there is no reason to redo our work.
+        return computed_ancestral_states[tree], computed_ancestral_states
+
+    elif tree.rootDegree == 0:
+        #Case: the tree under consideration is a leaf (has no subtrees)
+        computed_ancestral_states[tree] = 1
+        return computed_ancestral_states[tree],computed_ancestral_states
+
+    elif tree.rootDegree == 1:
+        #Case: the root has only a single subtree.
+        subtree = tree.getSubtrees()[0]
+        state_count_new, computed_ancestral_states = AS_prime(subtree, computed_ancestral_states)
+        computed_ancestral_states[tree] = state_count_new + 1
+        return computed_ancestral_states[tree], computed_ancestral_states
+
+    else:
+        accumulator = 1
+
+        subtrees = tree.getSubtrees()
+        subtree_states = []
+        for subtree in subtrees:
+            sub_states, computed_ancestral_states = AS_prime(subtree,computed_ancestral_states)
+            subtree_states.append(sub_states)
+
+        indices = range(len(subtrees))
+        for notS in powerset(indices):
+            sizeS = len(indices) - len(notS)
+
+            a = factorial(sizeS)
+            factor_1 = 0
+            for nBlocks in range(0, sizeS//2 + 1):
+                for lambd in partitions(sizeS,nBlocks):
+                    #a = factorial(sizeS)
+                    b = reduce(lambda x,y: x*y, map(factorial, lambd ) ,1)
+                    c = reduce(lambda x,y: x*y, map(factorial, partitionToMultiset(lambd) ), 1)
+                    assert a % (b * c) == 0
+                    factor_1 += a / ( b * c )
+
+            # if sizeS == 0 and factor_1 != 1:
+            #     print sizeS,factor_1
+            assert sizeS != 0 or factor_1 == 1
+
+            sub_states
+            factor_2 = reduce(lambda x,y: x*y ,[x for i,x in enumerate(subtree_states) if i in notS] ,1)
+
+            assert factor_1 != 0 or sizeS == 1, 'factor 1 is 0 when it shouldn\'t be!'
+            #print 'sizeS: %i, factor_1: %i'%(sizeS, factor_1 )
+            assert factor_2 != 0, 'factor 2 is 0'
+
+            accumulator += factor_1 * factor_2
+
+        computed_ancestral_states[tree] = accumulator
+        return accumulator,computed_ancestral_states
+
+def AS_prime_2_AS(tree, AS_prime_value):
+    return AS_prime_value - int(tree.rootDegree > 1)
+
+def AS(tree, return_dict = False):
+    AS_prime_value, d = AS_prime(tree, dict())
+    if return_dict:
+        for k,v in d.iteritems():
+            d[k] = AS_prime_2_AS(k,v)
+        return AS_prime_2_AS(tree, AS_prime_value), d
+    else:
+        return AS_prime_2_AS(tree, AS_prime_value)
+
 # def flatten(H):
 #     '''Flatten a hierarchy.
 #     i.e. flatten( ( (1,2), (3,4) ) ) = (1,2,3,4)'''
@@ -406,7 +517,7 @@ def testcase_single_root(n_max = 10,supress_individual_tests = False):
         print 'Failed: histories could not be computed!'
 
 
-def simulate_data_and_count_histories(n,s,N,seedval = None, print_results = True, add_header = True):
+def simulate_data_and_count_histories_and_states(n,s,N,seedval = None, print_results = True, add_header = True):
 
     if seedval != None:
         np.random.seed(seedval)
@@ -423,14 +534,17 @@ def simulate_data_and_count_histories(n,s,N,seedval = None, print_results = True
 
     #compute the number of histories of each dataset
     known_hist = dict()
+    known_as_prime = dict()
     hist_list = [count_histories(T,known_hist)[0] for T in T_list]
+    AS_prime_list = [AS_prime(T,known_as_prime)[0] for T in T_list]
+    states_list = [ AS_prime_2_AS(T,val) for T,val in zip(T_list,AS_prime_list) ]
 
     #Format each individual tree into a line.
     #(format is csv with semicolons as separators)
-    out_strings = ['%i ;\t%i ;\t%i ;\t%s ;\t%s'%(n, s, hist_list[i], str(T_list[i]), command) for i in range(N)]
+    out_strings = ['%i ;\t%i ;\t%i ;\t%i ;\t%s ;\t%s'%(n, s, hist_list[i], states_list[i], str(T_list[i]), command) for i in range(N)]
 
     if add_header:
-        header = 'sequences ; seg sites ;  histories; gene_tree ; command'
+        header = 'sequences ; seg sites ;  histories; ancestral_states; gene_tree ; command'
         out_strings = [header] + out_strings
 
     results = '\n'.join(out_strings)
