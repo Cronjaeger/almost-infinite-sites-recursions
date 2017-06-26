@@ -5,83 +5,131 @@ from collections import Counter
 from itertools import product, chain, combinations
 import numpy as np
 from runMS import ms_sim_sites
+from time import clock
 
 # class Hierarchy(object):
 #
 #     def __init__(self,H1,H2):
 #         pass
 
-def factorial(k,start = 1):
-    #compute k * k-1 * ... * start
-    assert isinstance(k,int)
-    assert k >= 0
-    return reduce(lambda x,y: x*y, xrange(start,k+1),1)
+class LabelledUnorderedRootedTree(object):
+    '''Represent a rooted unirdered tree ass a collection of subtrees under a labelled root'''
 
-def binom(n,k):
-    #compute binomial coefficients
-    a = factorial(n,n-k+1)
-    b = factorial(k)
-    #assert a%b == 0
-    return a/b
+    def __init__(self, rootLabel = None, subtree_counts = Counter() ):
+        '''Initialize a tree'''
 
-def odd_factorial(n):
-    '''returns 1 * 3 * ... * 2n -1'''
-    assert isinstance(n,int)
-    assert n > 0
-    return reduce(lambda x,y: x*y, xrange(1,2*n,2), 1 )
+        #We want trees to be immutable (using them as keys in a hash-table would
+        #be ill-advised otherwise).
+        object.__setattr__(self, "subtree_counts", subtree_counts)
+        object.__setattr__(self, "rootLabel", rootLabel)
+        object.__setattr__(self, "nodes", self.count_nodes_recursive() )
+        object.__setattr__(self, "leaves", self.count_non_root_leaves_recursive() )
+        object.__setattr__(self, "rootDegree", self.compute_rootDegree() )
+        object.__setattr__(self, "hash_precomputed", self.precompute_hash())
 
-def hist_single_root_with_n_leaves(n):
-    #return binom(n,2) * binom(n-1,2) * ... * binom(2,2)
-    return reduce( lambda x,y: x*binom(y,2), xrange(2,n+1), 1)
+        # self.subtree_counts = subtree_counts
+        # self.rootLabel = rootLabel
+        # self.nodes = self.count_nodes_recursive()
+        # self.leaves = self.count_non_root_leaves_recursive()
+        # self.rootDegree = self.compute_rootDegree()
 
-def powerset(iterable):
-    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
-    ## copied from https://docs.python.org/2/library/itertools.html
-    s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
+    #To guard against accidentially changing the contents of a tree, we rneder
+    #them immutable, by manually making it raise an error to try to modify an
+    #instance of this class.
+    def __setattr__(self, *args):
+        raise TypeError
+    def __delattr__(self, *args):
+        raise TypeError
 
+    def __hash__(self):
+        return self.hash_precomputed
 
+    def precompute_hash(self):
+        const = 468395662504823 ## a prime taken from https://primes.utm.edu/curios/page.php/468395662504823.html
 
+        #Hash the root-label
+        if self.rootLabel == None:
+            rootHash = 0
+        else:
+            rootHash = hash(self.rootLabel)
 
-def partitions(n,n1):
-    '''Outputs the set {x : x is a partition of n into n1 parts}.
-    The partitions are generated in lexicographical order'''
-    if n1 == 0:
-        return [tuple()] if n == 0 else []
-    if n1==1:
-#        return set([(n,)])
-        return [(n,)]
-    else:
-#        P = set()
-        P = []
-        for i in xrange(1,n//n1+1):
-            buildPartitions((i,),i,P,n,n1,1,i)
-        return P
+        #hash sub-trees
+        if sum(self.subtree_counts.values()) == 0:
+            return rootHash
+        else:
 
-def buildPartitions(part,last,P,n,n1,Len,Sum):
-    ''''A recursive function used to generate all partitions of n into N parts (note
-this implementation does not handle the case n1 == 1 faithfully'''
-    if Len == n1-1:
-#        P.add(part+(n-Sum,))
-        P.append(part+(n-Sum,))
-    else:
-        for i in xrange(last,(n-Sum)//(n1-Len)+1):
-            buildPartitions(part+(i,),i,P,n,n1,Len+1,Sum+i)
+            #For each subtree, we hash that subtree, add one, multiply by our
+            #constant, and bit-shift the hashed value by the multiplicity of
+            #that subtree. All of the results are then combined as a bitwise
+            #xor.
+            #Note that since the bitwise xor is commutative, the ordering
+            #of subtrees does not matter. This is a feature, not a bug!
 
-def partitionToMultiset(part):
-    '''
-        input: a partition encoded as a non-ascending sequence
-        output: the multiset-encoding of the input-partition
+            subtree_hash = reduce(lambda x,y: x^y, map(lambda x: ((1+hash(x[0]))*const)<<x[1], self.subtree_counts.items()), 0)
 
-        example:
-        part = (4,2,1,1,1) partition of 9
-        partitionToMultiset(part) = (0,3,1,0,1,0,0,0,0,0)
-    '''
-    #return tuple([part.count(i) for i in range(sum(part)+1)])
-    return tuple([part.count(i) for i in range(max( part+(0,) ) +1 ) ])
+            return rootHash + subtree_hash
 
+    def __eq__(self,other):
 
+        if id(self) == id(other):
+            return True
 
+        elif type(self) != type(other):
+            return False
+
+        elif self.rootLabel != other.rootLabel:
+            return False
+
+        elif hash(self) != hash(other):
+            return False
+
+        else:
+            return self.subtree_counts == other.subtree_counts
+
+    def count_non_root_leaves_recursive(self):
+        ''' returns the number of leaves. if we interpret a rooted tree as having arcs
+from a root to the roots of a sub-tree, we want to count the number of leaves
+which have out-degree 0 (i.e. the root only counts as a leaf when it has no subtrees)'''
+        if len(self.subtree_counts) == 0:
+            return 1
+        else:
+            return sum( [count*T.leaves for T,count in self.subtree_counts.items()] )
+
+    def count_nodes_recursive(self):
+        if len(self.subtree_counts) == 0:
+            return 1
+        else:
+            return 1 + sum( [count*T.nodes for T,count in self.subtree_counts.items()] )
+
+    def compute_rootDegree(self):
+        return sum(self.subtree_counts.values())
+
+    def compute_max_degree(self):
+        '''returns the maximum out degree of a tree (when edges are directed away from
+the root). This corresponds to the number of 'children' that a node has.'''
+        if self.rootDegree == 0:
+            return 0
+        else:
+            subtree_max = max( subtree.compute_max_degree() for subtree in self.subtree_counts.keys() )
+            return max(self.rootDegree,subtree_max)
+
+    def __str__(self):
+        if self.rootDegree == 0:
+            str_root = str(self.rootLabel) if self.rootLabel != None else ''
+            return str_root
+        else:
+            str_root = '%s'%str(self.rootLabel) if self.rootLabel != None else ''
+            return '(%s)%s'%(', '.join(map(lambda x: ', '.join([str(x[0])]*x[1]),self.subtree_counts.items())),str_root)
+
+    def getSubtrees(self):
+        'returns all subtrees. each subtree has a multiplicity according to its count'
+        return sum([ (tree,)*count for tree,count in self.subtree_counts.items()], () )
+
+    def getSubtrees_unique(self):
+        return tuple(self.subtree_counts.keys())
+
+def labelledUnorderedRootedTree_from_subtrees(subtrees):
+    return LabelledUnorderedRootedTree(subtree_counter = Counter(subtrees))
 
 def unordered_rooted_leaf_labelled_tree_from_nested_tuples(T):
     if type(T) is tuple:
@@ -167,116 +215,74 @@ def three_gammete_test(c1,c2):
 def sort_matrix_coumns_in_rev_lex_order(S):
     return S[:,np.lexsort(np.rot90(S.transpose()))[::-1]]
 
-def labelledUnorderedRootedTree_from_subtrees(subtrees):
-    return LabelledUnorderedRootedTree(subtree_counter = Counter(subtrees))
+def factorial(k,start = 1):
+    #compute k * k-1 * ... * start
+    assert isinstance(k,int)
+    assert k >= 0
+    return reduce(lambda x,y: x*y, xrange(start,k+1),1)
 
-class LabelledUnorderedRootedTree(object):
-    '''Represent a rooted unirdered tree ass a collection of subtrees under a labelled root'''
+def binom(n,k):
+    #compute binomial coefficients
+    a = factorial(n,n-k+1)
+    b = factorial(k)
+    #assert a%b == 0
+    return a/b
 
-    def __init__(self, rootLabel = None, subtree_counts = Counter() ):
-        '''Initialize a tree'''
+def odd_factorial(n):
+    '''returns 1 * 3 * ... * 2n -1'''
+    assert isinstance(n,int)
+    assert n > 0
+    return reduce(lambda x,y: x*y, xrange(1,2*n,2), 1 )
 
-        #We want trees to be immutable (using them as keys in a hash-table would
-        #be ill advised otherwise).
-        object.__setattr__(self, "subtree_counts", subtree_counts)
-        object.__setattr__(self, "rootLabel", rootLabel)
-        object.__setattr__(self, "nodes", self.count_nodes_recursive() )
-        object.__setattr__(self, "leaves", self.count_non_root_leaves_recursive() )
-        object.__setattr__(self, "rootDegree", self.compute_rootDegree() )
-        object.__setattr__(self, "hash_precomputed", self.precompute_hash())
+def hist_single_root_with_n_leaves(n):
+    #return binom(n,2) * binom(n-1,2) * ... * binom(2,2)
+    return reduce( lambda x,y: x*binom(y,2), xrange(2,n+1), 1)
 
-        # self.subtree_counts = subtree_counts
-        # self.rootLabel = rootLabel
-        # self.nodes = self.count_nodes_recursive()
-        # self.leaves = self.count_non_root_leaves_recursive()
-        # self.rootDegree = self.compute_rootDegree()
+def powerset(iterable):
+    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    ## copied from https://docs.python.org/2/library/itertools.html
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
-    #To guard against accidentially changing the contents of a tree, we rneder
-    #them immutable, by manually making it raise an error to try to modify an
-    #instance of this class.
-    def __setattr__(self, *args):
-        raise TypeError
-    def __delattr__(self, *args):
-        raise TypeError
 
-    def __hash__(self):
-        return self.hash_precomputed
 
-    def precompute_hash(self):
-        const = 468395662504823 ## a prime taken from https://primes.utm.edu/curios/page.php/468395662504823.html
 
-        #Hash the root-label
-        if self.rootLabel == None:
-            rootHash = 0
-        else:
-            rootHash = hash(self.rootLabel)
+def partitions(n,n1):
+    '''Outputs the set {x : x is a partition of n into n1 parts}.
+    The partitions are generated in lexicographical order'''
+    if n1 == 0:
+        return [tuple()] if n == 0 else []
+    if n1==1:
+#        return set([(n,)])
+        return [(n,)]
+    else:
+#        P = set()
+        P = []
+        for i in xrange(1,n//n1+1):
+            buildPartitions((i,),i,P,n,n1,1,i)
+        return P
 
-        #hash sub-trees
-        if sum(self.subtree_counts.values()) == 0:
-            return rootHash
-        else:
+def buildPartitions(part,last,P,n,n1,Len,Sum):
+    ''''A recursive function used to generate all partitions of n into N parts (note
+this implementation does not handle the case n1 == 1 faithfully'''
+    if Len == n1-1:
+#        P.add(part+(n-Sum,))
+        P.append(part+(n-Sum,))
+    else:
+        for i in xrange(last,(n-Sum)//(n1-Len)+1):
+            buildPartitions(part+(i,),i,P,n,n1,Len+1,Sum+i)
 
-            #For each subtree, we hash that subtree, add one, multiply by our
-            #constant, and bit-shift the hashed value by the multiplicity of
-            #that subtree. All of the results are then combined as a bitwise
-            #xor.
-            #Note that since the bitwise xor is commutative, the ordering
-            #of subtrees does not matter. This is a feature, not a bug!
+def partitionToMultiset(part):
+    '''
+        input: a partition encoded as a non-ascending sequence
+        output: the multiset-encoding of the input-partition
 
-            subtree_hash = reduce(lambda x,y: x^y, map(lambda x: ((1+hash(x[0]))*const)<<x[1], self.subtree_counts.items()), 0)
-
-            return rootHash + subtree_hash
-
-    def __eq__(self,other):
-
-        if id(self) == id(other):
-            return True
-
-        elif type(self) != type(other):
-            return False
-
-        elif self.rootLabel != other.rootLabel:
-            return False
-
-        elif hash(self) != hash(other):
-            return False
-
-        else:
-            return self.subtree_counts == other.subtree_counts
-
-    def count_non_root_leaves_recursive(self):
-        ''' returns the number of leaves. if we interpret a rooted tree as having arcs
-from a root to the roots of a sub-tree, we want to count the number of leaves
-which have out-degree 0 (i.e. the root only counts as a leaf when it has no subtrees)'''
-        if len(self.subtree_counts) == 0:
-            return 1
-        else:
-            return sum( [count*T.leaves for T,count in self.subtree_counts.items()] )
-
-    def count_nodes_recursive(self):
-        if len(self.subtree_counts) == 0:
-            return 1
-        else:
-            return 1 + sum( [count*T.nodes for T,count in self.subtree_counts.items()] )
-
-    def compute_rootDegree(self):
-        return sum(self.subtree_counts.values())
-
-    def __str__(self):
-        if self.rootDegree == 0:
-            str_root = str(self.rootLabel) if self.rootLabel != None else ''
-            return str_root
-        else:
-            str_root = '%s'%str(self.rootLabel) if self.rootLabel != None else ''
-            return '(%s)%s'%(', '.join(map(lambda x: ', '.join([str(x[0])]*x[1]),self.subtree_counts.items())),str_root)
-
-    def getSubtrees(self):
-        'returns all subtrees. each subtree has a multiplicity according to its count'
-        return sum([ (tree,)*count for tree,count in self.subtree_counts.items()], () )
-
-    def getSubtrees_unique(self):
-        return tuple(self.subtree_counts.keys())
-
+        example:
+        part = (4,2,1,1,1) partition of 9
+        partitionToMultiset(part) = (0,3,1,0,1,0,0,0,0,0)
+    '''
+    #return tuple([part.count(i) for i in range(sum(part)+1)])
+    return tuple([part.count(i) for i in range(max( part+(0,) ) +1 ) ])
 
 def count_histories(tree,computed_histories):
 
@@ -532,19 +538,45 @@ def simulate_data_and_count_histories_and_states(n,s,N,seedval = None, print_res
     #compute the associated trees
     T_list = [unordered_rooted_leaf_labelled_tree_from_haplotype_matrix(S) for S in S_list]
 
-    #compute the number of histories of each dataset
-    known_hist = dict()
-    known_as_prime = dict()
-    hist_list = [count_histories(T,known_hist)[0] for T in T_list]
-    AS_prime_list = [AS_prime(T,known_as_prime)[0] for T in T_list]
-    states_list = [ AS_prime_2_AS(T,val) for T,val in zip(T_list,AS_prime_list) ]
+    #compute the number of histories and ancestral states of each dataset
+    # known_hist = dict()
+    # known_as_prime = dict()
+    # hist_list = [count_histories(T,known_hist)[0] for T in T_list]
+    # AS_prime_list = [AS_prime(T,known_as_prime)[0] for T in T_list]
+    # states_list = [ AS_prime_2_AS(T,val) for T,val in zip(T_list,AS_prime_list) ]
+    hist_list = []
+    hist_time_list = []
+    states_list = []
+    states_time_list = []
+    max_deg_list = []
+    for i,T in enumerate(T_list):
+
+        t1 = clock()
+        hist = count_histories(T,dict())[0]
+
+        t2 = clock()
+        states_prime = AS_prime(T,dict())[0]
+        states = AS_prime_2_AS(T,states_prime)
+        t3 = clock()
+
+        t_hist_count = t2 - t1
+        t_states_count = t3 - t2
+
+        max_deg = T.compute_max_degree()
+
+        hist_list.append(hist)
+        states_list.append(states)
+        max_deg_list.append(max_deg)
+        hist_time_list.append(t_hist_count)
+        states_time_list.append(t_states_count)
 
     #Format each individual tree into a line.
     #(format is csv with semicolons as separators)
-    out_strings = ['%i ;\t%i ;\t%i ;\t%i ;\t%s ;\t%s'%(n, s, hist_list[i], states_list[i], str(T_list[i]), command) for i in range(N)]
+    out_strings = ['%i ;\t%i ;\t%i ;\t%i ;\t%16f ;\t%16f ;\t%i ;\t%s ;\t%s'%(n, s, hist_list[i], states_list[i], hist_time_list[i], states_time_list[i], max_deg_list[i], str(T_list[i]), command) for i in range(N)]
+    #out_strings = ['%i ;\t%i ;\t%i ;\t%i ;\t%s ;\t%s'%(n, s, hist_list[i], states_list[i], str(T_list[i]), command) for i in range(N)]
 
     if add_header:
-        header = 'sequences ; seg sites ;  histories; ancestral_states; gene_tree ; command'
+        header = 'sequences ; seg_sites ;  histories; ancestral_states; t_histories ; t_states ; max_deg ; gene_tree ; command'
         out_strings = [header] + out_strings
 
     results = '\n'.join(out_strings)
