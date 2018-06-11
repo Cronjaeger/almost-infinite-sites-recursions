@@ -170,7 +170,7 @@ def evaluate_single_example(file_path):
     deviants = set((1,2,3))
     b_min = sum( [ len(deviants.intersection(set([S[i,j] for i in xrange(S.shape[0])]))) * nc[j] for j in xrange(S.shape[1]) ] )
 
-    theta_w = waterson(b_min,n)
+    theta_w = waterson(b_min + int(b_min <= 0),n)
 
     b = b_min+b_extra
     t1 = time.time()
