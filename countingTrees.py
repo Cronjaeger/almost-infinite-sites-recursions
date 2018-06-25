@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#from itertools import product as cartesianProduct
+# from itertools import product as cartesianProduct
 from scipy.misc import comb
 import numpy as np
 from math import sqrt
@@ -9,26 +9,26 @@ from math import sqrt
  debugging. """
 verbose = False
 
-#The maximum calue of n that we want to
+# The maximum calue of n that we want to
 Nmax = 20L
 
 # What numeric value is used to represent that a value has not yet been
 # computed
-#NA = float("nan")
+# NA = float("nan")
 NA = -1L
 def NAcheck(value):
-    #returns True if "value" corresponds to NA
+    # returns True if "value" corresponds to NA
     return str(value) == str(NA)
 
-#==============================================================================
+# ==============================================================================
 # initialize a tables to store all values of T that have been computed so far.
 #
 #  t_*[i][j][k] stores t(n = i,l = j, L = k).
 #  A ll values are initialized as nan indicates that these values have not been
 #  computed
-#==============================================================================
-#t_table = [[[ nan for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)]
-#table_t_p = np.array([[[ NA for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)],ndmin=3)
+# ==============================================================================
+# t_table = [[[ nan for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)]
+# table_t_p = np.array([[[ NA for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)],ndmin=3)
 table_t_p = [[[ NA for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)]
 table_t_np = [[[ NA for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)]
 table_t_s_p = [[[ NA for L in range(Nmax+1)] for l in range(Nmax+1)] for n in range(Nmax+1)]
@@ -224,11 +224,11 @@ def t_np(n,l,L):
 #                            pass
                         for L1 in range(0, min(L, n-m-l1) +1 ):
                             for L2 in range(L-L1,min(L, d-l2 +int(d!=1))+1):
-#                                temp += 1
+                                # temp += 1
                                 temp += d * binom(L,L1) * binom(L1,L1+L2-L) * table_t_p[n-m][l1][L1] * table_t_s_p[d][l2][L2]
-#                                temp += d * binom(L,L2) * table_t_p[n-m][l1][L1] * table_t_s_p[d][l2][L2]
+                                # temp += d * binom(L,L2) * table_t_p[n-m][l1][L1] * table_t_s_p[d][l2][L2]
 
-                    ## case: planted, non-planted
+                    # case: planted, non-planted
                     for l2 in range(1, l//j +1):
                         l1 = l + 1 - j * l2
                         for L1 in range(0,min(L,n-m-l1)+1):
@@ -262,6 +262,10 @@ def t_np(n,l,L):
         temp = temp//(n-1)
         return temp
 
+
+def t_np_distinguishaqbleSites(nSeq,nSites):
+    nNodes = nSeq + nSites + 1
+    return t_np(long(nNodes), long(nSeq), long(nSites) )
 
 #==============================================================================
 #  BEGIN: fill out tables.
