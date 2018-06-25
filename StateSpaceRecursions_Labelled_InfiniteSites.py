@@ -95,7 +95,18 @@ def t_np_LU(n, l):
     else:
         return 0
 
-# @memoize
+
+def t_UL(n , l, k = 0, label_root = False):
+
+    # verify inputs
+    assert n > 0
+    assert l > 0
+    assert k >= 0
+    assert isinstance(label_root, bool)
+
+    pass
+
+@memoize
 def t_LL(n, l, k = 0, label_root = False):
 
     # verify inputs
@@ -109,9 +120,9 @@ def t_LL(n, l, k = 0, label_root = False):
     elif k > 0:
         if n - k > 1:
             a = n - l + int(label_root) # total number of sites to be labelled
-            b = k - int(not label_root) # total number of sites on chain from root to next node of degree != 2
+            b = k - 0 + int(label_root) # total number of sites on chain from root to next node of degree != 2
             ways_to_pick_labels_to_go_directly_below_root = binomial(a, b)
-            ways_to_pick_tree_below_chain = t_LL(n-k, l-1, 0, label_root = True)
+            ways_to_pick_tree_below_chain = t_LL(n-k, l-1, 0, label_root = False)
             assert ways_to_pick_labels_to_go_directly_below_root >= 0
             assert ways_to_pick_tree_below_chain >= 0
             return ways_to_pick_labels_to_go_directly_below_root * ways_to_pick_tree_below_chain
@@ -177,7 +188,8 @@ def t_LL_aux(n1, l1, label_root = False):
         sum_total = 0
         for k in xrange(0, n1 - l1 + 1):
             l_new = l1 + int(k > 0) # l1 is only the number of leaves below the root in the old tree; when k>0, the root is also a leaf.
-            sum_total += t_LL(n1, l_new, k, label_root = label_root)
+            term = t_LL(n1, l_new, k, label_root = label_root)
+            sum_total += term
         return sum_total
 
 
@@ -255,7 +267,7 @@ def t_LL_aux(n1, l1, label_root = False):
 def generateStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
     header = '\\begin{tabular}{%s}'%('r' * (s_max + 2))
     header += '\n'
-    header += 'Sample Size & \\multicolumn{%i}{c}{Segregating Sites}'%(s_max + 1)
+    header += 'Sample size & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max + 1)
     header += '\\\\\n'
     header += '  & ' + '& '.join([str(s) for s in range(0, s_max + 1)])
     lines = [header]
@@ -270,16 +282,31 @@ def generateStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
         lines.append(line)
     return '\\\\\n'.join(lines) + '\n\\end{tabular}'
 
+
+def diff_LL_LU(n,l):
+    return t_LL(n,l) - t_np_LU(n,l)
+
 def run_tests():
     assert t_LL(1,1,0) == 1
     assert t_LL(2,2,1) == 1
     assert t_LL(3,2,0) == 1
     assert t_LL(4, 2, 0, label_root=True) == 4
     assert t_LL(5, 3, 0) == 6
-    # assert t_LL(4,3,1, label_root=True) == 1
+    assert t_LL(4,3,1, label_root=True) == 1
+
     t_630 = t_LL(6,3,0)
-    # assert t_630 == 30
-    # print t_LL(8,3,0)
+    assert t_630 == 30
+
+    for n in xrange(3,10):
+        for l in range(1,n):
+            try:
+                assert diff_LL_LU(n,l) >= 0
+            except AssertionError:
+                msg  = 'removing internal labels leads to more trees in case n,l = %i,%i'%(n,l)
+                msg += '  counts are'
+                msg += '   t_LL = %i'%t_LL(n,l)
+                msg += '   t_LU = %i' % t_np_LU(n, l)
+                raise RuntimeError(msg)
 
 if __name__ == '__main__':
     run_tests()
@@ -290,7 +317,11 @@ if __name__ == '__main__':
     #         print '\tt_LL, t_star_LL (%i,%i,0) = %i \t %i'%(n,l,t_LL(n, l , 0), t_LL(n, l , 0, label_root = True))
     #     print ''
 
-    # print t_LL(4,3,1, True)
+    # print t_LL(6,3,0)
+    # print t_LL_aux( 5, 2, False)
 
     # print t_LL(2,1,0)
-    print generateStateSpaceTable(t_function = t_LL)
+
+    # print generateStateSpaceTable(t_function = t_np_LU)
+    # print generateStateSpaceTable(t_function = t_LL)
+    print generateStateSpaceTable(t_function = diff_LL_LU)
