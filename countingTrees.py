@@ -9,8 +9,10 @@ from math import sqrt
  debugging. """
 verbose = False
 
-# The maximum calue of n that we want to
-Nmax = 20L
+# The maximum value of n that we want to
+seq_max = 40
+sites_max = 40
+Nmax = seq_max + sites_max + 1
 
 # What numeric value is used to represent that a value has not yet been
 # computed
@@ -127,6 +129,30 @@ def binom(n,k):
 def lrange(start,stop):
     return map(long,range(start,stop))
 
+
+def memoize(f):
+    """Memoize a function
+    Returns a version of f(...) which stores all computed values for later
+    reference. The first time f(x) is called, we evaulate f(x) as usual. We then
+    proceed to store the key-value-pair (x,f(x)) in a dictionary D. The next
+    time f(x) is called, we notice that 'x' is in the keys of D and we just
+    retrieve D[x] and return it rather than calling f(x) again."""
+
+    memory = {}
+
+    def memoized_function(*args,**kwargs):
+        kwargs_tuple = tuple(sorted(kwargs.items()))
+        args_all = args + kwargs_tuple
+        try:
+            return memory[args_all]
+        except KeyError:
+            f_x = f(*args, **kwargs)
+            memory[args_all] = f_x
+            return memory[args_all]
+
+    return memoized_function
+
+@memoize
 def t_p(n,l,L):
 
     validateInput(n,l,L)
@@ -145,6 +171,8 @@ def t_p(n,l,L):
     else:
         return 0L
 
+
+@memoize
 def t_s_p(n,l,L):
 
     validateInput(n,l,L)
@@ -165,6 +193,8 @@ def t_s_p(n,l,L):
     else:
         return 0L
 
+
+@memoize
 def t_s_np(n,l,L):
 
     validateInput(n,l,L)
@@ -189,6 +219,7 @@ def t_s_np(n,l,L):
         return 0L
 
 
+@memoize
 def t_np(n,l,L):
 
     validateInput(n,l,L)
@@ -273,7 +304,7 @@ def t_np_distinguishaqbleSites(nSeq,nSites):
 
 def generateTable():
     for n in lrange(1,Nmax+1):
-        print "Computing tables for n=%i ... "%n
+        print "Computing Unlabelled-Unlabelled tables for N=%i ... "%n
         for L in lrange(0,Nmax+1):
 #            table_t_p[n][0][L] = 0L
 #            table_t_np[n][0][L] = 0L
@@ -300,10 +331,12 @@ def generateTable():
 
 
 generateTable()
-print "Generating CSV-tables"
-generateTablesCSV()
-print "Generating LaTeX-tables"
-generateTablesLatex()
+
+if __name__ == '__main__':
+    print "Generating CSV-tables"
+    generateTablesCSV()
+    print "Generating LaTeX-tables"
+    generateTablesLatex()
 
 #==============================================================================
 # BEGIN: setting initial values

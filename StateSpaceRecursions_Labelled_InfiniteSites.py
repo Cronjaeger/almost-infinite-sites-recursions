@@ -5,6 +5,8 @@ versions of the infinite sites model.
 Mathias C. Cronjager June 2018
 """
 
+from math import log10
+from countingTrees import t_np, t_p, t_s_p, t_s_np
 
 def falling_factorial(n, k):
     # type: (int, int) -> int
@@ -54,6 +56,9 @@ def memoize(f):
 
     return memoized_function
 
+@memoize
+def t_UU(n,l):
+    return t_np(long(n) ,long(l), long(1)) if n-l > 1 else 1
 
 @memoize
 def t_p_LU(n, l):
@@ -95,16 +100,204 @@ def t_np_LU(n, l):
     else:
         return 0
 
+@memoize
+def t_UL(n,l, k = 0, label_root = False):
 
-def t_UL(n , l, k = 0, label_root = False):
-
-    # verify inputs
+    # Verify inputs
     assert n > 0
     assert l > 0
     assert k >= 0
     assert isinstance(label_root, bool)
 
-    pass
+    if k > 0:
+        if n-k == 1 and l == 2: # case: t is a chain, i.e. t = (1)--(2)--...--(n)
+            return 1
+
+        elif n-k > 1:
+            ways_to_label_chain_below_root = binomial(n - l + int(label_root), k + int(label_root) )
+            ways_to_pick_trree_below_chain = t_UL(n-k, l-1, 0)
+            return ways_to_label_chain_below_root * ways_to_pick_trree_below_chain
+        else:
+            return 0
+
+    elif k == 0:
+        if n==l==1: # case: t consists of a single root-node
+            return 1
+
+        elif n-l == 1 and l>1: # case: t consits of n-1 nodes united directly below a common root.
+            return 1
+
+        elif n-l > 1 and l>1: # case: t has at least one internal node, and the root has degree at least two.
+
+            sum_big_t2_terms = 0
+            for n1 in xrange(2,n - 1):
+                n2 = n - n1
+                assert 1 < n2 < n - 1
+                assert n1 + n2 == n
+
+                for l1 in xrange(max(l - n2, 1), min(l, n1)):
+                    l2 = l-l1
+                    assert 1 <= l1 <= n1
+                    assert 1 <= l2 <= n2
+
+                    s  = n - l - 1
+                    s1 = n1 - l1 - 1 # seg sites on t1 (including root if labelled)
+                    s2 = n2 - l2 # seg sites on t2
+                    assert s1 >= 0
+                    assert s2 >= 0 # if s2==0, t2 has no labels; this case is handled separately (below)
+                    assert s == s1 + s2
+
+                    ways_to_pick_root_label = (n - l)**int(label_root)
+                    ways_to_partition_non_root_labels = binomial(s, s1)
+
+                    ways_to_pick_tree1 = t_UL(n1, l1, 0, label_root=False)
+                    for k1 in xrange(1,n1 - l1 + 2):
+                        ways_to_pick_tree1 += t_UL(n1, l1 + 1, k1, label_root=False)
+
+                    ways_to_pick_tree2 = t_UL(n2, l2, 0, label_root=True)
+                    for k2 in xrange(1,n2 - l2 + 2):
+                        ways_to_pick_tree2 += t_UL(n2, l2 + 1, k2, label_root=True)
+
+                    term  = n2
+                    term *= ways_to_pick_root_label
+                    term *= ways_to_partition_non_root_labels
+                    term *= ways_to_pick_tree1
+                    term *= ways_to_pick_tree2
+
+                    sum_big_t2_terms += term
+                    assert n1 + n2 == n
+
+            sum_trivial_t2_terms = 0
+            for l1 in range(1,l):
+                j = l - l1
+                n1 = n - j
+
+                ways_to_pick_root_label = (n - l)**int(label_root)
+
+                ways_to_pick_tree1 = t_UL(n1,l1,0)
+                for k1 in xrange(1, n1 - l1 + 2):
+                    ways_to_pick_tree1 += t_UL(n1, l1 + 1, k1, label_root=False)
+
+                term  = 1
+                term *= ways_to_pick_root_label
+                term *= ways_to_pick_tree1
+
+                sum_trivial_t2_terms += term
+
+            sum_total = sum_trivial_t2_terms + sum_big_t2_terms
+            assert sum_total % (n-1) == 0
+            return sum_total // (n-1)
+
+        else:
+            return 0
+    else:
+        raise RuntimeError('k=%i, but should have been handled in previous cases.'%k)
+
+# def t_UL(n , l, k = 0, label_root = False):
+#
+#     # verify inputs
+#     assert n > 0
+#     assert l > 0
+#     assert k >= 0
+#     assert isinstance(label_root, bool)
+#
+#     if n-k == 1 and (l == 2 or n == l == 1):
+#         return 1
+#     elif k > 0 and n >= l > 1:
+#         if n - k > 1:
+#             a = n - l + int(label_root)  # total number of sites to be labelled
+#             b = k - 0 + int(label_root)  # total number of sites on chain from root to next node of degree != 2
+#             ways_to_pick_labels_to_go_directly_below_root = binomial(a, b)
+#             ways_to_pick_tree_below_chain = t_UL(n - k, l - 1, 0, label_root=False)
+#             assert ways_to_pick_labels_to_go_directly_below_root >= 0
+#             assert ways_to_pick_tree_below_chain >= 0
+#             return ways_to_pick_labels_to_go_directly_below_root * ways_to_pick_tree_below_chain
+#         else:
+#             msg = 'Not sure this should occur: t_UL(%i,%i,%i) was called (returning value 0)' % (n, k, l)
+#             raise RuntimeWarning(msg)
+#             return 0
+#     elif k == 0 and n > l:
+#         if n-l == 1 and n>2:
+#             return 1
+#         sum_total = 0
+#         for n2 in xrange(2,n-1):
+#             n1 = n - n2
+#             assert 2 <= n1 <= n-1
+#             for l2 in xrange(max(1, l-n1), min(n2+1, l)):
+#                 l1 = l - l2
+#                 assert 0 <= l1 < l
+#
+#                 ways_to_pick_root_label = (n - l) ** int(label_root)
+#                 ways_to_partition_non_root_site_labels = binomial(n - l - 1, n1 - l1 - 1)
+#
+#                 assert 0 < n1 < n
+#                 assert 0 < l1 < l
+#                 ways_to_label_tree1 = t_UL_aux(n1, l1, label_root=False)
+#
+#                 assert 0 < n2 < n
+#                 assert 0 < l2 < l
+#                 ways_to_label_tree2 = t_UL_aux(n2, l2, label_root=True)
+#
+#                 term = n2
+#                 term *= ways_to_pick_root_label
+#                 term *= ways_to_partition_non_root_site_labels
+#                 term *= ways_to_label_tree1
+#                 term *= ways_to_label_tree2
+#
+#                 sum_total += term
+#
+#         for j in range(1,l):
+#
+#             ways_to_pick_root_label = (n - l) ** int(label_root)
+#             l1 = l - j
+#             n1 = n - j
+#
+#             term = 0
+#             for k1 in xrange(0,n-l1+2):
+#                 l_new = l1 + int(k1 > 0 or n1 == 1)
+#                 assert l1 > 0
+#                 term += t_UL(n1, l1, k1, label_root=label_root)
+#
+#             term *= ways_to_pick_root_label
+#             term *= j
+#
+#             sum_total += term
+#
+#         # for l1 in xrange(1,l):
+#         #     l2 = l - l1
+#         #
+#         #     ways_to_pick_root_label = (n - l) ** int(label_root)
+#         #     ways_to_pick_tree1 = t_UL_aux(n - l2, l1, label_root=False)
+#         #
+#         #     term = l2 * ways_to_pick_tree1 * ways_to_pick_root_label
+#         #
+#         #     sum_total += term
+#
+#         try:
+#             assert sum_total % (n-1) == 0
+#         except AssertionError:
+#             msg = 'Error in case (n = %i, l = %i, k = %i, label_root = %i): sum_total = %i is not divisible by n-1 = %i'%(n,l,k,int(label_root),sum_total,n-1)
+#             raise RuntimeError(msg)
+#
+#         return sum_total // (n-1)
+#
+#     else:
+#         return 0
+#
+# def t_UL_aux(n1,l1,label_root=True):
+#     assert n1 > 0
+#     assert l1 > 0
+#     assert isinstance(label_root, bool)
+#
+#     if l1 == 1:
+#         return int(n1 >= 1)
+#     else:
+#         sum_total = 0
+#         for k in xrange(0, n1 - l1 + 1):
+#             l_new = l1 + int(k > 0) # l1 is only the number of leaves below the root in the old tree; when k>0, the root is also a leaf.
+#             term = t_UL(n1, l_new, k, label_root=label_root)
+#             sum_total += term
+#         return sum_total
 
 @memoize
 def t_LL(n, l, k = 0, label_root = False):
@@ -264,7 +457,20 @@ def t_LL_aux(n1, l1, label_root = False):
 #     return result
 
 
-def generateStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
+def generateCSVTable(n_max = 25,s_max = 25, Verbose = True):
+    header = 'n ; s ; seqUlab-siteUlab ; seqLab-siteUlab ; seqUlab-siteLab ; seqLab-siteLab'
+    if Verbose: print header
+    lines = [header]
+    for n in range(2,n_max+1):
+        for s in range(s_max+1):
+            N = n+s+1
+            line = '%i ; %i ; %i ; %i ; %i ; %i'%(n, s, t_UU(N, n), t_np_LU(N, n), t_UL(N, n), t_LL(N, n))
+            if Verbose: print line
+            lines.append(line)
+    return '\n'.join(lines)
+
+
+def generateLatexStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
     header = '\\begin{tabular}{%s}'%('r' * (s_max + 2))
     header += '\n'
     header += 'Sample size & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max + 1)
@@ -286,7 +492,19 @@ def generateStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
 def diff_LL_LU(n,l):
     return t_LL(n,l) - t_np_LU(n,l)
 
-def run_tests():
+def relative_diff_LL_LU(n,l):
+    try:
+        return ( t_LL(n, l) - t_np_LU(n, l) ) / float(t_LL(n, l))
+    except ValueError:
+        return float('nan')
+
+def log_relative_diff_LL_LU(n,l):
+    try:
+        return log10( t_LL(n, l) - t_np_LU(n, l) ) - log10(t_LL(n, l))
+    except ValueError:
+        return float('nan')
+
+def run_tests_LL():
     assert t_LL(1,1,0) == 1
     assert t_LL(2,2,1) == 1
     assert t_LL(3,2,0) == 1
@@ -308,8 +526,15 @@ def run_tests():
                 msg += '   t_LU = %i' % t_np_LU(n, l)
                 raise RuntimeError(msg)
 
+def run_tests_UL():
+    assert t_UL(1,1,0) == 1
+    assert t_UL(2,2,1) == 1
+    assert t_UL(3,2,0) == 1
+    assert t_UL(4,3,1) == 1
+
 if __name__ == '__main__':
-    run_tests()
+    #run_tests_LL()
+    run_tests_UL()
 
     # for n in range(2,10):
     #     print 'n = %i'%n
@@ -324,4 +549,10 @@ if __name__ == '__main__':
 
     # print generateStateSpaceTable(t_function = t_np_LU)
     # print generateStateSpaceTable(t_function = t_LL)
-    print generateStateSpaceTable(t_function = diff_LL_LU)
+    # print generateStateSpaceTable(t_function = diff_LL_LU)
+    # print generateStateSpaceTable(t_function=relative_diff_LL_LU)
+    # print t_UL(4,2,0, label_root=True)
+    # print t_UL(5,2,0,label_root=True)
+    #print generateLatexStateSpaceTable(t_function = t_UU)
+
+    print generateCSVTable(40, 40, False)
