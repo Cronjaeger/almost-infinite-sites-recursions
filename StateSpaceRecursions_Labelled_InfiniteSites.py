@@ -483,7 +483,9 @@ def generateLatexStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
             N = n + s + 1
             l = n
             states = t_function(N,l)
-            line += '& {:,}'.format(states)
+            #line += '& {:,}'.format(states)
+            #line += '& {:.2e}'.format(states)
+            line += '& {:.2g}'.format(states)
             # print '%i Lab. seq., %i Ulab. pos : %i'%(n,s,t_np_LU(N,l))
         lines.append(line)
     return '\\\\\n'.join(lines) + '\n\\end{tabular}'
@@ -492,11 +494,30 @@ def generateLatexStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
 def diff_LL_LU(n,l):
     return t_LL(n,l) - t_np_LU(n,l)
 
+def relative_diff(x, y):
+    if y!= 0:
+        return float(abs(x-y))/y
+    elif x!= y:
+        return float('inf')
+    else:
+        return 0
+
+
 def relative_diff_LL_LU(n,l):
-    try:
-        return ( t_LL(n, l) - t_np_LU(n, l) ) / float(t_LL(n, l))
-    except ValueError:
-        return float('nan')
+    return relative_diff(t_LL(n, l), t_np_LU(n, l))
+    # try:
+    #     return ( t_LL(n, l) - t_np_LU(n, l) ) / float(t_LL(n, l))
+    # except ValueError:
+    #     return float('nan')
+
+def relative_diff_LL_UU(n,l):
+    return relative_diff(t_LL(n, l), t_UU(n, l))
+
+def relative_diff_LU_UU(n,l):
+    return relative_diff(t_np_LU(n, l), t_UU(n, l))
+
+def relative_diff_UL_UU(n,l):
+    return  relative_diff(t_UL(n, l), t_UU(n, l))
 
 def log_relative_diff_LL_LU(n,l):
     try:
@@ -553,6 +574,15 @@ if __name__ == '__main__':
     # print generateStateSpaceTable(t_function=relative_diff_LL_LU)
     # print t_UL(4,2,0, label_root=True)
     # print t_UL(5,2,0,label_root=True)
-    #print generateLatexStateSpaceTable(t_function = t_UU)
 
-    print generateCSVTable(40, 40, False)
+    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UU(n, l)))
+    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_np_LU(n, l)))
+    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UL(n, l)))
+    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_LL(n, l)))
+    #
+    print generateLatexStateSpaceTable(100, 100, relative_diff_LU_UU)
+    print generateLatexStateSpaceTable(100, 100, relative_diff_UL_UU)
+    print generateLatexStateSpaceTable(100, 100, relative_diff_LL_UU)
+
+#    print generateCSVTable(40, 40, False)
+4
