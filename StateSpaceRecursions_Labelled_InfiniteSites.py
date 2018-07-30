@@ -457,16 +457,30 @@ def t_LL_aux(n1, l1, label_root = False):
 #     return result
 
 
-def generateCSVTable(n_max = 25,s_max = 25, Verbose = True):
-    header = 'n ; s ; seqUlab-siteUlab ; seqLab-siteUlab ; seqUlab-siteLab ; seqLab-siteLab'
-    if Verbose: print header
+def generateCSVTable(n_max = 25,s_max = 25, Verbose = True, log = False):
+
+    regularHeader = 'n, s, seqUlab-siteUlab, seqLab-siteUlab, seqUlab-siteLab, seqLab-siteLab'
+    logHeader = 'n, s, log10(seqUlab-siteUlab), log10(seqLab-siteUlab), log10(seqUlab-siteLab), log10(seqLab-siteLab)'
+    header = logHeader if log else regularHeader
+
+    if Verbose:
+        print header
+
     lines = [header]
     for n in range(2,n_max+1):
         for s in range(s_max+1):
             N = n+s+1
-            line = '%i ; %i ; %i ; %i ; %i ; %i'%(n, s, t_UU(N, n), t_np_LU(N, n), t_UL(N, n), t_LL(N, n))
-            if Verbose: print line
+
+            if log:
+                line = '%i, %i, %.10f, %.10f, %.10f, %.10f'%(n, s, log10(t_UU(N, n)), log10(t_np_LU(N, n)), log10(t_UL(N, n)), log10(t_LL(N, n)))
+            else:
+                line = '%i, %i, %i, %i, %i, %i'%(n, s, t_UU(N, n), t_np_LU(N, n), t_UL(N, n), t_LL(N, n))
+
+            if Verbose:
+                print line
+
             lines.append(line)
+
     return '\n'.join(lines)
 
 
@@ -575,14 +589,13 @@ if __name__ == '__main__':
     # print t_UL(4,2,0, label_root=True)
     # print t_UL(5,2,0,label_root=True)
 
-    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UU(n, l)))
-    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_np_LU(n, l)))
-    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UL(n, l)))
-    print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_LL(n, l)))
-    #
-    print generateLatexStateSpaceTable(100, 100, relative_diff_LU_UU)
-    print generateLatexStateSpaceTable(100, 100, relative_diff_UL_UU)
-    print generateLatexStateSpaceTable(100, 100, relative_diff_LL_UU)
+    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UU(n, l)))
+    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_np_LU(n, l)))
+    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UL(n, l)))
+    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_LL(n, l)))
+    # #
+    # print generateLatexStateSpaceTable(100, 100, relative_diff_LU_UU)
+    # print generateLatexStateSpaceTable(100, 100, relative_diff_UL_UU)
+    # print generateLatexStateSpaceTable(100, 100, relative_diff_LL_UU)
 
-#    print generateCSVTable(40, 40, False)
-4
+    print generateCSVTable(150, 150, False, log=True)
