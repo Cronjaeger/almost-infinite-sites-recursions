@@ -497,9 +497,9 @@ def generateLatexStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
             N = n + s + 1
             l = n
             states = t_function(N,l)
-            #line += '& {:,}'.format(states)
+            line += '& {:,}'.format(states)
             #line += '& {:.2e}'.format(states)
-            line += '& {:.2g}'.format(states)
+            #line += '& {:.2g}'.format(states)
             # print '%i Lab. seq., %i Ulab. pos : %i'%(n,s,t_np_LU(N,l))
         lines.append(line)
     return '\\\\\n'.join(lines) + '\n\\end{tabular}'
@@ -581,7 +581,7 @@ if __name__ == '__main__':
     # print t_LL_aux( 5, 2, False)
 
     # print t_LL(2,1,0)
-
+    print generateLatexStateSpaceTable(t_function = t_UU)
     # print generateStateSpaceTable(t_function = t_np_LU)
     # print generateStateSpaceTable(t_function = t_LL)
     # print generateStateSpaceTable(t_function = diff_LL_LU)
@@ -598,4 +598,4 @@ if __name__ == '__main__':
     # print generateLatexStateSpaceTable(100, 100, relative_diff_UL_UU)
     # print generateLatexStateSpaceTable(100, 100, relative_diff_LL_UU)
 
-    print generateCSVTable(150, 150, False, log=True)
+    #print generateCSVTable(150, 150, False, log=True)
