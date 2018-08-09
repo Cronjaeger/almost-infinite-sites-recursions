@@ -5,7 +5,7 @@ versions of the infinite sites model.
 Mathias C. Cronjager June 2018
 """
 
-from math import log10
+from math import log10, floor
 from countingTrees import t_np, t_p, t_s_p, t_s_np
 
 def falling_factorial(n, k):
@@ -483,26 +483,57 @@ def generateCSVTable(n_max = 25,s_max = 25, Verbose = True, log = False):
 
     return '\n'.join(lines)
 
+def identity_function(x):
+    """A functtion which does nothing; used as default transformation"""
+    return x
 
-def generateLatexStateSpaceTable(n_max = 20, s_max = 5, t_function = t_np_LU):
-    header = '\\begin{tabular}{%s}'%('r' * (s_max + 2))
+def generateLatexStateSpaceTable(n_max = 20, s_max = 5, n_step = 1, s_step = 1, t_function = t_np_LU):
+    header = '\\begin{tabular}{l%s}'%('r' * (s_max + 1))
     header += '\n'
+    header += '\\hline\n'
     header += 'Sample size & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max + 1)
-    header += '\\\\\n'
+    header += '\\\\\n\\hline\n'
     header += '  & ' + '& '.join([str(s) for s in range(0, s_max + 1)])
     lines = [header]
-    for n in range(2, n_max + 1):
+    for n in range(2, n_max + 1, n_step):
         line = '%i '%n
-        for s in range(0, s_max + 1):
+        for s in range(0, s_max + 1, s_step):
             N = n + s + 1
             l = n
             states = t_function(N,l)
-            line += '& {:,}'.format(states)
+            line += '& {:,}'.format(int(floor(states)))
             #line += '& {:.2e}'.format(states)
             #line += '& {:.2g}'.format(states)
             # print '%i Lab. seq., %i Ulab. pos : %i'%(n,s,t_np_LU(N,l))
         lines.append(line)
-    return '\\\\\n'.join(lines) + '\n\\end{tabular}'
+    return '\\\\\n'.join(lines) + '\\\\\n\\hline\n\\end{tabular}'
+
+def generateLatexStateSpaceTable_multifunction(n_max = 20, s_max = 5, n_step = 1, s_step = 1, transformation = identity_function):
+    header = '\\begin{tabular}{lll%s}'%('r' * (s_max + 1))
+    header += '\n'
+    header += '\\hline\n'
+    header += 'Sample size & seq. & pos. & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max + 1)
+    header += '\\\\\n\\hline\n'
+    header += '  &  &  & ' + '& '.join([str(s) for s in range(0, s_max + 1)])
+    lines = [header]
+    for n in range(2, n_max + 1, n_step):
+        for f,label in ((t_UU, 'U& U'),
+                        (t_np_LU, 'L& U'),
+                        (t_UL, 'U& L'),
+                        (t_LL, 'L& L')):
+            if f == t_UU:
+                line = '%i & %s'%(n, label)
+            else:
+                line = '  & %s'%label
+
+            for s in range(0, s_max + 1, s_step):
+                N = n + s + 1
+                l = n
+                states = f(N, l)
+                entry = transformation(states)
+                line += '& {:,}'.format(entry)
+            lines.append(line)
+    return '\\\\\n'.join(lines) + '\\\\\n\\hline\n\\end{tabular}'
 
 
 def diff_LL_LU(n,l):
@@ -581,7 +612,7 @@ if __name__ == '__main__':
     # print t_LL_aux( 5, 2, False)
 
     # print t_LL(2,1,0)
-    print generateLatexStateSpaceTable(t_function = t_UU)
+    # print generateLatexStateSpaceTable(t_function = t_UU)
     # print generateStateSpaceTable(t_function = t_np_LU)
     # print generateStateSpaceTable(t_function = t_LL)
     # print generateStateSpaceTable(t_function = diff_LL_LU)
@@ -589,10 +620,15 @@ if __name__ == '__main__':
     # print t_UL(4,2,0, label_root=True)
     # print t_UL(5,2,0,label_root=True)
 
-    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UU(n, l)))
-    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_np_LU(n, l)))
-    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_UL(n, l)))
-    # print generateLatexStateSpaceTable(100, 100, lambda n, l: log10(t_LL(n, l)))
+    # print generateLatexStateSpaceTable_multifunction(102, 50, n_step=10, s_step=10)
+    print generateLatexStateSpaceTable_multifunction(102, 100, n_step=10, s_step=10, transformation=lambda x: int(floor(log10(x))))
+
+    # print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_UU(n, l)))
+    #print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_np_LU(n, l)))
+    #print '\n'
+    #print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_UL(n, l)))
+    #print '\n'
+    #print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_LL(n, l)))
     # #
     # print generateLatexStateSpaceTable(100, 100, relative_diff_LU_UU)
     # print generateLatexStateSpaceTable(100, 100, relative_diff_UL_UU)
