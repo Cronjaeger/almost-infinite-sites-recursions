@@ -509,14 +509,14 @@ def generateLatexStateSpaceTable(n_max = 20, s_max = 5, n_step = 1, s_step = 1, 
     return '\\\\\n'.join(lines) + '\\\\\n\\hline\n\\end{tabular}'
 
 def generateLatexStateSpaceTable_multifunction(n_max = 20, s_max = 5, n_step = 1, s_step = 1, transformation = identity_function):
-    header = '\\begin{tabular}{lll%s}'%('r' * (s_max + 1))
+    header = '\\begin{tabular}{lll%s}'%('r' * (s_max // s_step))
     header += '\n'
     header += '\\hline\n'
-    header += 'Sample size & seq. & pos. & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max + 1)
+    header += 'Sample size & seq. & pos. & \\multicolumn{%i}{c}{Number of segregating sites}'%(s_max//s_step)
     header += '\\\\\n\\hline\n'
-    header += '  &  &  & ' + '& '.join([str(s) for s in range(0, s_max + 1)])
+    header += '  &  &  & ' + '& '.join([str(s) for s in range(s_step, s_max+1, s_step)])
     lines = [header]
-    for n in range(2, n_max + 1, n_step):
+    for n in range(max(2,n_step), n_max + 1, n_step):
         for f,label in ((t_UU, 'U& U'),
                         (t_np_LU, 'L& U'),
                         (t_UL, 'U& L'),
@@ -526,7 +526,7 @@ def generateLatexStateSpaceTable_multifunction(n_max = 20, s_max = 5, n_step = 1
             else:
                 line = '  & %s'%label
 
-            for s in range(0, s_max + 1, s_step):
+            for s in range(s_step, s_max + 1, s_step):
                 N = n + s + 1
                 l = n
                 states = f(N, l)
@@ -621,7 +621,7 @@ if __name__ == '__main__':
     # print t_UL(5,2,0,label_root=True)
 
     # print generateLatexStateSpaceTable_multifunction(102, 50, n_step=10, s_step=10)
-    print generateLatexStateSpaceTable_multifunction(102, 100, n_step=10, s_step=10, transformation=lambda x: int(floor(log10(x))))
+    print generateLatexStateSpaceTable_multifunction(10, 10, n_step=2, s_step=3, transformation=lambda x: int(floor(log10(x))))
 
     # print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_UU(n, l)))
     #print generateLatexStateSpaceTable(40, 20, lambda n, l: log10(t_np_LU(n, l)))
